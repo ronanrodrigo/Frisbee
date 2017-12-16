@@ -8,4 +8,11 @@ extension FBEResult {
         default: return nil
         }
     }
+
+    var error: FBEError? {
+        switch self {
+        case let .fail(error): return error
+        default: return nil
+        }
+    }
 }

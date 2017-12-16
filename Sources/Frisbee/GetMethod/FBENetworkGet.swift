@@ -4,7 +4,7 @@ public class FBENetworkGet: FBEGetable {
 
     public static func get(url: String, completionHandler: @escaping (FBEResult) -> Void) {
         guard let url = URL(string: url) else {
-            return completionHandler(.error(FBEError.invalidUrl))
+            return completionHandler(.fail(FBEError.invalidUrl))
         }
         get(url: url, completionHandler: completionHandler)
     }

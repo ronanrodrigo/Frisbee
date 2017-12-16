@@ -7,10 +7,12 @@ protocol FBEResultGeneratable {
 struct FBEResultGenerator: FBEResultGeneratable {
     static func generate(data: Data?, error: Error?) -> FBEResult {
         if let data = data {
-            return .success(data)
+            return FBEResult.success(data)
         } else if let error = error {
-            return .error(.other(error))
+            let otherError = FBEError.other(localizedDescription: error.localizedDescription)
+            return FBEResult.fail(otherError)
         }
-        return .error(.noData)
+        let noDataError = FBEError.noData
+        return FBEResult.fail(noDataError)
     }
 }

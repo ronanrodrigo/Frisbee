@@ -7,7 +7,7 @@ extension FBEError: Equatable {
              (FBEError.noData, FBEError.noData):
             return true
         case (let FBEError.other(lhsError), let FBEError.other(rhsError)):
-            return lhsError.localizedDescription == rhsError.localizedDescription
+            return lhsError == rhsError
         default:
             return false
         }

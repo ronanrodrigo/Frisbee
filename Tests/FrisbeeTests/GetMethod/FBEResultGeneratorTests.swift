@@ -11,9 +11,58 @@ final class FBEResultGeneratorTests: XCTestCase {
         XCTAssertEqual(result.data?.count, data.count)
     }
 
+    func testGenerateResultWhenHasDataThenResultFailErrorIsNil() {
+        let data = Data(count: Int(arc4random()))
+
+        let result = FBEResultGenerator.generate(data: data, error: nil)
+
+        XCTAssertNil(result.error)
+    }
+
+    func testGenerateResultWhenHasNilDataThenGenerateNoDataErrorResult() {
+        let noDataError = FBEResult.fail(FBEError.noData)
+
+        let result = FBEResultGenerator.generate(data: nil, error: nil)
+
+        XCTAssertEqual(result, noDataError)
+    }
+
+    func testGenerateResultWhenHasNilDataThenResultSuccessDataIsNil() {
+        let result = FBEResultGenerator.generate(data: nil, error: nil)
+
+        XCTAssertNil(result.data)
+    }
+
+    func testGenerateResultWhenHasErrorThenGenerateErrorResult() {
+        let someError = NSError(domain: "Some error", code: Int(arc4random()), userInfo:nil)
+        let noDataError = FBEError.other(localizedDescription: someError.localizedDescription)
+
+        let result = FBEResultGenerator.generate(data: nil, error: someError)
+
+        XCTAssertEqual(result.error, noDataError)
+    }
+
+    func testGenerateResultWhenHasErrorThenResultSuccessDataIsNil() {
+        let someError = NSError(domain: "Some error", code: Int(arc4random()), userInfo:nil)
+
+        let result = FBEResultGenerator.generate(data: nil, error: someError)
+
+        XCTAssertNil(result.data)
+    }
+
     static var allTests = [
         ("testGenerateResultWhenHasDataThenGenerateSuccessResult",
          testGenerateResultWhenHasDataThenGenerateSuccessResult),
-        ]
+        ("testGenerateResultWhenHasDataThenResultFailErrorIsNil",
+         testGenerateResultWhenHasDataThenResultFailErrorIsNil),
+        ("testGenerateResultWhenHasNilDataThenGenerateNoDataErrorResult",
+         testGenerateResultWhenHasNilDataThenGenerateNoDataErrorResult),
+        ("testGenerateResultWhenHasNilDataThenResultSuccessDataIsNil",
+         testGenerateResultWhenHasNilDataThenResultSuccessDataIsNil),
+        ("testGenerateResultWhenHasErrorThenGenerateErrorResult",
+         testGenerateResultWhenHasErrorThenGenerateErrorResult),
+        ("testGenerateResultWhenHasErrorThenResultSuccessDataIsNil",
+         testGenerateResultWhenHasErrorThenResultSuccessDataIsNil)
+    ]
 
 }
