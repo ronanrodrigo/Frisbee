@@ -26,6 +26,10 @@
 		344FC71E1FE5BA0200958CE4 /* FBEResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC71D1FE5BA0200958CE4 /* FBEResult.swift */; };
 		344FC7201FE5BBFE00958CE4 /* FBENetworkGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC71F1FE5BBFE00958CE4 /* FBENetworkGet.swift */; };
 		344FC7241FE5C86200958CE4 /* FBEResult+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7221FE5BDD400958CE4 /* FBEResult+Equatable.swift */; };
+		344FC7261FE5D76B00958CE4 /* FBEResultGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7251FE5D76B00958CE4 /* FBEResultGenerator.swift */; };
+		344FC7291FE5D7FC00958CE4 /* FBEResultGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7271FE5D7F900958CE4 /* FBEResultGeneratorTests.swift */; };
+		344FC72E1FE5DA3D00958CE4 /* FBEError+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC72C1FE5DA2C00958CE4 /* FBEError+Equatable.swift */; };
+		344FC72F1FE5DA4200958CE4 /* FBEResult+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC72A1FE5DA0300958CE4 /* FBEResult+Data.swift */; };
 		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_27 /* FBENetworkGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* FBENetworkGetTests.swift */; };
 		OBJ_29 /* Frisbee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Frisbee::Frisbee::Product" /* Frisbee.framework */; };
@@ -55,6 +59,10 @@
 		344FC71D1FE5BA0200958CE4 /* FBEResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBEResult.swift; sourceTree = "<group>"; };
 		344FC71F1FE5BBFE00958CE4 /* FBENetworkGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBENetworkGet.swift; sourceTree = "<group>"; };
 		344FC7221FE5BDD400958CE4 /* FBEResult+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FBEResult+Equatable.swift"; sourceTree = "<group>"; };
+		344FC7251FE5D76B00958CE4 /* FBEResultGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBEResultGenerator.swift; sourceTree = "<group>"; };
+		344FC7271FE5D7F900958CE4 /* FBEResultGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBEResultGeneratorTests.swift; sourceTree = "<group>"; };
+		344FC72A1FE5DA0300958CE4 /* FBEResult+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FBEResult+Data.swift"; sourceTree = "<group>"; };
+		344FC72C1FE5DA2C00958CE4 /* FBEError+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FBEError+Equatable.swift"; sourceTree = "<group>"; };
 		"Frisbee::Frisbee::Product" /* Frisbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Frisbee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = FrisbeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* FBENetworkGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBENetworkGetTests.swift; sourceTree = "<group>"; };
@@ -85,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				344FC7221FE5BDD400958CE4 /* FBEResult+Equatable.swift */,
+				344FC72A1FE5DA0300958CE4 /* FBEResult+Data.swift */,
+				344FC72C1FE5DA2C00958CE4 /* FBEError+Equatable.swift */,
 			);
 			name = Extensions;
 			path = Tests/FrisbeeTests/Extensions;
@@ -101,8 +111,9 @@
 		OBJ_11 /* FrisbeeTests */ = {
 			isa = PBXGroup;
 			children = (
-				344FC7211FE5BDAE00958CE4 /* Extensions */,
 				OBJ_12 /* FBENetworkGetTests.swift */,
+				344FC7271FE5D7F900958CE4 /* FBEResultGeneratorTests.swift */,
+				344FC7211FE5BDAE00958CE4 /* Extensions */,
 			);
 			name = FrisbeeTests;
 			path = Tests/FrisbeeTests;
@@ -144,6 +155,7 @@
 				344FC71F1FE5BBFE00958CE4 /* FBENetworkGet.swift */,
 				344FC71D1FE5BA0200958CE4 /* FBEResult.swift */,
 				OBJ_9 /* Frisbee.swift */,
+				344FC7251FE5D76B00958CE4 /* FBEResultGenerator.swift */,
 			);
 			name = Frisbee;
 			path = Sources/Frisbee;
@@ -240,8 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				344FC7291FE5D7FC00958CE4 /* FBEResultGeneratorTests.swift in Sources */,
+				344FC72E1FE5DA3D00958CE4 /* FBEError+Equatable.swift in Sources */,
 				OBJ_27 /* FBENetworkGetTests.swift in Sources */,
 				344FC7241FE5C86200958CE4 /* FBEResult+Equatable.swift in Sources */,
+				344FC72F1FE5DA4200958CE4 /* FBEResult+Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +266,7 @@
 			files = (
 				344FC71A1FE5B93200958CE4 /* FBEGetable.swift in Sources */,
 				344FC71E1FE5BA0200958CE4 /* FBEResult.swift in Sources */,
+				344FC7261FE5D76B00958CE4 /* FBEResultGenerator.swift in Sources */,
 				OBJ_36 /* Frisbee.swift in Sources */,
 				344FC7201FE5BBFE00958CE4 /* FBENetworkGet.swift in Sources */,
 				344FC71C1FE5B9D500958CE4 /* FBEError.swift in Sources */,
