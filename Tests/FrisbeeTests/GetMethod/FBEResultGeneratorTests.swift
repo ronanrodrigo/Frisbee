@@ -3,6 +3,8 @@ import XCTest
 
 final class FBEResultGeneratorTests: XCTestCase {
 
+    private let someError = NSError(domain: "Some error", code: Int(arc4random()), userInfo:nil)
+
     func testGenerateResultWhenHasDataThenGenerateSuccessResult() {
         let data = Data(count: Int(arc4random()))
 
@@ -34,7 +36,6 @@ final class FBEResultGeneratorTests: XCTestCase {
     }
 
     func testGenerateResultWhenHasErrorThenGenerateErrorResult() {
-        let someError = NSError(domain: "Some error", code: Int(arc4random()), userInfo:nil)
         let noDataError = FBEError.other(localizedDescription: someError.localizedDescription)
 
         let result = FBEResultGenerator.generate(data: nil, error: someError)
@@ -43,8 +44,6 @@ final class FBEResultGeneratorTests: XCTestCase {
     }
 
     func testGenerateResultWhenHasErrorThenResultSuccessDataIsNil() {
-        let someError = NSError(domain: "Some error", code: Int(arc4random()), userInfo:nil)
-
         let result = FBEResultGenerator.generate(data: nil, error: someError)
 
         XCTAssertNil(result.data)
