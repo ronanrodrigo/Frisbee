@@ -11,4 +11,9 @@ final class FBEResultGeneratorTests: XCTestCase {
         XCTAssertEqual(result.data?.count, data.count)
     }
 
+    static var allTests = [
+        ("testGenerateResultWhenHasDataThenGenerateSuccessResult",
+         testGenerateResultWhenHasDataThenGenerateSuccessResult),
+        ]
+
 }

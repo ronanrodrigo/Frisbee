@@ -15,6 +15,7 @@ class FBENetworkGetTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError", testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError),
+        ("testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError",
+         testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError),
     ]
 }
