@@ -20,7 +20,7 @@ public class FBENetworkGet: FBEGetable {
         request.httpMethod = "GET"
 
         let task = session.dataTask(with: request) { data, _, error in
-            completionHandler(FBEResultGenerator.generateResult(data: data, error: error))
+            completionHandler(FBEResultGenerator.generate(data: data, error: error))
         }
 
         task.resume()
