@@ -3,13 +3,12 @@ import XCTest
 
 class FBENetworkGetTests: XCTestCase {
     private let invalidUrl = "🤷‍♂️"
+    private let validUrl = "http://www.com.br"
 
     func testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError() {
         var generatedResult: FBEResult!
 
-        FBENetworkGet.get(url: invalidUrl) { result in
-            generatedResult = result
-        }
+        FBENetworkGet.get(url: invalidUrl) { generatedResult = $0 }
 
         XCTAssertEqual(generatedResult, FBEResult.error(FBEError.invalidUrl))
     }

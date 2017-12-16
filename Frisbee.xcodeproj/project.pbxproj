@@ -90,12 +90,51 @@
 		344FC7211FE5BDAE00958CE4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				344FC7221FE5BDD400958CE4 /* FBEResult+Equatable.swift */,
-				344FC72A1FE5DA0300958CE4 /* FBEResult+Data.swift */,
 				344FC72C1FE5DA2C00958CE4 /* FBEError+Equatable.swift */,
+				344FC72A1FE5DA0300958CE4 /* FBEResult+Data.swift */,
+				344FC7221FE5BDD400958CE4 /* FBEResult+Equatable.swift */,
 			);
 			name = Extensions;
 			path = Tests/FrisbeeTests/Extensions;
+			sourceTree = SOURCE_ROOT;
+		};
+		344FC7301FE5DB7700958CE4 /* GetMethod */ = {
+			isa = PBXGroup;
+			children = (
+				344FC7191FE5B93200958CE4 /* FBEGetable.swift */,
+				344FC71F1FE5BBFE00958CE4 /* FBENetworkGet.swift */,
+			);
+			name = GetMethod;
+			path = Sources/Frisbee/GetMethod;
+			sourceTree = SOURCE_ROOT;
+		};
+		344FC7311FE5DBAB00958CE4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				344FC71B1FE5B9D500958CE4 /* FBEError.swift */,
+				344FC71D1FE5BA0200958CE4 /* FBEResult.swift */,
+			);
+			name = Entities;
+			path = Sources/Frisbee/Entities;
+			sourceTree = SOURCE_ROOT;
+		};
+		344FC7321FE5DFD400958CE4 /* GetMethod */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* FBENetworkGetTests.swift */,
+				344FC7271FE5D7F900958CE4 /* FBEResultGeneratorTests.swift */,
+			);
+			name = GetMethod;
+			path = Tests/FrisbeeTests/GetMethod;
+			sourceTree = SOURCE_ROOT;
+		};
+		344FC7331FE5DFFD00958CE4 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				344FC7251FE5D76B00958CE4 /* FBEResultGenerator.swift */,
+			);
+			name = Interactors;
+			path = Sources/Frisbee/Interactors;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_10 /* Tests */ = {
@@ -109,8 +148,7 @@
 		OBJ_11 /* FrisbeeTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* FBENetworkGetTests.swift */,
-				344FC7271FE5D7F900958CE4 /* FBEResultGeneratorTests.swift */,
+				344FC7321FE5DFD400958CE4 /* GetMethod */,
 				344FC7211FE5BDAE00958CE4 /* Extensions */,
 			);
 			name = FrisbeeTests;
@@ -148,11 +186,9 @@
 		OBJ_8 /* Frisbee */ = {
 			isa = PBXGroup;
 			children = (
-				344FC71B1FE5B9D500958CE4 /* FBEError.swift */,
-				344FC7191FE5B93200958CE4 /* FBEGetable.swift */,
-				344FC71F1FE5BBFE00958CE4 /* FBENetworkGet.swift */,
-				344FC71D1FE5BA0200958CE4 /* FBEResult.swift */,
-				344FC7251FE5D76B00958CE4 /* FBEResultGenerator.swift */,
+				344FC7311FE5DBAB00958CE4 /* Entities */,
+				344FC7301FE5DB7700958CE4 /* GetMethod */,
+				344FC7331FE5DFFD00958CE4 /* Interactors */,
 			);
 			name = Frisbee;
 			path = Sources/Frisbee;
