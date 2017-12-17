@@ -43,12 +43,12 @@ To integrate Frisbee into your Swift Package Manager project, set the dependenci
 import PackageDescription
 
 let package = Package(
-    name: "MyPackage",
+    name: "<Your Packege Name>",
     dependencies: [
         .package(url: "https://github.com/ronanrodrigo/Frisbee.git", from: "0.0.23")
     ],
     targets: [
-        .target(name: "MyPackage", dependencies: ["Frisbee"])
+        .target(name: "<Your Packege Name>", dependencies: ["Frisbee"])
     ]
 )
 ```
