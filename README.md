@@ -12,6 +12,25 @@ github "ronanrodrigo/Frisbee"
 
 Run carthage update to build the framework and drag the built Frisbee.framework into your Xcode project.
 
+##### CocoaPods
+To integrate Frisbee into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+    pod 'Frisbee'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
 # How to use
 
 ##### Create some decodable entity
@@ -88,7 +107,7 @@ class MoviesControllerTests: XCTestCase {
 # Frisbee next features
 - [x] Get request
 - [x] Create Carthage distribution
-- [ ] Create Cocoapod distribution
+- [x] Create Cocoapod distribution
 - [ ] Post request
 - [ ] Cache policy
 - [ ] Some mock ready for use
