@@ -34,7 +34,7 @@ Then, run the following command:
 $ pod install
 ```
 
-#### Swift Package Manager
+##### Swift Package Manager
 To integrate Frisbee into your Swift Package Manager project, set the dependencies in your `Package.swift`:
 
 ```swift
