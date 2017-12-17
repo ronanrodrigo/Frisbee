@@ -1,6 +1,6 @@
-[![Build Status](https://www.bitrise.io/app/27a5e39dc511ba7c/status.svg?token=HZCmnpdBTIy3rOQdUv6HOg&branch=master)](https://www.bitrise.io/app/27a5e39dc511ba7c)
+![](https://i.imgur.com/jNJIheR.jpg)
 
-![https://i.imgur.com/wzJE3xG.png](https://i.imgur.com/wzJE3xG.png)
+[![Build Status](https://www.bitrise.io/app/27a5e39dc511ba7c/status.svg?token=HZCmnpdBTIy3rOQdUv6HOg&branch=master)](https://www.bitrise.io/app/27a5e39dc511ba7c)
 
 # Install
 ##### Carthage
