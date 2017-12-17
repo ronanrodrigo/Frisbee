@@ -58,7 +58,7 @@ public class FBEMockGet: FBEGetable {
 
 ```
 
-##### And instead `FBENetworkGet` you will use to test the `FBEMoviesMockGet` on `MoviesController`
+##### And instead `FBENetworkGet` you will use to test the `FBEMockGet` on `MoviesController`
 ```swift
 
 class MoviesControllerTests: XCTestCase {
