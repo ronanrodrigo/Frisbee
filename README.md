@@ -73,7 +73,7 @@ class MoviesControllerTests: XCTestCase {
 }
 ```
 
-# Frisbie next features
+# Frisbee next features
 - [x] Get request
 - [ ] Post request
 - [ ] Cache policy
