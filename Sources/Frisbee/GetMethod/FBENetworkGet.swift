@@ -2,6 +2,8 @@ import Foundation
 
 public class FBENetworkGet: FBEGetable {
 
+    public init() { }
+
     public func get<Entity: Decodable>(url: String, completionHandler: @escaping (FBEResult<Entity>) -> Void) {
         guard let url = URL(string: url) else {
             return completionHandler(.fail(FBEError.invalidUrl))
