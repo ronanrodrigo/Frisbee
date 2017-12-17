@@ -7,11 +7,11 @@ struct Fake: Codable {
 
 final class FBEResultGeneratorTests: XCTestCase {
 
-    private let someError = NSError(domain: "Some error", code: Int(arc4random()), userInfo:nil)
+    private let someError = NSError(domain: "Some error", code: Int(arc4random()), userInfo: nil)
     private let fakeString = "Fake Fake"
 
     func testGenerateResultWhenHasDataThenGenerateSuccessResult() {
-        let data = try! JSONEncoder().encode(Fake(fake: fakeString))
+        let data = try? JSONEncoder().encode(Fake(fake: fakeString))
 
         let result = FBEResultGenerator<Fake>.generate(data: data, error: nil)
 
@@ -19,7 +19,7 @@ final class FBEResultGeneratorTests: XCTestCase {
     }
 
     func testGenerateResultWhenHasDataThenResultFailErrorIsNil() {
-        let data = try! JSONEncoder().encode(Fake(fake: fakeString))
+        let data = try? JSONEncoder().encode(Fake(fake: fakeString))
 
         let result = FBEResultGenerator<Fake>.generate(data: data, error: nil)
 
