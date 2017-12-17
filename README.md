@@ -33,6 +33,25 @@ Then, run the following command:
 $ pod install
 ```
 
+#### Swift Package Manager
+To integrate Frisbee into your Swift Package Manager project, set the dependencies in your `Package.swift`:
+
+```swift
+// swift-tools-version:4.0
+
+import PackageDescription
+
+let package = Package(
+    name: "MyPackage",
+    dependencies: [
+        .package(url: "https://github.com/ronanrodrigo/Frisbee.git", from: "0.0.23")
+    ],
+    targets: [
+        .target(name: "MyPackage", dependencies: ["Frisbee"])
+    ]
+)
+```
+
 # How to use
 
 ##### Create some decodable entity
