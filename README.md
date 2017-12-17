@@ -17,28 +17,28 @@ Run carthage update to build the framework and drag the built Frisbee.framework 
 ##### Create some decodable entity
 ```swift
 struct Movie: Decodable {
-let name: String
+    let name: String
 }
 ```
 
 ##### This are an exemple of some code that will request some data across network.
 ```swift
 class MoviesController {
-private let getRequest: FBEGetable
-var moviesQuantity = 0
+    private let getRequest: FBEGetable
+    var moviesQuantity = 0
 
-init(getRequest: FBEGetable) {
-self.getRequest = getRequest
-}
+    init(getRequest: FBEGetable) {
+        self.getRequest = getRequest
+    }
 
-func didTouchAtListMovies() {
-getRequest.get(url: "") { (moviesResult: FBEResult<[Movie]>) in
-switch moviesResult {
-case let .success(movies): self.moviesQuantity = movies.count
-case let .fail(error): print(error)
-}
-}
-}
+    func didTouchAtListMovies() {
+        getRequest.get(url: "") { (moviesResult: FBEResult<[Movie]>) in
+            switch moviesResult {
+                case let .success(movies): self.moviesQuantity = movies.count
+                case let .fail(error): print(error)
+            }
+        }
+    }
 }
 
 ```
@@ -52,17 +52,17 @@ MoviesController(getRequest: FBENetworkGet())
 ##### In test target code you can create your own `FBEGetable` mock.
 ```swift
 public class FBEMockGet: FBEGetable {
-var decodableMock: Decodable!
+    var decodableMock: Decodable!
 
-public func get<Entity: Decodable>(url: URL, completionHandler: @escaping (FBEResult<Entity>) -> Void) {
-get(url: url.absoluteString, completionHandler: completionHandler)
-}
+    public func get<Entity: Decodable>(url: URL, completionHandler: @escaping (FBEResult<Entity>) -> Void) {
+        get(url: url.absoluteString, completionHandler: completionHandler)
+    }
 
-public func get<Entity: Decodable>(url: String, completionHandler: @escaping (FBEResult<Entity>) -> Void) {
-if let decodableMock = decodableMock as? Entity {
-completionHandler(.success(decodableMock))
-}
-}
+    public func get<Entity: Decodable>(url: String, completionHandler: @escaping (FBEResult<Entity>) -> Void) {
+        if let decodableMock = decodableMock as? Entity {
+            completionHandler(.success(decodableMock))
+        }
+    }
 
 }
 
@@ -72,16 +72,16 @@ completionHandler(.success(decodableMock))
 ```swift
 
 class MoviesControllerTests: XCTestCase {
-func testDidTouchAtListMoviesWhenHasMoviesThenPresentAllMovies() {
-let mockGet = FBEMockGet()
-let movies = [Movie(name: "Star Wars")]
-mockGet.decodableMock = movies
-let controller = MoviesController(getRequest: mockGet)
+    func testDidTouchAtListMoviesWhenHasMoviesThenPresentAllMovies() {
+        let mockGet = FBEMockGet()
+        let movies = [Movie(name: "Star Wars")]
+        mockGet.decodableMock = movies
+        let controller = MoviesController(getRequest: mockGet)
 
-controller.didTouchAtListMovies()
+        controller.didTouchAtListMovies()
 
-XCTAssertEqual(controller.moviesQuantity, movies.count)
-}
+        XCTAssertEqual(controller.moviesQuantity, movies.count)
+    }
 }
 ```
 
