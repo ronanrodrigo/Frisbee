@@ -1,4 +1,4 @@
-![](https://i.imgur.com/ELeuGch.png)
+![](https://i.imgur.com/OWfQe0m.png)
 
 #
 Another network wrapper for URLSession. Built to make it easy to create tests for your application's network layer.
