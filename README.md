@@ -75,6 +75,8 @@ class MoviesControllerTests: XCTestCase {
 
 # Frisbee next features
 - [x] Get request
+- [ ] Create Carthage framework
+- [ ] Create Cocoapod framework
 - [ ] Post request
 - [ ] Cache policy
 - [ ] Some mock ready for use
