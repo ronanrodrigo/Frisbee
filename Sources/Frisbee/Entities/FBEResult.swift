@@ -1,6 +1,4 @@
-import Foundation
-
-public enum FBEResult {
-    case success(Data)
+public enum FBEResult<Entity> {
+    case success(Entity)
     case fail(FBEError)
 }

@@ -1,15 +1,15 @@
 import XCTest
 @testable import Frisbee
 
-class FBENetworkGetTests: XCTestCase {
+class MoviesControllerTests: XCTestCase {
 
     private let invalidUrl = "🤷‍♂️"
     private let validUrl = "http://www.com.br"
     
     func testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError() {
-        var generatedResult: FBEResult!
+        var generatedResult: FBEResult<Data?>!
         
-        FBENetworkGet.get(url: invalidUrl) { generatedResult = $0 }
+        FBENetworkGet().get(url: invalidUrl) { generatedResult = $0 }
         
         XCTAssertEqual(generatedResult, FBEResult.fail(FBEError.invalidUrl))
     }

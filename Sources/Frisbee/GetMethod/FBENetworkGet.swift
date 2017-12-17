@@ -2,18 +2,18 @@ import Foundation
 
 public class FBENetworkGet: FBEGetable {
 
-    public static func get(url: String, completionHandler: @escaping (FBEResult) -> Void) {
+    public func get<Entity: Decodable>(url: String, completionHandler: @escaping (FBEResult<Entity>) -> Void) {
         guard let url = URL(string: url) else {
             return completionHandler(.fail(FBEError.invalidUrl))
         }
         get(url: url, completionHandler: completionHandler)
     }
 
-    public static func get(url: URL, completionHandler: @escaping (FBEResult) -> Void) {
+    public func get<Entity: Decodable>(url: URL, completionHandler: @escaping (FBEResult<Entity>) -> Void) {
         makeRequest(url: url, completionHandler: completionHandler)
     }
 
-    private static func makeRequest(url: URL, completionHandler: @escaping (FBEResult) -> Void) {
+    private func makeRequest<Entity: Decodable>(url: URL, completionHandler: @escaping (FBEResult<Entity>) -> Void) {
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
         var request = URLRequest(url: url)
