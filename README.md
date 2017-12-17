@@ -68,6 +68,8 @@ class MoviesController {
 MoviesController(getRequest: FBENetworkGet())
 ```
 
+# How to test your APP
+
 ##### In test target code you can create your own `FBEGetable` mock.
 ```swift
 public class FBEMockGet: FBEGetable {
