@@ -1,7 +1,7 @@
 import XCTest
 @testable import Frisbee
 
-class MoviesControllerTests: XCTestCase {
+final class MoviesControllerTests: XCTestCase {
 
     private let invalidUrl = "🤷‍♂️"
     private let validUrl = "http://www.com.br"

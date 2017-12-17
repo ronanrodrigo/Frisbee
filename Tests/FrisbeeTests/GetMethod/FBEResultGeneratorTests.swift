@@ -1,9 +1,7 @@
 import XCTest
 @testable import Frisbee
 
-struct Fake: Codable {
-    let fake: String
-}
+struct Fake: Codable { let fake: String }
 
 final class FBEResultGeneratorTests: XCTestCase {
 
