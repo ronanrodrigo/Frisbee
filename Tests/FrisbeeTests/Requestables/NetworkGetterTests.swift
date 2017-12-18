@@ -1,7 +1,7 @@
 import XCTest
 @testable import Frisbee
 
-final class NetworkGetTests: XCTestCase {
+final class NetworkGetterTests: XCTestCase {
 
     private let invalidUrl = "🤷‍♂️"
     private let validUrl = "http://www.com.br"
@@ -9,7 +9,7 @@ final class NetworkGetTests: XCTestCase {
     func testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError() {
         var generatedResult: Result<Data?>!
 
-        NetworkGet().get(url: invalidUrl) { generatedResult = $0 }
+        NetworkGetter().get(url: invalidUrl) { generatedResult = $0 }
 
         XCTAssertEqual(generatedResult, Result.fail(FrisbeeError.invalidUrl))
     }

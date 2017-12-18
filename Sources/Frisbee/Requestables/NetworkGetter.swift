@@ -1,6 +1,6 @@
 import Foundation
 
-public class NetworkGet: Getable {
+public class NetworkGetter: Getable {
 
     public init() { }
 

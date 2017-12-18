@@ -85,17 +85,17 @@ class MoviesController {
 ```
 
 
-#### In production-ready code you must inject an instance of `NetworkGet`.
+#### In production-ready code you must inject an instance of `NetworkGetter`.
 ```swift
-// Who will call the MoviesController must inject a NetworkGet instance
-MoviesController(getRequest: NetworkGet())
+// Who will call the MoviesController must inject a NetworkGetter instance
+MoviesController(getRequest: NetworkGetter())
 ```
 
 # Usage in tests
 
 #### In test target code you can create your own `Getable` mock.
 ```swift
-public class MockGet: Getable {
+public class MockGetter: Getable {
     var decodableMock: Decodable!
 
     public func get<Entity: Decodable>(url: URL, completionHandler: @escaping (Result<Entity>) -> Void) {
@@ -112,12 +112,12 @@ public class MockGet: Getable {
 
 ```
 
-#### And instead `NetworkGet` you will use to test the `MockGet` on `MoviesController`
+#### And instead `NetworkGetter` you will use to test the `MockGetter` on `MoviesController`
 ```swift
 
 class MoviesControllerTests: XCTestCase {
     func testDidTouchAtListMoviesWhenHasMoviesThenPresentAllMovies() {
-        let mockGet = MockGet()
+        let mockGet = MockGetter()
         let movies = [Movie(name: "Star Wars")]
         mockGet.decodableMock = movies
         let controller = MoviesController(getRequest: mockGet)
