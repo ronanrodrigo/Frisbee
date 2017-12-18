@@ -10,7 +10,7 @@ final class IntegrationNetworkGetTests: XCTestCase {
     func testGetWhenHasValidURLWithValidEntityThenRequestAndTransformData() {
         let url = "https://gist.githubusercontent.com/ronanrodrigo" +
                   "/fbb32cee20e43f0f9972c9a3230ef93d/raw/2cb87fd40e65fadb25fcc30f643d385bccdb5f7c/movie.json"
-        let longRunningExpectation = expectation(description: "RegisterUserWithAlreadyInUseEmail")
+        let longRunningExpectation = expectation(description: "RequestMoviesWithSuccess")
         let expectedMovieName = "Ghostbusters"
         var returnedData: Movie?
 
