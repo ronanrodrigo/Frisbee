@@ -8,13 +8,15 @@ protocol ResultGeneratable {
 struct ResultGenerator<Entity: Decodable>: ResultGeneratable {
     static func generate(data: Data?, error: Error?) -> Result<Entity> {
         if let data = data {
+            let result: Result<Entity>
             do {
                 let entityDecoded = try JSONDecoder().decode(Entity.self, from: data)
-                return Result.success(entityDecoded)
+                result = Result.success(entityDecoded)
             } catch {
                 let noDataError = FrisbeeError.noData
-                return Result.fail(noDataError)
+                result = Result.fail(noDataError)
             }
+            return result
         } else if let error = error {
             let otherError = FrisbeeError.other(localizedDescription: error.localizedDescription)
             return Result.fail(otherError)

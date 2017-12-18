@@ -8,6 +8,15 @@ final class ResultGeneratorTests: XCTestCase {
     private let someError = NSError(domain: "Some error", code: Int(arc4random()), userInfo: nil)
     private let fakeString = "Fake Fake"
 
+    func testGenerateResultWhenInvalidDataThenGenerateSuccessResult() {
+        let noDataError = FrisbeeError.noData
+        let data = try? JSONEncoder().encode(Data())
+
+        let result = ResultGenerator<Fake>.generate(data: data, error: nil)
+
+        XCTAssertEqual(result.error, noDataError)
+    }
+
     func testGenerateResultWhenHasDataThenGenerateSuccessResult() {
         let data = try? JSONEncoder().encode(Fake(fake: fakeString))
 

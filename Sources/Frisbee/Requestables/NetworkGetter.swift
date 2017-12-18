@@ -16,10 +16,8 @@ public class NetworkGetter: Getable {
     }
 
     private func makeRequest<Entity: Decodable>(url: URL, completionHandler: @escaping (Result<Entity>) -> Void) {
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
+        let request = URLRequestFactory.make(.GET, url)
+        let session = URLSessionFactory.make()
 
         let task = session.dataTask(with: request) { data, _, error in
             completionHandler(ResultGenerator.generate(data: data, error: error))
