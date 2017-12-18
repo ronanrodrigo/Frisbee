@@ -1,11 +1,12 @@
-![](https://i.imgur.com/ELeuGch.png)
+![](https://i.imgur.com/OWfQe0m.png)
 
-#
+# Frisbee
+Another simple network wrapper for URLSession. Built to be small and easy to create tests at the network layer of your application.
 
 [![Build Status](https://www.bitrise.io/app/27a5e39dc511ba7c/status.svg?token=HZCmnpdBTIy3rOQdUv6HOg&branch=master)](https://www.bitrise.io/app/27a5e39dc511ba7c) [![CocoaPods](https://img.shields.io/cocoapods/v/Frisbee.svg)]() [![CocoaPods](https://img.shields.io/cocoapods/p/Frisbee.svg)]() [![Carthage](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)]() [![codecov](https://codecov.io/gh/ronanrodrigo/frisbee/branch/master/graph/badge.svg)](https://codecov.io/gh/ronanrodrigo/frisbee)
 
-# Install
-##### Carthage
+## Install
+#### Carthage
 To integrate Frisbee into your Xcode project using Carthage, specify it in your Cartfile:
 
 ```
@@ -14,7 +15,7 @@ github "ronanrodrigo/Frisbee"
 
 Run carthage update to build the framework and drag the built Frisbee.framework into your Xcode project.
 
-##### CocoaPods
+#### CocoaPods
 To integrate Frisbee into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
@@ -42,37 +43,37 @@ To integrate Frisbee into your Swift Package Manager project, set the dependenci
 import PackageDescription
 
 let package = Package(
-    name: "MyPackage",
+    name: "<Your Packege Name>",
     dependencies: [
         .package(url: "https://github.com/ronanrodrigo/Frisbee.git", from: "0.0.23")
     ],
     targets: [
-        .target(name: "MyPackage", dependencies: ["Frisbee"])
+        .target(name: "<Your Packege Name>", dependencies: ["Frisbee"])
     ]
 )
 ```
 
-# How to use
+## Usage
 
-##### Create some decodable entity
+#### Create a decodable entity
 ```swift
 struct Movie: Decodable {
     let name: String
 }
 ```
 
-##### This are an exemple of some code that will request some data across network.
+#### This is an example of some code that will request some data across network
 ```swift
 class MoviesController {
     private let getRequest: Getable
     var moviesQuantity = 0
-
+    // Expect something that conforms to FBEGetable
     init(getRequest: Getable) {
         self.getRequest = getRequest
     }
 
     func didTouchAtListMovies() {
-        getRequest.get(url: "") { (moviesResult: Result<[Movie]>) in
+        getRequest.get(url: "http://www.com.br/movies.json") { (moviesResult: FBEResult<[Movie]>) in
             switch moviesResult {
                 case let .success(movies): self.moviesQuantity = movies.count
                 case let .fail(error): print(error)
@@ -83,15 +84,16 @@ class MoviesController {
 
 ```
 
-##### In production-ready code you must inject an instance of `NetworkGet`.
+
+#### In production-ready code you must inject an instance of `NetworkGet`.
 ```swift
 // Who will call the MoviesController must inject a NetworkGet instance
 MoviesController(getRequest: NetworkGet())
 ```
 
-# How to test your APP
+# Usage in tests
 
-##### In test target code you can create your own `Getable` mock.
+#### In test target code you can create your own `Getable` mock.
 ```swift
 public class MockGet: Getable {
     var decodableMock: Decodable!
@@ -110,7 +112,7 @@ public class MockGet: Getable {
 
 ```
 
-##### And instead `NetworkGet` you will use to test the `MockGet` on `MoviesController`
+#### And instead `NetworkGet` you will use to test the `MockGet` on `MoviesController`
 ```swift
 
 class MoviesControllerTests: XCTestCase {
