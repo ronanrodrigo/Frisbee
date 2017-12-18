@@ -67,13 +67,13 @@ struct Movie: Decodable {
 class MoviesController {
     private let getRequest: Getable
     var moviesQuantity = 0
-    // Expect something that conforms to FBEGetable
+    // Expect something that conforms to Getable
     init(getRequest: Getable) {
         self.getRequest = getRequest
     }
 
     func didTouchAtListMovies() {
-        getRequest.get(url: "http://www.com.br/movies.json") { (moviesResult: FBEResult<[Movie]>) in
+        getRequest.get(url: "http://www.com.br/movies.json") { (moviesResult: Result<[Movie]>) in
             switch moviesResult {
                 case let .success(movies): self.moviesQuantity = movies.count
                 case let .fail(error): print(error)
