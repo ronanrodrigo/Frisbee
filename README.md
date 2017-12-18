@@ -1,4 +1,4 @@
-![](https://i.imgur.com/OWfQe0m.png)
+![](https://i.imgur.com/67a4vkG.png)
 
 # Frisbee
 Another network wrapper for URLSession. Built to be simple, small and easy to create tests at the network layer of your application.
