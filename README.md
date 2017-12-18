@@ -64,15 +64,15 @@ struct Movie: Decodable {
 ##### This are an exemple of some code that will request some data across network.
 ```swift
 class MoviesController {
-    private let getRequest: FBEGetable
+    private let getRequest: Getable
     var moviesQuantity = 0
 
-    init(getRequest: FBEGetable) {
+    init(getRequest: Getable) {
         self.getRequest = getRequest
     }
 
     func didTouchAtListMovies() {
-        getRequest.get(url: "") { (moviesResult: FBEResult<[Movie]>) in
+        getRequest.get(url: "") { (moviesResult: Result<[Movie]>) in
             switch moviesResult {
                 case let .success(movies): self.moviesQuantity = movies.count
                 case let .fail(error): print(error)
@@ -83,24 +83,24 @@ class MoviesController {
 
 ```
 
-##### In production-ready code you must inject an instance of `FBENetworkGet`.
+##### In production-ready code you must inject an instance of `NetworkGet`.
 ```swift
-// Who will call the MoviesController must inject a FBENetworkGet instance
-MoviesController(getRequest: FBENetworkGet())
+// Who will call the MoviesController must inject a NetworkGet instance
+MoviesController(getRequest: NetworkGet())
 ```
 
 # How to test your APP
 
-##### In test target code you can create your own `FBEGetable` mock.
+##### In test target code you can create your own `Getable` mock.
 ```swift
-public class FBEMockGet: FBEGetable {
+public class MockGet: Getable {
     var decodableMock: Decodable!
 
-    public func get<Entity: Decodable>(url: URL, completionHandler: @escaping (FBEResult<Entity>) -> Void) {
+    public func get<Entity: Decodable>(url: URL, completionHandler: @escaping (Result<Entity>) -> Void) {
         get(url: url.absoluteString, completionHandler: completionHandler)
     }
 
-    public func get<Entity: Decodable>(url: String, completionHandler: @escaping (FBEResult<Entity>) -> Void) {
+    public func get<Entity: Decodable>(url: String, completionHandler: @escaping (Result<Entity>) -> Void) {
         if let decodableMock = decodableMock as? Entity {
             completionHandler(.success(decodableMock))
         }
@@ -110,12 +110,12 @@ public class FBEMockGet: FBEGetable {
 
 ```
 
-##### And instead `FBENetworkGet` you will use to test the `FBEMockGet` on `MoviesController`
+##### And instead `NetworkGet` you will use to test the `MockGet` on `MoviesController`
 ```swift
 
 class MoviesControllerTests: XCTestCase {
     func testDidTouchAtListMoviesWhenHasMoviesThenPresentAllMovies() {
-        let mockGet = FBEMockGet()
+        let mockGet = MockGet()
         let movies = [Movie(name: "Star Wars")]
         mockGet.decodableMock = movies
         let controller = MoviesController(getRequest: mockGet)

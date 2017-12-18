@@ -3,7 +3,7 @@ import XCTest
 
 struct Fake: Codable { let fake: String }
 
-final class FBEResultGeneratorTests: XCTestCase {
+final class ResultGeneratorTests: XCTestCase {
 
     private let someError = NSError(domain: "Some error", code: Int(arc4random()), userInfo: nil)
     private let fakeString = "Fake Fake"
@@ -11,7 +11,7 @@ final class FBEResultGeneratorTests: XCTestCase {
     func testGenerateResultWhenHasDataThenGenerateSuccessResult() {
         let data = try? JSONEncoder().encode(Fake(fake: fakeString))
 
-        let result = FBEResultGenerator<Fake>.generate(data: data, error: nil)
+        let result = ResultGenerator<Fake>.generate(data: data, error: nil)
 
         XCTAssertEqual(result.data?.fake, fakeString)
     }
@@ -19,35 +19,35 @@ final class FBEResultGeneratorTests: XCTestCase {
     func testGenerateResultWhenHasDataThenResultFailErrorIsNil() {
         let data = try? JSONEncoder().encode(Fake(fake: fakeString))
 
-        let result = FBEResultGenerator<Fake>.generate(data: data, error: nil)
+        let result = ResultGenerator<Fake>.generate(data: data, error: nil)
 
         XCTAssertNil(result.error)
     }
 
     func testGenerateResultWhenHasNilDataThenGenerateNoDataErrorResult() {
-        let noDataError = FBEResult<Data>.fail(FBEError.noData)
+        let noDataError = Result<Data>.fail(FrisbeeError.noData)
 
-        let result = FBEResultGenerator<Data>.generate(data: nil, error: nil)
+        let result = ResultGenerator<Data>.generate(data: nil, error: nil)
 
         XCTAssertEqual(result, noDataError)
     }
 
     func testGenerateResultWhenHasNilDataThenResultSuccessDataIsNil() {
-        let result = FBEResultGenerator<Data>.generate(data: nil, error: nil)
+        let result = ResultGenerator<Data>.generate(data: nil, error: nil)
 
         XCTAssertNil(result.data)
     }
 
     func testGenerateResultWhenHasErrorThenGenerateErrorResult() {
-        let noDataError = FBEError.other(localizedDescription: someError.localizedDescription)
+        let noDataError = FrisbeeError.other(localizedDescription: someError.localizedDescription)
 
-        let result = FBEResultGenerator<Data>.generate(data: nil, error: someError)
+        let result = ResultGenerator<Data>.generate(data: nil, error: someError)
 
         XCTAssertEqual(result.error, noDataError)
     }
 
     func testGenerateResultWhenHasErrorThenResultSuccessDataIsNil() {
-        let result = FBEResultGenerator<Data>.generate(data: nil, error: someError)
+        let result = ResultGenerator<Data>.generate(data: nil, error: someError)
 
         XCTAssertNil(result.data)
     }

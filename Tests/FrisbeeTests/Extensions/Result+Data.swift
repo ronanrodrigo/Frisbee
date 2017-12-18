@@ -1,7 +1,7 @@
 import Foundation
 import Frisbee
 
-extension FBEResult {
+extension Result {
     var data: Entity? {
         switch self {
         case let .success(data): return data
@@ -9,7 +9,7 @@ extension FBEResult {
         }
     }
 
-    var error: FBEError? {
+    var error: FrisbeeError? {
         switch self {
         case let .fail(error): return error
         default: return nil
