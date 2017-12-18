@@ -1,7 +1,7 @@
 ![](https://i.imgur.com/OWfQe0m.png)
 
 # Frisbee
-Another simple network wrapper for URLSession. Built to be small and easy to create tests at the network layer of your application.
+Another network wrapper for URLSession. Built to be simple, small and easy to create tests at the network layer of your application.
 
 [![Build Status](https://www.bitrise.io/app/27a5e39dc511ba7c/status.svg?token=HZCmnpdBTIy3rOQdUv6HOg&branch=master)](https://www.bitrise.io/app/27a5e39dc511ba7c) [![CocoaPods](https://img.shields.io/cocoapods/v/Frisbee.svg)]() [![CocoaPods](https://img.shields.io/cocoapods/p/Frisbee.svg)]() [![Carthage](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)]() [![codecov](https://codecov.io/gh/ronanrodrigo/frisbee/branch/master/graph/badge.svg)](https://codecov.io/gh/ronanrodrigo/frisbee) [![codebeat badge](https://codebeat.co/badges/f5cf675c-2fca-4689-a42e-a7029a984fe3)](https://codebeat.co/projects/github-com-ronanrodrigo-frisbee-master)
 
