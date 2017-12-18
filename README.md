@@ -6,7 +6,7 @@ Another simple network wrapper for URLSession. Built to be small and easy to cre
 [![Build Status](https://www.bitrise.io/app/27a5e39dc511ba7c/status.svg?token=HZCmnpdBTIy3rOQdUv6HOg&branch=master)](https://www.bitrise.io/app/27a5e39dc511ba7c) [![CocoaPods](https://img.shields.io/cocoapods/v/Frisbee.svg)]() [![CocoaPods](https://img.shields.io/cocoapods/p/Frisbee.svg)]() [![Carthage](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)]() [![codecov](https://codecov.io/gh/ronanrodrigo/frisbee/branch/master/graph/badge.svg)](https://codecov.io/gh/ronanrodrigo/frisbee)
 
 ## Install
-### Carthage
+#### Carthage
 To integrate Frisbee into your Xcode project using Carthage, specify it in your Cartfile:
 
 ```
@@ -15,7 +15,7 @@ github "ronanrodrigo/Frisbee"
 
 Run carthage update to build the framework and drag the built Frisbee.framework into your Xcode project.
 
-### CocoaPods
+#### CocoaPods
 To integrate Frisbee into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
@@ -34,7 +34,7 @@ Then, run the following command:
 $ pod install
 ```
 
-### Swift Package Manager
+#### Swift Package Manager
 To integrate Frisbee into your Swift Package Manager project, set the dependencies in your `Package.swift`:
 
 ```swift
@@ -55,14 +55,14 @@ let package = Package(
 
 ## Usage
 
-### Create a decodable entity
+#### Create a decodable entity
 ```swift
 struct Movie: Decodable {
     let name: String
 }
 ```
 
-### This is an example of some code that will request some data across network.
+#### This is an example of some code that will request some data across network
 ```swift
 class MoviesController {
     private let getRequest: FBEGetable
@@ -85,7 +85,7 @@ class MoviesController {
 
 ```
 
-##### In production-ready code you must inject an instance of `FBENetworkGet`.
+#### In production-ready code you must inject an instance of `FBENetworkGet`
 ```swift
 // Who will call the MoviesController must inject a FBENetworkGet instance
 MoviesController(getRequest: FBENetworkGet())
@@ -93,7 +93,7 @@ MoviesController(getRequest: FBENetworkGet())
 
 # Usage in tests
 
-##### In test target code you can create your own `FBEGetable` mock.
+#### In test target code you can create your own `FBEGetable` mock.
 ```swift
 public class FBEMockGet: FBEGetable {
     var decodableMock: Decodable!
@@ -112,7 +112,7 @@ public class FBEMockGet: FBEGetable {
 
 ```
 
-##### And instead `FBENetworkGet` you will use to test the `FBEMockGet` on `MoviesController`
+#### And instead `FBENetworkGet` you will use to test the `FBEMockGet` on `MoviesController`
 ```swift
 
 class MoviesControllerTests: XCTestCase {
