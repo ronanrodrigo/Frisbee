@@ -36,6 +36,8 @@
 		344FC7291FE5D7FC00958CE4 /* ResultGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */; };
 		344FC72E1FE5DA3D00958CE4 /* Error+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC72C1FE5DA2C00958CE4 /* Error+Equatable.swift */; };
 		344FC72F1FE5DA4200958CE4 /* Result+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC72A1FE5DA0300958CE4 /* Result+Data.swift */; };
+		34F9C7261FE89650002C1EB0 /* QueryStringBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F9C7251FE89650002C1EB0 /* QueryStringBuilderTests.swift */; };
+		34F9C7281FE89C4B002C1EB0 /* QueryStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F9C7271FE89C4B002C1EB0 /* QueryStringBuilder.swift */; };
 		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_27 /* NetworkGetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NetworkGetterTests.swift */; };
 		OBJ_29 /* Frisbee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Frisbee::Frisbee::Product" /* Frisbee.framework */; };
@@ -74,6 +76,8 @@
 		344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeneratorTests.swift; sourceTree = "<group>"; };
 		344FC72A1FE5DA0300958CE4 /* Result+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Data.swift"; sourceTree = "<group>"; };
 		344FC72C1FE5DA2C00958CE4 /* Error+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Equatable.swift"; sourceTree = "<group>"; };
+		34F9C7251FE89650002C1EB0 /* QueryStringBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryStringBuilderTests.swift; sourceTree = "<group>"; };
+		34F9C7271FE89C4B002C1EB0 /* QueryStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryStringBuilder.swift; sourceTree = "<group>"; };
 		"Frisbee::Frisbee::Product" /* Frisbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Frisbee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = FrisbeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* NetworkGetterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGetterTests.swift; sourceTree = "<group>"; };
@@ -153,8 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				344FC71B1FE5B9D500958CE4 /* FrisbeeError.swift */,
-				344FC71D1FE5BA0200958CE4 /* Result.swift */,
 				3434A0B51FE7DA5A000659E5 /* HTTPMethod.swift */,
+				344FC71D1FE5BA0200958CE4 /* Result.swift */,
 			);
 			name = Entities;
 			path = Sources/Frisbee/Entities;
@@ -164,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_12 /* NetworkGetterTests.swift */,
-				344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */,
 			);
 			name = Requestables;
 			path = Tests/FrisbeeTests/Requestables;
@@ -174,9 +177,19 @@
 			isa = PBXGroup;
 			children = (
 				344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */,
+				34F9C7271FE89C4B002C1EB0 /* QueryStringBuilder.swift */,
 			);
 			name = Interactors;
 			path = Sources/Frisbee/Interactors;
+			sourceTree = SOURCE_ROOT;
+		};
+		34F9C7241FE895F6002C1EB0 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */,
+				34F9C7251FE89650002C1EB0 /* QueryStringBuilderTests.swift */,
+			);
+			path = Interactors;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_10 /* Tests */ = {
@@ -190,6 +203,7 @@
 		OBJ_11 /* FrisbeeTests */ = {
 			isa = PBXGroup;
 			children = (
+				34F9C7241FE895F6002C1EB0 /* Interactors */,
 				3434A0BD1FE7DFEF000659E5 /* Integration */,
 				3434A0B71FE7DBA8000659E5 /* Factories */,
 				344FC7321FE5DFD400958CE4 /* Requestables */,
@@ -363,6 +377,7 @@
 			buildActionMask = 0;
 			files = (
 				3434A0BF1FE7E025000659E5 /* IntegrationNetworkGetTests.swift in Sources */,
+				34F9C7261FE89650002C1EB0 /* QueryStringBuilderTests.swift in Sources */,
 				3434A0BA1FE7DC30000659E5 /* URLRequestFactoryTests.swift in Sources */,
 				344FC7291FE5D7FC00958CE4 /* ResultGeneratorTests.swift in Sources */,
 				344FC72E1FE5DA3D00958CE4 /* Error+Equatable.swift in Sources */,
@@ -385,6 +400,7 @@
 				344FC7201FE5BBFE00958CE4 /* NetworkGetter.swift in Sources */,
 				3434A0B21FE7D9CC000659E5 /* URLRequestFactory.swift in Sources */,
 				344FC71C1FE5B9D500958CE4 /* FrisbeeError.swift in Sources */,
+				34F9C7281FE89C4B002C1EB0 /* QueryStringBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
