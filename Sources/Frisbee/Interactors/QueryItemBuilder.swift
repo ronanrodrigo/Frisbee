@@ -1,6 +1,6 @@
 import Foundation
 
-struct QueryStringBuilder {
+struct QueryItemBuilder {
 
     static func build(query: [String: Any]) -> [URLQueryItem] {
         return query.map { keyAndValue -> URLQueryItem in

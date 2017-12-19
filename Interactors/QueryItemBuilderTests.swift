@@ -1,12 +1,12 @@
 import XCTest
 @testable import Frisbee
 
-final class QueryStringBuilderTests: XCTestCase {
+final class QueryItemBuilderTests: XCTestCase {
 
     func testBuildWhenValidDictionaryThenReturnQueryItem() {
         let queryDictionary: [String: Any] = ["name": "Ghostbuster", "release_year": 1984]
 
-        let queryItems = QueryStringBuilder.build(query: queryDictionary)
+        let queryItems = QueryItemBuilder.build(query: queryDictionary)
 
         XCTAssertEqual(queryItems.count, queryDictionary.values.count)
         XCTAssertTrue(queryItems.contains { $0.value == "1984" })
@@ -14,7 +14,7 @@ final class QueryStringBuilderTests: XCTestCase {
     }
 
     func testBuildWhenEmptyDictionaryThenReturnQueryItem() {
-        let queryItems = QueryStringBuilder.build(query: [:])
+        let queryItems = QueryItemBuilder.build(query: [:])
 
         XCTAssertTrue(queryItems.isEmpty)
     }
