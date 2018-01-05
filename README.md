@@ -91,7 +91,23 @@ class MoviesController {
 MoviesController(getRequest: NetworkGetter())
 ```
 
-# Usage in tests
+#### Query parameters
+It is easy to use query ~~strings~~ paramenters. Just create an `Encodable` struct and use it in `get(url:query:onComplete)` method.
+
+```swift
+struct MovieQuery: Encodable {
+    let page: Int
+}
+```
+
+```swift
+let query = MovieQuery(page: 10)
+NetworkGetter().get(url: url, query: query) { (result: Result<Movie>) in
+	// ...
+}
+```
+
+## Usage in tests
 
 #### In test target code you can create your own `Getable` mock.
 ```swift
