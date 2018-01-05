@@ -47,11 +47,55 @@ final class IntegrationNetworkGetTests: XCTestCase {
         }
     }
 
+    func testGetURLWhenHasValidURLWithValidEntityThenRequestAndTransformData() {
+        let expectation = self.expectation(description: "RequestMoviesWithSuccess")
+        let expectedMovieName = "Ghostbusters"
+        var returnedData: Movie?
+
+        guard let url = URL(string: self.url) else {
+            return XCTFail("Could not create URL")
+        }
+
+        NetworkGetter().get(url: url) { (result: Result<Movie>) in
+            returnedData = result.data
+            expectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 20) { expectationError in
+            XCTAssertNil(expectationError, expectationError!.localizedDescription)
+            XCTAssertEqual(returnedData?.name, expectedMovieName)
+        }
+    }
+
+    func testGetURLWhenHasQueryParametersAndValidURLWithValidEntityThenRequestAndTransformData() {
+        let expectation = self.expectation(description: "RequestMoviesWithSuccess")
+        let expectedMovieName = "Ghostbusters"
+        var returnedData: Movie?
+        let query = MovieQuery(page: 10)
+
+        guard let url = URL(string: self.url) else {
+            return XCTFail("Could not create URL")
+        }
+
+        NetworkGetter().get(url: url, query: query) { (result: Result<Movie>) in
+            returnedData = result.data
+            expectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 20) { expectationError in
+            XCTAssertNil(expectationError, expectationError!.localizedDescription)
+            XCTAssertEqual(returnedData?.name, expectedMovieName)
+        }
+    }
+
     static var allTests = [
         ("testGetWhenHasValidURLWithValidEntityThenRequestAndTransformData",
          testGetWhenHasValidURLWithValidEntityThenRequestAndTransformData),
         ("testGetWhenHasQueryParamentersAndValidURLWithValidEntityThenRequestAndTransformData",
-         testGetWhenHasQueryParamentersAndValidURLWithValidEntityThenRequestAndTransformData)
+         testGetWhenHasQueryParamentersAndValidURLWithValidEntityThenRequestAndTransformData),
+        ("testGetURLWhenHasValidURLWithValidEntityThenRequestAndTransformData",
+         testGetURLWhenHasValidURLWithValidEntityThenRequestAndTransformData),
+        ("testGetURLWhenHasQueryParametersAndValidURLWithValidEntityThenRequestAndTransformData",
+         testGetURLWhenHasQueryParametersAndValidURLWithValidEntityThenRequestAndTransformData)
     ]
-
 }

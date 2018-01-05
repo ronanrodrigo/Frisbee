@@ -19,7 +19,19 @@ public class NetworkGetter: Getable {
         makeRequest(url: url, onComplete: onComplete)
     }
 
+    public func get<Entity: Decodable>(url: URL, onComplete: @escaping (Result<Entity>) -> Void) {
+        makeRequest(url: url, onComplete: onComplete)
+    }
+
     public func get<Entity: Decodable, Query: Encodable>(url: String, query: Query,
+                                                         onComplete: @escaping (Result<Entity>) -> Void) {
+        guard let url = URL(string: url) else {
+            return onComplete(.fail(FrisbeeError.invalidUrl))
+        }
+        get(url: url, query: query, onComplete: onComplete)
+    }
+
+    public func get<Entity: Decodable, Query: Encodable>(url: URL, query: Query,
                                                          onComplete: @escaping (Result<Entity>) -> Void) {
         do {
             let url = try URLWithQueryBuilder.build(withUrl: url, query: query)
