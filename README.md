@@ -103,7 +103,7 @@ struct MovieQuery: Encodable {
 ```swift
 let query = MovieQuery(page: 10)
 NetworkGetter().get(url: url, query: query) { (result: Result<Movie>) in
-	// ...
+    // ...
 }
 ```
 
