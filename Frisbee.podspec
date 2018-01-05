@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage = "https://github.com/ronanrodrigo/Frisbee"
   s.license = {:type => "MIT", :file => "LICENSE"}
   s.author = {"Ronan Rodrigo Nunes" => "ronan.nunes@me.com"}
-  s.social_media_url = "https://twitter.com/ronanrodrigon"
+  s.social_media_url = "https://twitter.com/ronanrodrigo_"
   s.ios.deployment_target = "10.0"
   s.osx.deployment_target = "10.13"
   s.source = { :git => "https://github.com/ronanrodrigo/Frisbee.git", :tag => "#{s.version}" }
