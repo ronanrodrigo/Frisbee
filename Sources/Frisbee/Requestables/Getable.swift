@@ -1,6 +1,7 @@
 import Foundation
 
 public protocol Getable {
-    func get<Entity: Decodable>(url: URL, completionHandler: @escaping (Result<Entity>) -> Void)
-    func get<Entity: Decodable>(url: String, completionHandler: @escaping (Result<Entity>) -> Void)
+    func get<Entity: Decodable>(url: String, onComplete: @escaping (Result<Entity>) -> Void)
+    func get<Entity: Decodable, Query: Encodable>(url: String, query: Query,
+                                                  onComplete: @escaping (Result<Entity>) -> Void)
 }

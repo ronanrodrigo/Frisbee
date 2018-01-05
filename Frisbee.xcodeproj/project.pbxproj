@@ -27,6 +27,8 @@
 		3434A0BA1FE7DC30000659E5 /* URLRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0B81FE7DBC4000659E5 /* URLRequestFactoryTests.swift */; };
 		3434A0BC1FE7DD74000659E5 /* URLSessionFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0BB1FE7DD74000659E5 /* URLSessionFactoryTests.swift */; };
 		3434A0BF1FE7E025000659E5 /* IntegrationNetworkGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0BE1FE7E025000659E5 /* IntegrationNetworkGetTests.swift */; };
+		344DD87B1FFEFBE40021350B /* URLWithQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344DD8791FFEFB120021350B /* URLWithQueryBuilder.swift */; };
+		344DD87D1FFEFC910021350B /* URLWithQueryBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344DD87C1FFEFC910021350B /* URLWithQueryBuilderTests.swift */; };
 		344FC71A1FE5B93200958CE4 /* Getable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7191FE5B93200958CE4 /* Getable.swift */; };
 		344FC71C1FE5B9D500958CE4 /* FrisbeeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC71B1FE5B9D500958CE4 /* FrisbeeError.swift */; };
 		344FC71E1FE5BA0200958CE4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC71D1FE5BA0200958CE4 /* Result.swift */; };
@@ -67,6 +69,8 @@
 		3434A0B81FE7DBC4000659E5 /* URLRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactoryTests.swift; sourceTree = "<group>"; };
 		3434A0BB1FE7DD74000659E5 /* URLSessionFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFactoryTests.swift; sourceTree = "<group>"; };
 		3434A0BE1FE7E025000659E5 /* IntegrationNetworkGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkGetTests.swift; sourceTree = "<group>"; };
+		344DD8791FFEFB120021350B /* URLWithQueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLWithQueryBuilder.swift; sourceTree = "<group>"; };
+		344DD87C1FFEFC910021350B /* URLWithQueryBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLWithQueryBuilderTests.swift; sourceTree = "<group>"; };
 		344FC7191FE5B93200958CE4 /* Getable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Getable.swift; sourceTree = "<group>"; };
 		344FC71B1FE5B9D500958CE4 /* FrisbeeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrisbeeError.swift; sourceTree = "<group>"; };
 		344FC71D1FE5BA0200958CE4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 			children = (
 				34F9C72B1FE89F44002C1EB0 /* QueryItemBuilder.swift */,
 				344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */,
+				344DD8791FFEFB120021350B /* URLWithQueryBuilder.swift */,
 			);
 			name = Interactors;
 			path = Sources/Frisbee/Interactors;
@@ -188,6 +193,7 @@
 			children = (
 				34F9C7291FE89EF5002C1EB0 /* QueryItemBuilderTests.swift */,
 				344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */,
+				344DD87C1FFEFC910021350B /* URLWithQueryBuilderTests.swift */,
 			);
 			path = Interactors;
 			sourceTree = SOURCE_ROOT;
@@ -203,11 +209,11 @@
 		OBJ_11 /* FrisbeeTests */ = {
 			isa = PBXGroup;
 			children = (
-				34F9C7241FE895F6002C1EB0 /* Interactors */,
-				3434A0BD1FE7DFEF000659E5 /* Integration */,
-				3434A0B71FE7DBA8000659E5 /* Factories */,
-				344FC7321FE5DFD400958CE4 /* Requestables */,
 				344FC7211FE5BDAE00958CE4 /* Extensions */,
+				3434A0B71FE7DBA8000659E5 /* Factories */,
+				3434A0BD1FE7DFEF000659E5 /* Integration */,
+				34F9C7241FE895F6002C1EB0 /* Interactors */,
+				344FC7321FE5DFD400958CE4 /* Requestables */,
 			);
 			name = FrisbeeTests;
 			path = Tests/FrisbeeTests;
@@ -243,10 +249,10 @@
 		OBJ_8 /* Frisbee */ = {
 			isa = PBXGroup;
 			children = (
-				3434A0AF1FE7D912000659E5 /* Factories */,
 				344FC7311FE5DBAB00958CE4 /* Entities */,
-				344FC7301FE5DB7700958CE4 /* Requestables */,
+				3434A0AF1FE7D912000659E5 /* Factories */,
 				344FC7331FE5DFFD00958CE4 /* Interactors */,
+				344FC7301FE5DB7700958CE4 /* Requestables */,
 			);
 			name = Frisbee;
 			path = Sources/Frisbee;
@@ -380,6 +386,7 @@
 				3434A0BA1FE7DC30000659E5 /* URLRequestFactoryTests.swift in Sources */,
 				344FC7291FE5D7FC00958CE4 /* ResultGeneratorTests.swift in Sources */,
 				344FC72E1FE5DA3D00958CE4 /* Error+Equatable.swift in Sources */,
+				344DD87D1FFEFC910021350B /* URLWithQueryBuilderTests.swift in Sources */,
 				OBJ_27 /* NetworkGetterTests.swift in Sources */,
 				34F9C72A1FE89EF5002C1EB0 /* QueryItemBuilderTests.swift in Sources */,
 				344FC7241FE5C86200958CE4 /* Result+Equatable.swift in Sources */,
@@ -393,6 +400,7 @@
 			buildActionMask = 0;
 			files = (
 				344FC71A1FE5B93200958CE4 /* Getable.swift in Sources */,
+				344DD87B1FFEFBE40021350B /* URLWithQueryBuilder.swift in Sources */,
 				3434A0B41FE7D9FF000659E5 /* URLSessionFactory.swift in Sources */,
 				344FC71E1FE5BA0200958CE4 /* Result.swift in Sources */,
 				344FC7261FE5D76B00958CE4 /* ResultGenerator.swift in Sources */,

@@ -133,7 +133,7 @@ class MoviesControllerTests: XCTestCase {
 - [x] Get request
 - [x] Create Carthage distribution
 - [x] Create Cocoapod distribution
-- [ ] Query parameter builder
+- [x] Query parameter builder
 - [ ] Post request
 - [ ] Cache policy
 - [ ] Some mock ready for use

@@ -1,29 +1,38 @@
 import XCTest
 @testable import Frisbee
 
+private struct Movie: Encodable {
+    let name: String
+    let releaseYear: Int
+
+    enum CodingKeys: String, CodingKey {
+        case name, releaseYear = "release_year"
+    }
+}
+
 final class QueryItemBuilderTests: XCTestCase {
 
-    func testBuildWhenValidDictionaryThenReturnQueryItem() {
-        let queryDictionary: [String: Any] = ["name": "Ghostbuster", "release_year": 1984]
+    func testBuildWhenValidDictionaryThenReturnQueryItem() throws {
+        let entity = Movie(name: "Ghostbuster", releaseYear: 1984)
 
-        let queryItems = QueryItemBuilder.build(query: queryDictionary)
+        let queryItems = try QueryItemBuilder.build(withEntity: entity)
 
-        XCTAssertEqual(queryItems.count, queryDictionary.values.count)
-        XCTAssertTrue(queryItems.contains { $0.value == "1984" })
-        XCTAssertTrue(queryItems.contains { $0.value == "Ghostbuster" })
-    }
-
-    func testBuildWhenEmptyDictionaryThenReturnQueryItem() {
-        let queryItems = QueryItemBuilder.build(query: [:])
-
-        XCTAssertTrue(queryItems.isEmpty)
+        XCTAssertEqual(queryItems.count, 2)
+        XCTAssertContains(queryItems, { $0.name == "release_year" })
+        XCTAssertContains(queryItems, { $0.name == "name" })
+        XCTAssertContains(queryItems, { $0.value == "1984" })
+        XCTAssertContains(queryItems, { $0.value == "Ghostbuster" })
     }
 
     static var allTests = [
         ("testBuildWhenValidDictionaryThenReturnQueryItem",
-         testBuildWhenValidDictionaryThenReturnQueryItem),
-        ("testBuildWhenEmptyDictionaryThenReturnQueryItem",
-         testBuildWhenEmptyDictionaryThenReturnQueryItem)
+         testBuildWhenValidDictionaryThenReturnQueryItem)
     ]
 
+}
+
+extension XCTestCase {
+    func XCTAssertContains<T>(_ array: [T], _ predicate: (T) -> Bool, file: StaticString = #file, line: UInt = #line) {
+        XCTAssertTrue(array.contains(where: predicate))
+    }
 }
