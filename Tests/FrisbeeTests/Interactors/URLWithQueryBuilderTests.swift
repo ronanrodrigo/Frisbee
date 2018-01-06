@@ -20,7 +20,10 @@ class URLWithQueryBuilderTests: XCTestCase {
 
         let builtUrl = try? URLWithQueryBuilder.build(withUrl: url, query: query)
 
-        XCTAssertEqual(builtUrl?.absoluteString, "\(url)?page=\(query.page)&key_access=\(query.keyAccess)")
+        XCTAssertTrue(builtUrl?.absoluteString.starts(with: url) ?? false)
+        XCTAssertEqual("\(query.page)", getQueryValue(builtUrl?.absoluteString, "page"))
+        XCTAssertEqual("\(query.keyAccess)", getQueryValue(builtUrl?.absoluteString, "key_access"))
+        XCTAssertNil(getQueryValue(builtUrl?.absoluteString, "optional_int"))
     }
 
     func testBuildURLWhenHasCorrectQueryWithoutNilValueThenGenerateURLWithQueryStrings() {
@@ -29,8 +32,10 @@ class URLWithQueryBuilderTests: XCTestCase {
 
         let builtUrl = try? URLWithQueryBuilder.build(withUrl: url, query: query)
 
-        let expectedUrl = "\(url)?optional_int=\(query.optionalInt!)&page=\(query.page)&key_access=\(query.keyAccess)"
-        XCTAssertEqual(builtUrl?.absoluteString, expectedUrl)
+        XCTAssertTrue(builtUrl?.absoluteString.starts(with: url) ?? false)
+        XCTAssertEqual("\(query.page)", getQueryValue(builtUrl?.absoluteString, "page"))
+        XCTAssertEqual("\(query.keyAccess)", getQueryValue(builtUrl?.absoluteString, "key_access"))
+        XCTAssertEqual("\(query.optionalInt ?? 0)", getQueryValue(builtUrl?.absoluteString, "optional_int"))
     }
 
     func testBuildURLWhenHasInvalidUrlThenThrowInvalidURLError() {
@@ -38,6 +43,11 @@ class URLWithQueryBuilderTests: XCTestCase {
         let url = "http://www.çøµ.∫®"
 
         XCTAssertThrowsError(try URLWithQueryBuilder.build(withUrl: url, query: query))
+    }
+
+    private func getQueryValue(_ urlString: String?, _ param: String) -> String? {
+        guard let urlString = urlString, let url = URLComponents(string: urlString) else { return nil }
+        return url.queryItems?.first(where: { $0.name == param })?.value
     }
 
     static var allTests = [
