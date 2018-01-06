@@ -99,7 +99,7 @@ workflows:
         - content: |-
             curl -X "POST" "https://api.github.com/repos/ronanrodrigo/Frisbee/releases" \
                  -H 'Content-Type: application/json' \
-                 -u 'ronanrodrigo:822dc842119c097377d479d0a7b4162f032f25e6' \
+                 -u "ronanrodrigo:${GITHUB_OAUTH_TOKEN}" \
                  -d "{\"body\": \"Description of the release\", \"draft\": false, \"tag_name\": \"${FRISBEE_VERSION}\", \"target_commitish\": \"master\", \"name\": \"${FRISBEE_VERSION}\", \"prerelease\": false}"
     - cache-pull: {}
     - script:
