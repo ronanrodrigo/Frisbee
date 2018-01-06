@@ -19,9 +19,7 @@ final class URLSessionFactoryTests: XCTestCase {
         ("testMakeWithoutDelegateQueueThenReturnURLSessionWithDefaultDelegateQueue",
          testMakeWithoutDelegateQueueThenReturnURLSessionWithDefaultDelegateQueue),
         ("testMakeWithoutDelegateThenReturnURLSessionWithNilDelegate",
-         testMakeWithoutDelegateThenReturnURLSessionWithNilDelegate),
-        ("testMakeWithDefaultConfigurationThenReturnURLSession",
-         testMakeWithDefaultConfigurationThenReturnURLSession)
+         testMakeWithoutDelegateThenReturnURLSessionWithNilDelegate)
     ]
 
 }
