@@ -52,7 +52,6 @@ public class NetworkGetter: Getable {
         }
 
         task.resume()
-        urlSession.finishTasksAndInvalidate()
     }
 
 }
