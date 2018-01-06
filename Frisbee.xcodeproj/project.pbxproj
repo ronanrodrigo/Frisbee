@@ -70,17 +70,17 @@
 		3434A0BB1FE7DD74000659E5 /* URLSessionFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFactoryTests.swift; sourceTree = "<group>"; };
 		3434A0BE1FE7E025000659E5 /* IntegrationNetworkGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkGetTests.swift; sourceTree = "<group>"; };
 		344DD8791FFEFB120021350B /* URLWithQueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLWithQueryBuilder.swift; sourceTree = "<group>"; };
-		344DD87C1FFEFC910021350B /* URLWithQueryBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLWithQueryBuilderTests.swift; path = ../Tests/FrisbeeTests/Interactors/URLWithQueryBuilderTests.swift; sourceTree = "<group>"; };
+		344DD87C1FFEFC910021350B /* URLWithQueryBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLWithQueryBuilderTests.swift; sourceTree = "<group>"; };
 		344FC7191FE5B93200958CE4 /* Getable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Getable.swift; sourceTree = "<group>"; };
 		344FC71B1FE5B9D500958CE4 /* FrisbeeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrisbeeError.swift; sourceTree = "<group>"; };
 		344FC71D1FE5BA0200958CE4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		344FC71F1FE5BBFE00958CE4 /* NetworkGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGetter.swift; sourceTree = "<group>"; };
 		344FC7221FE5BDD400958CE4 /* Result+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Equatable.swift"; sourceTree = "<group>"; };
 		344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGenerator.swift; sourceTree = "<group>"; };
-		344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultGeneratorTests.swift; path = ../Tests/FrisbeeTests/Interactors/ResultGeneratorTests.swift; sourceTree = "<group>"; };
+		344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeneratorTests.swift; sourceTree = "<group>"; };
 		344FC72A1FE5DA0300958CE4 /* Result+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Data.swift"; sourceTree = "<group>"; };
 		344FC72C1FE5DA2C00958CE4 /* Error+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Equatable.swift"; sourceTree = "<group>"; };
-		34F9C7291FE89EF5002C1EB0 /* QueryItemBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueryItemBuilderTests.swift; path = ../Tests/FrisbeeTests/Interactors/QueryItemBuilderTests.swift; sourceTree = "<group>"; };
+		34F9C7291FE89EF5002C1EB0 /* QueryItemBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryItemBuilderTests.swift; sourceTree = "<group>"; };
 		34F9C72B1FE89F44002C1EB0 /* QueryItemBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryItemBuilder.swift; sourceTree = "<group>"; };
 		"Frisbee::Frisbee::Product" /* Frisbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Frisbee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = FrisbeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +195,8 @@
 				344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */,
 				344DD87C1FFEFC910021350B /* URLWithQueryBuilderTests.swift */,
 			);
-			path = Interactors;
+			name = Interactors;
+			path = Tests/FrisbeeTests/Interactors;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_10 /* Tests */ = {
