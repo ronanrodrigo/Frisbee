@@ -150,9 +150,9 @@ class MoviesControllerTests: XCTestCase {
 - [x] Create Carthage distribution
 - [x] Create Cocoapod distribution
 - [x] Query parameter builder
-- [ ] Post request
-- [ ] Cache policy
-- [ ] Some mock ready for use
-
+- [ ] [Issue # 8](https://github.com/ronanrodrigo/Frisbee/issues/8) Implement other HTTP verbs
+- [ ] [Issue # 9](https://github.com/ronanrodrigo/Frisbee/issues/9) Cache policy
+- [ ] [Issue # 7](https://github.com/ronanrodrigo/Frisbee/issues/7) Ready for use mock
+- [ ] [Issue # 2](https://github.com/ronanrodrigo/Frisbee/issues/2) Propagate Swift Errors
 # Telegram
 To collaborate, resolve questions and find out what's new about the Frisbee library, join the group on Telegram: https://t.me/FrisbeeLib
