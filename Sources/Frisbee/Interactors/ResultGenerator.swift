@@ -1,11 +1,7 @@
 import Foundation
 
-protocol ResultGeneratable {
-    associatedtype Entity
-    static func generate(data: Data?, error: Error?) -> Result<Entity>
-}
+struct ResultGenerator<Entity: Decodable> {
 
-struct ResultGenerator<Entity: Decodable>: ResultGeneratable {
     static func generate(data: Data?, error: Error?) -> Result<Entity> {
         if let data = data {
             let result: Result<Entity>
@@ -24,4 +20,5 @@ struct ResultGenerator<Entity: Decodable>: ResultGeneratable {
         let noDataError = FrisbeeError.noData
         return Result.fail(noDataError)
     }
+
 }
