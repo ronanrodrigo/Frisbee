@@ -3,14 +3,14 @@
 # Frisbee
 Another network wrapper for URLSession. Built to be simple, small and easy to create tests at the network layer of your application.
 
-[![Build Status](https://www.bitrise.io/app/27a5e39dc511ba7c/status.svg?token=HZCmnpdBTIy3rOQdUv6HOg&branch=master)](https://www.bitrise.io/app/27a5e39dc511ba7c) [![CocoaPods](https://img.shields.io/cocoapods/v/Frisbee.svg)]() [![CocoaPods](https://img.shields.io/cocoapods/p/Frisbee.svg)]() [![Carthage](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)]() [![codecov](https://codecov.io/gh/ronanrodrigo/frisbee/branch/master/graph/badge.svg)](https://codecov.io/gh/ronanrodrigo/frisbee) [![codebeat badge](https://codebeat.co/badges/f5cf675c-2fca-4689-a42e-a7029a984fe3)](https://codebeat.co/projects/github-com-ronanrodrigo-frisbee-master)
+[![Build Status](https://www.bitrise.io/app/27a5e39dc511ba7c/status.svg?token=HZCmnpdBTIy3rOQdUv6HOg&branch=master)](https://www.bitrise.io/app/27a5e39dc511ba7c) [![CocoaPods](https://img.shields.io/cocoapods/v/Frisbee.svg)]() [![CocoaPods](https://img.shields.io/cocoapods/p/Frisbee.svg)]() [![Carthage](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)]() [![codecov](https://codecov.io/gh/ronanrodrigo/frisbee/branch/master/graph/badge.svg)](https://codecov.io/gh/ronanrodrigo/frisbee) [![codebeat badge](https://codebeat.co/badges/f5cf675c-2fca-4689-a42e-a7029a984fe3)](https://codebeat.co/projects/github-com-ronanrodrigo-frisbee-master) [![Join at Telegram](https://img.shields.io/badge/telegram-join-319FD7.svg)](https://t.me/FrisbeeLib)
 
 ## Install
 #### Carthage
 To integrate Frisbee into your Xcode project using Carthage, specify it in your Cartfile:
 
 ```
-github "ronanrodrigo/Frisbee" ~> 0.1.1
+github "ronanrodrigo/Frisbee" ~> 0.1.4
 ```
 
 Run carthage update to build the framework and drag the built Frisbee.framework into your Xcode project.
@@ -24,7 +24,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'Frisbee', '0.1.1'
+    pod 'Frisbee', '0.1.4'
 end
 ```
 
@@ -45,7 +45,7 @@ import PackageDescription
 let package = Package(
     name: "<Your Packege Name>",
     dependencies: [
-        .package(url: "https://github.com/ronanrodrigo/Frisbee.git", from: "0.1.1")
+        .package(url: "https://github.com/ronanrodrigo/Frisbee.git", from: "0.1.4")
     ],
     targets: [
         .target(name: "<Your Packege Name>", dependencies: ["Frisbee"])
@@ -154,3 +154,5 @@ class MoviesControllerTests: XCTestCase {
 - [ ] Cache policy
 - [ ] Some mock ready for use
 
+# Telegram
+To collaborate, resolve questions and find out what's new about the Frisbee library, join the group on Telegram: https://t.me/FrisbeeLib
