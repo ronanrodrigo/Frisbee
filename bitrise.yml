@@ -1,0 +1,172 @@
+---
+format_version: '4'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: macos
+trigger_map:
+- push_branch: "*"
+  workflow: primary
+- pull_request_source_branch: "*"
+  workflow: primary
+workflows:
+  primary:
+    steps:
+    - codecov:
+        inputs:
+        - CODECOV_TOKEN: f16c3f4d-8a64-4cc2-8e9c-7f1b11a1279a
+    before_run:
+    - _start
+  deploy-minor:
+    steps:
+    - script:
+        inputs:
+        - content: |-
+            major_version=$( /usr/libexec/PlistBuddy -c "Print :Major" Frisbee.plist )
+            patch_version=0
+
+            current_minor_version=$( /usr/libexec/PlistBuddy -c "Print :Minor" Frisbee.plist )
+            minor_version=$(( $current_minor_version + 1 ))
+            /usr/libexec/PlistBuddy -c "Set :Minor ${minor_version}" Frisbee.plist
+            /usr/libexec/PlistBuddy -c "Set :Patch ${patch_version}" Frisbee.plist
+
+            envman add --key FRISBEE_VERSION --value "${major_version}.${minor_version}.${patch_version}"
+        title: Update version Frisbee.plist
+    before_run:
+    - _start
+    after_run:
+    - _submit
+  deploy-patch:
+    steps:
+    - script:
+        inputs:
+        - content: |-
+            major_version=$( /usr/libexec/PlistBuddy -c "Print :Major" Frisbee.plist )
+            minor_version=$( /usr/libexec/PlistBuddy -c "Print :Minor" Frisbee.plist )
+
+            current_patch_version=$( /usr/libexec/PlistBuddy -c "Print :Patch" Frisbee.plist )
+            patch_version=$(( $current_patch_version + 1 ))
+            /usr/libexec/PlistBuddy -c "Set :Patch ${patch_version}" Frisbee.plist
+
+            envman add --key FRISBEE_VERSION --value "${major_version}.${minor_version}.${patch_version}"
+        title: Update version Frisbee.plist
+    before_run:
+    - _start
+    after_run:
+    - _submit
+  deploy-major:
+    steps:
+    - script:
+        inputs:
+        - content: |-
+            minor_version=0
+            patch_version=0
+
+            current_major_version=$( /usr/libexec/PlistBuddy -c "Print :Major" Frisbee.plist )
+            major_version=$(( $current_major_version + 1 ))
+            /usr/libexec/PlistBuddy -c "Set :Major ${major_version}" Frisbee.plist
+            /usr/libexec/PlistBuddy -c "Set :Minor ${minor_version}" Frisbee.plist
+            /usr/libexec/PlistBuddy -c "Set :Patch ${patch_version}" Frisbee.plist
+
+            envman add --key FRISBEE_VERSION --value "${major_version}.${minor_version}.${patch_version}"
+        title: Update version Frisbee.plist
+    before_run:
+    - _start
+    after_run:
+    - _submit
+  _submit:
+    steps:
+    - script@1.1.5:
+        title: Commit Frisbee.plist
+        inputs:
+        - content: |-
+            git add Frisbee.plist
+            git commit -m "Update Frisbee.plist to $FRISBEE_VERSION [skip ci]"
+    - script@1.1.5:
+        title: Update README.md
+        inputs:
+        - content: |-
+            file=README.md
+
+            old_value="[0-9]+\.[0-9]+\.[0-9]+"
+
+            sed -E "s/$old_value/$FRISBEE_VERSION/g" "$file" > "$file.new" && mv "$file.new" "$file"
+
+            git add README.md
+            git commit -m "Update README.md to reference $FRISBEE_VERSION [skip ci]"
+    - script:
+        title: Create Release
+        inputs:
+        - is_debug: 'yes'
+        - content: |-
+            curl -X "POST" "https://api.github.com/repos/ronanrodrigo/Frisbee/releases" \
+                 -H 'Content-Type: application/json' \
+                 -u 'ronanrodrigo:822dc842119c097377d479d0a7b4162f032f25e6' \
+                 -d "{\"body\": \"Description of the release\", \"draft\": false, \"tag_name\": \"${FRISBEE_VERSION}\", \"target_commitish\": \"master\", \"name\": \"${FRISBEE_VERSION}\", \"prerelease\": false}"
+    - cache-pull: {}
+    - script:
+        title: Submit Cocoapod
+        inputs:
+        - content: |-
+            cat > Frisbee.podspec <<- EOM
+            Pod::Spec.new do |s|
+              s.name = "Frisbee"
+              s.version = "$FRISBEE_VERSION"
+              s.summary = "Another network wrapper for URLSession"
+              s.description = "Built to make it easy to create tests for your application's network layer."
+              s.homepage = "https://github.com/ronanrodrigo/Frisbee"
+              s.license = {:type => "MIT", :file => "LICENSE"}
+              s.author = {"Ronan Rodrigo Nunes" => "ronan.nunes@me.com"}
+              s.social_media_url = "https://twitter.com/ronanrodrigo_"
+              s.ios.deployment_target = "10.0"
+              s.osx.deployment_target = "10.13"
+              s.source = { :git => "https://github.com/ronanrodrigo/Frisbee.git", :tag => "#{s.version}" }
+              s.source_files = "Sources/**/*.{swift}"
+              s.exclude_files = "Tests"
+            end
+            EOM
+
+            bundle install
+
+            bundle exec pod trunk push Frisbee.podspec
+
+            git add Frisbee.podspec
+            git commit -m "Update Frisbee.podspec to $FRISBEE_VERSION [skip ci]"
+    - script:
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ev
+            envman add --key GEM_HOME --value "$(gem environment gemdir)"
+        title: Set GEM_HOME env var
+    - cache-push:
+        inputs:
+        - cache_paths: "$GEM_HOME"
+    - script:
+        inputs:
+        - content: git push origin master
+        title: Push to Master
+    - script:
+        inputs:
+        - content: 'curl -X POST -H "Content-Type: application/json" -d "{\"value1\":\"${FRISBEE_VERSION}\"}"
+            https://maker.ifttt.com/trigger/frisbee_deployed/with/key/nxQ9BMglU9TxGH1pbX6JobpP9JRiGiZYcWr0EUYaYdl'
+        title: Push Notification
+    before_run: []
+  _start:
+    steps:
+    - activate-ssh-key@3.1.1:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone: {}
+    - xcode-test-mac:
+        inputs:
+        - project_path: "$BITRISE_PROJECT_PATH"
+        - scheme: "$BITRISE_SCHEME"
+app:
+  envs:
+  - opts:
+      is_expand: false
+    BITRISE_PROJECT_PATH: Frisbee.xcodeproj
+  - opts:
+      is_expand: false
+    BITRISE_SCHEME: Frisbee-Package
+  - opts:
+      is_expand: false
+    BITRISE_EXPORT_METHOD: none
