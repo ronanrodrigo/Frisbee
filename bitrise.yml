@@ -12,7 +12,7 @@ workflows:
     steps:
     - codecov:
         inputs:
-        - CODECOV_TOKEN: f16c3f4d-8a64-4cc2-8e9c-7f1b11a1279a
+        - CODECOV_TOKEN: "$CODECOV_TOKEN"
     before_run:
     - _start
   deploy-minor:
@@ -147,7 +147,7 @@ workflows:
     - script:
         inputs:
         - content: 'curl -X POST -H "Content-Type: application/json" -d "{\"value1\":\"${FRISBEE_VERSION}\"}"
-            https://maker.ifttt.com/trigger/frisbee_deployed/with/key/nxQ9BMglU9TxGH1pbX6JobpP9JRiGiZYcWr0EUYaYdl'
+            https://maker.ifttt.com/trigger/frisbee_deployed/with/key/$IFTTT_TOKEN'
         title: Push Notification
     before_run: []
   _start:
