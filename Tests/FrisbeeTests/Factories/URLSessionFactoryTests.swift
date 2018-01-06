@@ -3,12 +3,6 @@ import XCTest
 
 final class URLSessionFactoryTests: XCTestCase {
 
-    func testMakeWithDefaultConfigurationThenReturnURLSession() {
-        let urlSession = URLSessionFactory.make()
-
-        XCTAssertEqual(urlSession.configuration, URLSessionConfiguration.default)
-    }
-
     func testMakeWithoutDelegateThenReturnURLSessionWithNilDelegate() {
         let urlSession = URLSessionFactory.make()
 
