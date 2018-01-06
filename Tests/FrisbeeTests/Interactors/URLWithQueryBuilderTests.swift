@@ -16,6 +16,20 @@ class URLWithQueryBuilderTests: XCTestCase {
 
     func testBuildURLWhenHasCorrectQueryWithNilValueThenGenerateURLWithQueryStrings() {
         let query = MovieQuery(page: 1, keyAccess: "a1d13so979", optionalInt: nil)
+        guard let url = URL(string: "http://www.com.br") else {
+            return XCTFail("Invalid URL")
+        }
+
+        let builtUrl = try? URLWithQueryBuilder.build(withUrl: url, query: query)
+
+        XCTAssertTrue(builtUrl?.absoluteString.starts(with: url.absoluteString) ?? false)
+        XCTAssertEqual("\(query.page)", getQueryValue(builtUrl?.absoluteString, "page"))
+        XCTAssertEqual("\(query.keyAccess)", getQueryValue(builtUrl?.absoluteString, "key_access"))
+        XCTAssertNil(getQueryValue(builtUrl?.absoluteString, "optional_int"))
+    }
+
+    func testBuildStringURLWhenHasCorrectQueryWithNilValueThenGenerateURLWithQueryStrings() {
+        let query = MovieQuery(page: 1, keyAccess: "a1d13so979", optionalInt: nil)
         let url = "http://www.com.br"
 
         let builtUrl = try? URLWithQueryBuilder.build(withUrl: url, query: query)
@@ -28,6 +42,20 @@ class URLWithQueryBuilderTests: XCTestCase {
 
     func testBuildURLWhenHasCorrectQueryWithoutNilValueThenGenerateURLWithQueryStrings() {
         let query = MovieQuery(page: 1, keyAccess: "a1d13so979", optionalInt: 10)
+        guard let url = URL(string: "http://www.com.br") else {
+            return XCTFail("Invalid URL")
+        }
+
+        let builtUrl = try? URLWithQueryBuilder.build(withUrl: url, query: query)
+
+        XCTAssertTrue(builtUrl?.absoluteString.starts(with: url.absoluteString) ?? false)
+        XCTAssertEqual("\(query.page)", getQueryValue(builtUrl?.absoluteString, "page"))
+        XCTAssertEqual("\(query.keyAccess)", getQueryValue(builtUrl?.absoluteString, "key_access"))
+        XCTAssertEqual("\(query.optionalInt ?? 0)", getQueryValue(builtUrl?.absoluteString, "optional_int"))
+    }
+
+    func testBuildStringURLWhenHasCorrectQueryWithoutNilValueThenGenerateURLWithQueryStrings() {
+        let query = MovieQuery(page: 1, keyAccess: "a1d13so979", optionalInt: 10)
         let url = "http://www.com.br"
 
         let builtUrl = try? URLWithQueryBuilder.build(withUrl: url, query: query)
@@ -38,11 +66,13 @@ class URLWithQueryBuilderTests: XCTestCase {
         XCTAssertEqual("\(query.optionalInt ?? 0)", getQueryValue(builtUrl?.absoluteString, "optional_int"))
     }
 
-    func testBuildURLWhenHasInvalidUrlThenThrowInvalidURLError() {
+    func testBuildStringURLWhenHasInvalidUrlThenThrowInvalidURLError() {
         let query = MovieQuery(page: 1, keyAccess: "a1d13so979", optionalInt: 10)
         let url = "http://www.çøµ.∫®"
 
-        XCTAssertThrowsError(try URLWithQueryBuilder.build(withUrl: url, query: query))
+        XCTAssertThrowsError(try URLWithQueryBuilder.build(withUrl: url, query: query)) {
+            XCTAssertEqual($0 as? FrisbeeError, FrisbeeError.invalidUrl)
+        }
     }
 
     private func getQueryValue(_ urlString: String?, _ param: String) -> String? {
@@ -53,10 +83,14 @@ class URLWithQueryBuilderTests: XCTestCase {
     static var allTests = [
         ("testBuildURLWhenHasCorrectQueryWithNilValueThenGenerateURLWithQueryStrings",
          testBuildURLWhenHasCorrectQueryWithNilValueThenGenerateURLWithQueryStrings),
+        ("testBuildStringURLWhenHasCorrectQueryWithNilValueThenGenerateURLWithQueryStrings",
+         testBuildStringURLWhenHasCorrectQueryWithNilValueThenGenerateURLWithQueryStrings),
         ("testBuildURLWhenHasCorrectQueryWithoutNilValueThenGenerateURLWithQueryStrings",
          testBuildURLWhenHasCorrectQueryWithoutNilValueThenGenerateURLWithQueryStrings),
-        ("testBuildURLWhenHasInvalidUrlThenThrowInvalidURLError",
-         testBuildURLWhenHasInvalidUrlThenThrowInvalidURLError)
+        ("testBuildStringURLWhenHasCorrectQueryWithoutNilValueThenGenerateURLWithQueryStrings",
+         testBuildStringURLWhenHasCorrectQueryWithoutNilValueThenGenerateURLWithQueryStrings),
+        ("testBuildStringURLWhenHasInvalidUrlThenThrowInvalidURLError",
+         testBuildStringURLWhenHasInvalidUrlThenThrowInvalidURLError)
     ]
 
 }
