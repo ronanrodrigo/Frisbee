@@ -5,7 +5,7 @@ struct Fake: Codable { let fake: String }
 
 final class ResultGeneratorTests: XCTestCase {
 
-    private let someError = NSError(domain: "Some error", code: Int(arc4random()), userInfo: nil)
+    private let someError = NSError(domain: "Some error", code: 33, userInfo: nil)
     private let fakeString = "Fake Fake"
 
     func testGenerateResultWhenInvalidDataThenGenerateSuccessResult() {
