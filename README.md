@@ -155,4 +155,4 @@ class MoviesControllerTests: XCTestCase {
 - [ ] Some mock ready for use
 
 # Telegram
-If you want to talk about the Frisbee library, join the group on Telegram: https://t.me/FrisbeeLib
+To collaborate, resolve questions and find out what's new about the Frisbee library, join the group on Telegram: https://t.me/FrisbeeLib
