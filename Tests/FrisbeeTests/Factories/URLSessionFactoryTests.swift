@@ -21,4 +21,13 @@ final class URLSessionFactoryTests: XCTestCase {
         XCTAssertNotNil(urlSession.delegateQueue)
     }
 
+    static var allTests = [
+        ("testMakeWithoutDelegateQueueThenReturnURLSessionWithDefaultDelegateQueue",
+         testMakeWithoutDelegateQueueThenReturnURLSessionWithDefaultDelegateQueue),
+        ("testMakeWithoutDelegateThenReturnURLSessionWithNilDelegate",
+         testMakeWithoutDelegateThenReturnURLSessionWithNilDelegate),
+        ("testMakeWithDefaultConfigurationThenReturnURLSession",
+         testMakeWithDefaultConfigurationThenReturnURLSession)
+    ]
+
 }

@@ -47,4 +47,11 @@ final class IntegrationNetworkGetTests: XCTestCase {
         }
     }
 
+    static var allTests = [
+        ("testGetWhenHasValidURLWithValidEntityThenRequestAndTransformData",
+         testGetWhenHasValidURLWithValidEntityThenRequestAndTransformData),
+        ("testGetWhenHasQueryParamentersAndValidURLWithValidEntityThenRequestAndTransformData",
+         testGetWhenHasQueryParamentersAndValidURLWithValidEntityThenRequestAndTransformData)
+    ]
+
 }

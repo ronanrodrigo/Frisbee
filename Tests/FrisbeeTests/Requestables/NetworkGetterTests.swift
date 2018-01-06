@@ -24,7 +24,9 @@ final class NetworkGetterTests: XCTestCase {
 
     static var allTests = [
         ("testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError",
-         testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError)
+         testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError),
+        ("testInitWithCustomUrlSessionThenKeepSameReferenceOfUrlSession",
+         testInitWithCustomUrlSessionThenKeepSameReferenceOfUrlSession)
     ]
 
 }

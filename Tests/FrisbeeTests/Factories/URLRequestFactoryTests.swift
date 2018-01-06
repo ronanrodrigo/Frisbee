@@ -27,4 +27,13 @@ final class URLRequestFactoryTests: XCTestCase {
         XCTAssertEqual(request.httpMethod, HTTPMethod.POST.rawValue)
     }
 
+    static var allTests = [
+        ("testMakeWhenGetMethodThenReturnAnURLRequestWithGetVerb",
+         testMakeWhenGetMethodThenReturnAnURLRequestWithGetVerb),
+        ("testMakeWithURLThenReturnAnURLRequestWithCorrectURL",
+         testMakeWithURLThenReturnAnURLRequestWithCorrectURL),
+        ("testMakeWhenPostMethodThenReturnAnURLRequestWithPostVerb",
+         testMakeWhenPostMethodThenReturnAnURLRequestWithPostVerb)
+    ]
+
 }

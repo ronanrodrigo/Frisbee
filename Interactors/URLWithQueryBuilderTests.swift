@@ -40,4 +40,13 @@ class URLWithQueryBuilderTests: XCTestCase {
         XCTAssertThrowsError(try URLWithQueryBuilder.build(withUrl: url, query: query))
     }
 
+    static var allTests = [
+        ("testBuildURLWhenHasCorrectQueryWithNilValueThenGenerateURLWithQueryStrings",
+         testBuildURLWhenHasCorrectQueryWithNilValueThenGenerateURLWithQueryStrings),
+        ("testBuildURLWhenHasCorrectQueryWithoutNilValueThenGenerateURLWithQueryStrings",
+         testBuildURLWhenHasCorrectQueryWithoutNilValueThenGenerateURLWithQueryStrings),
+        ("testBuildURLWhenHasInvalidUrlThenThrowInvalidURLError",
+         testBuildURLWhenHasInvalidUrlThenThrowInvalidURLError)
+    ]
+
 }
