@@ -10,7 +10,7 @@ Another network wrapper for URLSession. Built to be simple, small and easy to cr
 To integrate Frisbee into your Xcode project using Carthage, specify it in your Cartfile:
 
 ```
-github "ronanrodrigo/Frisbee" ~> 0.1.5
+github "ronanrodrigo/Frisbee" ~> 0.1.6
 ```
 
 Run carthage update to build the framework and drag the built Frisbee.framework into your Xcode project.
@@ -24,7 +24,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'Frisbee', '0.1.5'
+    pod 'Frisbee', '0.1.6'
 end
 ```
 
@@ -45,7 +45,7 @@ import PackageDescription
 let package = Package(
     name: "<Your Packege Name>",
     dependencies: [
-        .package(url: "https://github.com/ronanrodrigo/Frisbee.git", from: "0.1.5")
+        .package(url: "https://github.com/ronanrodrigo/Frisbee.git", from: "0.1.6")
     ],
     targets: [
         .target(name: "<Your Packege Name>", dependencies: ["Frisbee"])
