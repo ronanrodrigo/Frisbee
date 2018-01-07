@@ -1,77 +1,29 @@
----
-format_version: '4'
+format_version: "4"
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: macos
+app:
+  envs:
+  - BITRISE_PROJECT_PATH: Frisbee.xcodeproj
+    opts:
+      is_expand: false
+  - BITRISE_SCHEME: Frisbee-Package
+    opts:
+      is_expand: false
+  - BITRISE_EXPORT_METHOD: none
+    opts:
+      is_expand: false
 trigger_map:
-- push_branch: "*"
+- push_branch: '*'
   workflow: primary
-- pull_request_source_branch: "*"
+- pull_request_source_branch: '*'
   workflow: primary
 workflows:
-  primary:
-    steps:
-    - codecov:
-        inputs:
-        - CODECOV_TOKEN: "$CODECOV_TOKEN"
-    before_run:
-    - _start
-  deploy-minor:
+  _start:
     steps:
     - script:
+        title: Swift Tests - Without Coverage!
         inputs:
-        - content: |-
-            major_version=$( /usr/libexec/PlistBuddy -c "Print :Major" Frisbee.plist )
-            patch_version=0
-
-            current_minor_version=$( /usr/libexec/PlistBuddy -c "Print :Minor" Frisbee.plist )
-            minor_version=$(( $current_minor_version + 1 ))
-            /usr/libexec/PlistBuddy -c "Set :Minor ${minor_version}" Frisbee.plist
-            /usr/libexec/PlistBuddy -c "Set :Patch ${patch_version}" Frisbee.plist
-
-            envman add --key FRISBEE_VERSION --value "${major_version}.${minor_version}.${patch_version}"
-        title: Update version Frisbee.plist
-    before_run:
-    - _start
-    after_run:
-    - _submit
-  deploy-patch:
-    steps:
-    - script:
-        inputs:
-        - content: |-
-            major_version=$( /usr/libexec/PlistBuddy -c "Print :Major" Frisbee.plist )
-            minor_version=$( /usr/libexec/PlistBuddy -c "Print :Minor" Frisbee.plist )
-
-            current_patch_version=$( /usr/libexec/PlistBuddy -c "Print :Patch" Frisbee.plist )
-            patch_version=$(( $current_patch_version + 1 ))
-            /usr/libexec/PlistBuddy -c "Set :Patch ${patch_version}" Frisbee.plist
-
-            envman add --key FRISBEE_VERSION --value "${major_version}.${minor_version}.${patch_version}"
-        title: Update version Frisbee.plist
-    before_run:
-    - _start
-    after_run:
-    - _submit
-  deploy-major:
-    steps:
-    - script:
-        inputs:
-        - content: |-
-            minor_version=0
-            patch_version=0
-
-            current_major_version=$( /usr/libexec/PlistBuddy -c "Print :Major" Frisbee.plist )
-            major_version=$(( $current_major_version + 1 ))
-            /usr/libexec/PlistBuddy -c "Set :Major ${major_version}" Frisbee.plist
-            /usr/libexec/PlistBuddy -c "Set :Minor ${minor_version}" Frisbee.plist
-            /usr/libexec/PlistBuddy -c "Set :Patch ${patch_version}" Frisbee.plist
-
-            envman add --key FRISBEE_VERSION --value "${major_version}.${minor_version}.${patch_version}"
-        title: Update version Frisbee.plist
-    before_run:
-    - _start
-    after_run:
-    - _submit
+        - content: swift test --parallel
   _submit:
     steps:
     - script@1.1.5:
@@ -95,7 +47,7 @@ workflows:
     - script:
         title: Create Release
         inputs:
-        - is_debug: 'yes'
+        - is_debug: "yes"
         - content: |-
             curl -X "POST" "https://api.github.com/repos/ronanrodrigo/Frisbee/releases" \
                  -H 'Content-Type: application/json' \
@@ -131,39 +83,87 @@ workflows:
             git add Frisbee.podspec
             git commit -m "Update Frisbee.podspec to $FRISBEE_VERSION [skip ci]"
     - script:
+        title: Set GEM_HOME env var
         inputs:
         - content: |-
             #!/bin/bash
             set -ev
             envman add --key GEM_HOME --value "$(gem environment gemdir)"
-        title: Set GEM_HOME env var
     - cache-push:
         inputs:
-        - cache_paths: "$GEM_HOME"
+        - cache_paths: $GEM_HOME
     - script:
+        title: Push to Master
         inputs:
         - content: git push origin master
-        title: Push to Master
     - script:
+        title: Push Notification
         inputs:
         - content: 'curl -X POST -H "Content-Type: application/json" -d "{\"value1\":\"${FRISBEE_VERSION}\"}"
             https://maker.ifttt.com/trigger/frisbee_deployed/with/key/$IFTTT_TOKEN'
-        title: Push Notification
-    before_run: []
-  _start:
+  deploy-major:
+    before_run:
+    - _start
+    after_run:
+    - _submit
+    steps:
+    - script:
+        title: Update version Frisbee.plist
+        inputs:
+        - content: |-
+            minor_version=0
+            patch_version=0
+
+            current_major_version=$( /usr/libexec/PlistBuddy -c "Print :Major" Frisbee.plist )
+            major_version=$(( $current_major_version + 1 ))
+            /usr/libexec/PlistBuddy -c "Set :Major ${major_version}" Frisbee.plist
+            /usr/libexec/PlistBuddy -c "Set :Minor ${minor_version}" Frisbee.plist
+            /usr/libexec/PlistBuddy -c "Set :Patch ${patch_version}" Frisbee.plist
+
+            envman add --key FRISBEE_VERSION --value "${major_version}.${minor_version}.${patch_version}"
+  deploy-minor:
+    before_run:
+    - _start
+    after_run:
+    - _submit
+    steps:
+    - script:
+        title: Update version Frisbee.plist
+        inputs:
+        - content: |-
+            major_version=$( /usr/libexec/PlistBuddy -c "Print :Major" Frisbee.plist )
+            patch_version=0
+
+            current_minor_version=$( /usr/libexec/PlistBuddy -c "Print :Minor" Frisbee.plist )
+            minor_version=$(( $current_minor_version + 1 ))
+            /usr/libexec/PlistBuddy -c "Set :Minor ${minor_version}" Frisbee.plist
+            /usr/libexec/PlistBuddy -c "Set :Patch ${patch_version}" Frisbee.plist
+
+            envman add --key FRISBEE_VERSION --value "${major_version}.${minor_version}.${patch_version}"
+  deploy-patch:
+    before_run:
+    - _start
+    after_run:
+    - _submit
+    steps:
+    - script:
+        title: Update version Frisbee.plist
+        inputs:
+        - content: |-
+            major_version=$( /usr/libexec/PlistBuddy -c "Print :Major" Frisbee.plist )
+            minor_version=$( /usr/libexec/PlistBuddy -c "Print :Minor" Frisbee.plist )
+
+            current_patch_version=$( /usr/libexec/PlistBuddy -c "Print :Patch" Frisbee.plist )
+            patch_version=$(( $current_patch_version + 1 ))
+            /usr/libexec/PlistBuddy -c "Set :Patch ${patch_version}" Frisbee.plist
+
+            envman add --key FRISBEE_VERSION --value "${major_version}.${minor_version}.${patch_version}"
+  primary:
     steps:
     - xcode-test-mac:
         inputs:
-        - project_path: "$BITRISE_PROJECT_PATH"
-        - scheme: "$BITRISE_SCHEME"
-app:
-  envs:
-  - opts:
-      is_expand: false
-    BITRISE_PROJECT_PATH: Frisbee.xcodeproj
-  - opts:
-      is_expand: false
-    BITRISE_SCHEME: Frisbee-Package
-  - opts:
-      is_expand: false
-    BITRISE_EXPORT_METHOD: none
+        - project_path: $BITRISE_PROJECT_PATH
+        - scheme: $BITRISE_SCHEME
+    - codecov:
+        inputs:
+        - CODECOV_TOKEN: $CODECOV_TOKEN
