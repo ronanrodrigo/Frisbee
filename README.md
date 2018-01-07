@@ -151,7 +151,6 @@ class MoviesControllerTests: XCTestCase {
 - [x] Create Cocoapod distribution
 - [x] Query parameter builder
 - [ ] [Issue # 8](https://github.com/ronanrodrigo/Frisbee/issues/8) Implement other HTTP verbs
-- [ ] [Issue # 9](https://github.com/ronanrodrigo/Frisbee/issues/9) Cache policy
 - [ ] [Issue # 7](https://github.com/ronanrodrigo/Frisbee/issues/7) Ready for use mock
 - [ ] [Issue # 2](https://github.com/ronanrodrigo/Frisbee/issues/2) Propagate Swift Errors
 # Telegram
