@@ -3,15 +3,8 @@ import Frisbee
 import XCTest
 
 class ResultTests: XCTestCase {
-    private struct SomeEntity {}
-    private struct SomeEquatableEntity: Equatable {
-        static func == (lhs: SomeEquatableEntity,
-                        rhs: SomeEquatableEntity) -> Bool {
-            return true
-        }
-    }
 
-    func testProperties() {
+    func testEquatableEnumCasesWhenAssociatedValueAreEquatableThenShouldBeEqual() {
         let success = Result.success(SomeEquatableEntity())
         let fail = Result<SomeEquatableEntity>.fail(FrisbeeError.invalidEntity)
 
@@ -24,7 +17,7 @@ class ResultTests: XCTestCase {
         XCTAssertNil(fail.data)
     }
 
-    func testEquality() {
+    func testEquatableEnumCasesWhenAssociatedValueArentEquatableThenShoudBeNotEqual() {
         let success = Result.success(SomeEntity())
         let fail = Result<SomeEntity>.fail(FrisbeeError.invalidEntity)
 
@@ -34,7 +27,7 @@ class ResultTests: XCTestCase {
         XCTAssertEqual(fail, fail)
     }
 
-    func testEqualityOperatorWithEquatableEntity() {
+    func testEqualityOperatorWhenEquatableEntityThenShoudeBeEqual() {
         let success = Result.success(SomeEquatableEntity())
         let fail = Result<SomeEquatableEntity>.fail(FrisbeeError.invalidEntity)
 
@@ -43,4 +36,14 @@ class ResultTests: XCTestCase {
         XCTAssertFalse(success == fail)
         XCTAssertFalse(fail == success)
     }
+
+    static var allTests = [
+        ("testEquatableEnumCasesWhenAssociatedValueAreEquatableThenShouldBeEqual",
+         testEquatableEnumCasesWhenAssociatedValueAreEquatableThenShouldBeEqual),
+        ("testEquatableEnumCasesWhenAssociatedValueArentEquatableThenShoudBeNotEqual",
+         testEquatableEnumCasesWhenAssociatedValueArentEquatableThenShoudBeNotEqual),
+        ("testEqualityOperatorWhenEquatableEntityThenShoudeBeEqual",
+         testEqualityOperatorWhenEquatableEntityThenShoudeBeEqual)
+    ]
+
 }
