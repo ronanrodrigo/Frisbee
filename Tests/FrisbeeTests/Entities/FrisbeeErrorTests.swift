@@ -3,17 +3,18 @@ import Frisbee
 import XCTest
 
 class FrisbeeErrorTests: XCTestCase {
-    func testEquality() {
+
+    func testEquatableFromAllPossibleErrorsThenBeEqual() {
         let all = FrisbeeError.all(error: SomeError.some)
 
-        // asserts diagonal equality
         zip(all, all).forEach { lhs, rhs in
             XCTAssertEqual(lhs, rhs)
         }
     }
 
-    func testInequality() {
+    func testInequatableFromAllPossibleErrorsThenBeNotEqual() {
         let all = FrisbeeError.all(error: SomeError.some).enumerated()
+
         all.extensiveCombine(all).forEach { lhs, rhs in
             if lhs.offset == rhs.offset { //diagonal cases
                 XCTAssertEqual(lhs.element, rhs.element)
@@ -22,12 +23,12 @@ class FrisbeeErrorTests: XCTestCase {
             }
         }
     }
-}
 
-extension FrisbeeError {
-    static func all(error: Error) -> [FrisbeeError] {
-        return [FrisbeeError.invalidUrl, .invalidQuery,
-                .invalidEntity, .noData, .unknown,
-                .other(localizedDescription: error.localizedDescription)]
-    }
+    static var allTests = [
+        ("testEquatableFromAllPossibleErrorsThenBeEqual",
+         testEquatableFromAllPossibleErrorsThenBeEqual),
+        ("testInequatableFromAllPossibleErrorsThenBeNotEqual",
+         testInequatableFromAllPossibleErrorsThenBeNotEqual)
+    ]
+
 }
