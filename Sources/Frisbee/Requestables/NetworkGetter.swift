@@ -1,9 +1,6 @@
 import Foundation
 
-@available(*, deprecated, message: "use NetworkGet")
-typealias NetworkGetter = NetworkGet
-
-public class NetworkGet: Getable {
+public class NetworkGetter: Getable {
 
     let urlSession: URLSession
 

@@ -8,7 +8,7 @@ final class NetworkGetterTests: XCTestCase {
 
     func testInitWithCustomUrlSessionThenKeepSameReferenceOfUrlSession() {
         let urlSession = URLSession(configuration: .default)
-        let networkGetter = NetworkGet(urlSession: urlSession)
+        let networkGetter = NetworkGetter(urlSession: urlSession)
 
         XCTAssertEqual(urlSession, networkGetter.urlSession)
     }
@@ -16,15 +16,15 @@ final class NetworkGetterTests: XCTestCase {
     func testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError() {
         var generatedResult: Result<Data?>!
 
-        NetworkGet().get(url: invalidUrlString) { generatedResult = $0 }
+        NetworkGetter().get(url: invalidUrlString) { generatedResult = $0 }
 
         XCTAssertEqual(generatedResult, Result.fail(.invalidUrl))
     }
 
     func testGetWhenValidURLThenGenerateSuccessResult() {
         let session = MockURLSession(results: [.success(Empty.data, URLResponse())])
-        let getter = NetworkGet(urlSession: session)
         var generatedResult: Result<Empty>!
+        let getter = NetworkGetter(urlSession: session)
 
         getter.get(url: validUrlString) { generatedResult = $0 }
 
@@ -34,7 +34,7 @@ final class NetworkGetterTests: XCTestCase {
 
     func testGetWhenInvalidURLThenGenerateFailResult() {
         let session = MockURLSession(results: [])
-        let getter = NetworkGet(urlSession: session)
+        let getter = NetworkGetter(urlSession: session)
         var generatedResult: Result<Empty>!
 
         getter.get(url: invalidUrlString) { generatedResult = $0 }
@@ -45,7 +45,7 @@ final class NetworkGetterTests: XCTestCase {
 
     func testGetWithQueryWhenInvalidURLThenGenerateFailResult() {
         let session = MockURLSession(results: [])
-        let getter = NetworkGet(urlSession: session)
+        let getter = NetworkGetter(urlSession: session)
         let query = Empty()
         var generatedResult: Result<Empty>!
 
@@ -57,7 +57,7 @@ final class NetworkGetterTests: XCTestCase {
 
     func testGetWhenValidURLAndRequestFailsThenGenerateFailResult() {
         let session = MockURLSession(results: [.error(SomeError.some)])
-        let getter = NetworkGet(urlSession: session)
+        let getter = NetworkGetter(urlSession: session)
         var generatedResult: Result<Empty>!
 
         getter.get(url: validUrlString) { generatedResult = $0 }

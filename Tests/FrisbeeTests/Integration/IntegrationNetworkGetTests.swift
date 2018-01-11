@@ -15,7 +15,7 @@ final class IntegrationNetworkGetTests: XCTestCase {
         let expectedMovieName = "Ghostbusters"
         var returnedData: Movie?
 
-        NetworkGet().get(url: url) { (result: Result<Movie>) in
+        NetworkGetter().get(url: url) { (result: Result<Movie>) in
             returnedData = result.data
             longRunningExpectation.fulfill()
         }
@@ -32,7 +32,7 @@ final class IntegrationNetworkGetTests: XCTestCase {
         var returnedData: Movie?
         let query = MovieQuery(page: 10)
 
-        NetworkGet().get(url: url, query: query) { (result: Result<Movie>) in
+        NetworkGetter().get(url: url, query: query) { (result: Result<Movie>) in
             returnedData = result.data
             longRunningExpectation.fulfill()
         }
@@ -52,7 +52,7 @@ final class IntegrationNetworkGetTests: XCTestCase {
             return XCTFail("Could not create URL")
         }
 
-        NetworkGet().get(url: url) { (result: Result<Movie>) in
+        NetworkGetter().get(url: url) { (result: Result<Movie>) in
             returnedData = result.data
             expectation.fulfill()
         }
@@ -73,7 +73,7 @@ final class IntegrationNetworkGetTests: XCTestCase {
             return XCTFail("Could not create URL")
         }
 
-        NetworkGet().get(url: url, query: query) { (result: Result<Movie>) in
+        NetworkGetter().get(url: url, query: query) { (result: Result<Movie>) in
             returnedData = result.data
             expectation.fulfill()
         }
