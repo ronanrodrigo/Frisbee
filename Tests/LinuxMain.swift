@@ -8,5 +8,7 @@ XCTMain([
     testCase(URLRequestFactoryTests.allTests),
     testCase(QueryItemBuilderTests.allTests),
     testCase(URLWithQueryBuilderTests.allTests),
-    testCase(ResultGeneratorTests.allTests)
+    testCase(ResultGeneratorTests.allTests),
+    testCase(FrisbeeErrorTests.allTests),
+    testCase(ResultTests.allTests)
 ])

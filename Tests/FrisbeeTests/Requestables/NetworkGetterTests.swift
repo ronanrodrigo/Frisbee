@@ -18,64 +18,52 @@ final class NetworkGetterTests: XCTestCase {
 
         NetworkGetter().get(url: invalidUrlString) { generatedResult = $0 }
 
-        XCTAssertEqual(generatedResult, Result.fail(FrisbeeError.invalidUrl))
+        XCTAssertEqual(generatedResult, Result.fail(.invalidUrl))
     }
 
-    func testGetWithValidURL() {
+    func testGetWhenValidURLThenGenerateSuccessResult() {
         let session = MockURLSession(results: [.success(Empty.data, URLResponse())])
+        var generatedResult: Result<Empty>!
         let getter = NetworkGetter(urlSession: session)
 
-        getter.get(url: validUrlString) { (result: Result<Empty>) in
-            switch result {
-            case let .success(entity):
-                XCTAssertEqual(entity, Empty())
-            default:
-                XCTFail("Expected to succeed")
-            }
-        }
+        getter.get(url: validUrlString) { generatedResult = $0 }
+
+        XCTAssertEqual(generatedResult.data, Empty())
+        XCTAssertNil(generatedResult.error)
     }
 
-    func testGetWithInvalidURL() {
+    func testGetWhenInvalidURLThenGenerateFailResult() {
         let session = MockURLSession(results: [])
         let getter = NetworkGetter(urlSession: session)
+        var generatedResult: Result<Empty>!
 
-        getter.get(url: invalidUrlString) { (result: Result<Empty>) in
-            switch result {
-            case let .fail(error):
-                XCTAssertEqual(error, FrisbeeError.invalidUrl)
-            default:
-                XCTFail("Expected to fail")
-            }
-        }
+        getter.get(url: invalidUrlString) { generatedResult = $0 }
+
+        XCTAssertEqual(generatedResult.error, .invalidUrl)
+        XCTAssertNil(generatedResult.data)
     }
 
-    func testGetWithQueryWithInvalidURL() {
+    func testGetWithQueryWhenInvalidURLThenGenerateFailResult() {
         let session = MockURLSession(results: [])
         let getter = NetworkGetter(urlSession: session)
         let query = Empty()
+        var generatedResult: Result<Empty>!
 
-        getter.get(url: invalidUrlString, query: query) { (result: Result<Empty>) in
-            switch result {
-            case let .fail(error):
-                XCTAssertEqual(error, FrisbeeError.invalidUrl)
-            default:
-                XCTFail("Expected to fail")
-            }
-        }
+        getter.get(url: invalidUrlString, query: query) { generatedResult = $0 }
+
+        XCTAssertEqual(generatedResult.error, .invalidUrl)
+        XCTAssertNil(generatedResult.data)
     }
 
-    func testGetWithValidURLFails() {
+    func testGetWhenValidURLAndRequestFailsThenGenerateFailResult() {
         let session = MockURLSession(results: [.error(SomeError.some)])
         let getter = NetworkGetter(urlSession: session)
+        var generatedResult: Result<Empty>!
 
-        getter.get(url: validUrlString) { (result: Result<Empty>) in
-            switch result {
-            case let .fail(error):
-                XCTAssertEqual(error, FrisbeeError.other(localizedDescription: SomeError.some.localizedDescription))
-            default:
-                XCTFail("Expected to fail")
-            }
-        }
+        getter.get(url: validUrlString) { generatedResult = $0 }
+
+        XCTAssertEqual(generatedResult.error, .other(localizedDescription: SomeError.some.localizedDescription))
+        XCTAssertNil(generatedResult.data)
     }
 
     static var allTests = [
@@ -83,14 +71,14 @@ final class NetworkGetterTests: XCTestCase {
          testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError),
         ("testInitWithCustomUrlSessionThenKeepSameReferenceOfUrlSession",
          testInitWithCustomUrlSessionThenKeepSameReferenceOfUrlSession),
-        ("testGetWithValidURL",
-         testGetWithValidURL),
-        ("testGetWithInvalidURL",
-         testGetWithInvalidURL),
-        ("testGetWithQueryWithInvalidURL",
-         testGetWithQueryWithInvalidURL),
-        ("testGetWithValidURLFails",
-         testGetWithValidURLFails)
+        ("testGetWhenValidURLThenGenerateSuccessResult",
+         testGetWhenValidURLThenGenerateSuccessResult),
+        ("testGetWhenInvalidURLThenGenerateFailResult",
+         testGetWhenInvalidURLThenGenerateFailResult),
+        ("testGetWithQueryWhenInvalidURLThenGenerateFailResult",
+         testGetWithQueryWhenInvalidURLThenGenerateFailResult),
+        ("testGetWhenValidURLAndRequestFailsThenGenerateFailResult",
+         testGetWhenValidURLAndRequestFailsThenGenerateFailResult)
     ]
 
 }

@@ -1,15 +1,6 @@
 import XCTest
 @testable import Frisbee
 
-private struct Movie: Encodable {
-    let name: String
-    let releaseYear: Int
-
-    enum CodingKeys: String, CodingKey {
-        case name, releaseYear = "release_year"
-    }
-}
-
 final class QueryItemBuilderTests: XCTestCase {
 
     func testBuildWhenValidDictionaryThenReturnQueryItem() throws {
@@ -29,10 +20,4 @@ final class QueryItemBuilderTests: XCTestCase {
          testBuildWhenValidDictionaryThenReturnQueryItem)
     ]
 
-}
-
-extension XCTestCase {
-    func XCTAssertContains<T>(_ array: [T], _ predicate: (T) -> Bool, file: StaticString = #file, line: UInt = #line) {
-        XCTAssertTrue(array.contains(where: predicate))
-    }
 }

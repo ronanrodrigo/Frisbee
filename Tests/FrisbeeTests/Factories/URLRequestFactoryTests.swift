@@ -3,10 +3,6 @@ import XCTest
 
 final class URLRequestFactoryTests: XCTestCase {
 
-    override func setUp() {
-        super.setUp()
-    }
-
     func testMakeWhenGetMethodThenReturnAnURLRequestWithGetVerb() {
         let request = URLRequestFactory.make(.GET, URL(string: "http://www.com.br")!)
 
