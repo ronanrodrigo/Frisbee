@@ -10,10 +10,6 @@ final class IntegrationNetworkGetTests: XCTestCase {
         let name: String
     }
 
-    struct MovieQuery: Encodable {
-        let page: Int
-    }
-
     func testGetWhenHasValidURLWithValidEntityThenRequestAndTransformData() {
         let longRunningExpectation = expectation(description: "RequestMoviesWithSuccess")
         let expectedMovieName = "Ghostbusters"
