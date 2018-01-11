@@ -88,6 +88,7 @@
 		34F91DA12008217500FFAE20 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		34F91DA4200821A500FFAE20 /* XCTestCase+AssertContains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AssertContains.swift"; sourceTree = "<group>"; };
 		34F91DA7200822E000FFAE20 /* FrisbeeError+All.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrisbeeError+All.swift"; sourceTree = "<group>"; };
+		34F91DAA2008239600FFAE20 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinuxMain.swift; path = Tests/LinuxMain.swift; sourceTree = "<group>"; };
 		34F91DAB200823FA00FFAE20 /* SomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeEntity.swift; sourceTree = "<group>"; };
 		34F91DAD2008246700FFAE20 /* MovieQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuery.swift; sourceTree = "<group>"; };
 		34F9C7291FE89EF5002C1EB0 /* QueryItemBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryItemBuilderTests.swift; sourceTree = "<group>"; };
@@ -241,6 +242,7 @@
 		OBJ_10 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				34F91DAA2008239600FFAE20 /* LinuxMain.swift */,
 				OBJ_11 /* FrisbeeTests */,
 			);
 			name = Tests;
