@@ -39,11 +39,8 @@ public class NetworkGet: Getable {
         do {
             let url = try URLWithQueryBuilder.build(withUrl: url, query: query)
             makeRequest(url: url, onComplete: onComplete)
-        } catch where type(of: error) == FrisbeeError.self {
-            let error = error as? FrisbeeError ?? .unknown
-            return onComplete(.fail(error))
         } catch {
-            return onComplete(.fail(.other(localizedDescription: error.localizedDescription)))
+            return onComplete(.fail(FrisbeeError(error)))
         }
     }
 
