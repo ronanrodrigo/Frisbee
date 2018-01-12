@@ -6,6 +6,8 @@ final class NetworkGetterTests: XCTestCase {
     private let invalidUrlString = "🤷‍♂️"
     private let validUrlString = "http://www.com.br"
 
+    #if !os(Linux)
+
     func testInitWithCustomUrlSessionThenKeepSameReferenceOfUrlSession() {
         let urlSession = URLSession(configuration: .default)
         let networkGetter = NetworkGet(urlSession: urlSession)
@@ -80,5 +82,6 @@ final class NetworkGetterTests: XCTestCase {
         ("testGetWhenValidURLAndRequestFailsThenGenerateFailResult",
          testGetWhenValidURLAndRequestFailsThenGenerateFailResult)
     ]
+    #endif
 
 }

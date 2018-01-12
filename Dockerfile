@@ -1,4 +1,4 @@
-FROM swift:4.0.3
+FROM swift:latest
 
 WORKDIR /package
 

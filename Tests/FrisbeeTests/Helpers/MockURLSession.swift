@@ -1,5 +1,5 @@
 import Foundation
-
+#if !os(Linux)
 typealias URLSessionCallback = (Data?, URLResponse?, Error?) -> Void
 
 enum MockError: Error {
@@ -51,3 +51,4 @@ class MockDataTask: URLSessionDataTask {
         }
     }
 }
+#endif
