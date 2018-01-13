@@ -54,7 +54,7 @@ public class NetworkGet: Getable {
         let request = URLRequestFactory.make(.GET, url)
 
         let task = urlSession.dataTask(with: request) { data, _, error in
-            onComplete(ResultGenerator.generate(data: data, error: error))
+            onComplete(ResultGeneratorFactory.make().generate(data: data, error: error))
         }
 
         task.resume()
