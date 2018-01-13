@@ -35,6 +35,7 @@
 		344FC7201FE5BBFE00958CE4 /* NetworkGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC71F1FE5BBFE00958CE4 /* NetworkGet.swift */; };
 		344FC7261FE5D76B00958CE4 /* ResultGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */; };
 		344FC7291FE5D7FC00958CE4 /* ResultGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */; };
+		34C52E832009844400DCD88C /* URLWithQueryBuildableFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E802009841200DCD88C /* URLWithQueryBuildableFactory.swift */; };
 		34F91DA32008219600FFAE20 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F91DA12008217500FFAE20 /* Movie.swift */; };
 		34F91DA6200821B900FFAE20 /* XCTestCase+AssertContains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F91DA4200821A500FFAE20 /* XCTestCase+AssertContains.swift */; };
 		34F91DA9200822F500FFAE20 /* FrisbeeError+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F91DA7200822E000FFAE20 /* FrisbeeError+All.swift */; };
@@ -85,6 +86,7 @@
 		344FC71F1FE5BBFE00958CE4 /* NetworkGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGet.swift; sourceTree = "<group>"; };
 		344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGenerator.swift; sourceTree = "<group>"; };
 		344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeneratorTests.swift; sourceTree = "<group>"; };
+		34C52E802009841200DCD88C /* URLWithQueryBuildableFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLWithQueryBuildableFactory.swift; sourceTree = "<group>"; };
 		34F91DA12008217500FFAE20 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		34F91DA4200821A500FFAE20 /* XCTestCase+AssertContains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AssertContains.swift"; sourceTree = "<group>"; };
 		34F91DA7200822E000FFAE20 /* FrisbeeError+All.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrisbeeError+All.swift"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				3434A0B01FE7D952000659E5 /* URLRequestFactory.swift */,
 				3434A0B31FE7D9FF000659E5 /* URLSessionFactory.swift */,
+				34C52E802009841200DCD88C /* URLWithQueryBuildableFactory.swift */,
 			);
 			name = Factories;
 			path = Sources/Frisbee/Factories;
@@ -453,6 +456,7 @@
 			files = (
 				344FC71A1FE5B93200958CE4 /* Getable.swift in Sources */,
 				344DD87B1FFEFBE40021350B /* URLWithQueryBuilder.swift in Sources */,
+				34C52E832009844400DCD88C /* URLWithQueryBuildableFactory.swift in Sources */,
 				3434A0B41FE7D9FF000659E5 /* URLSessionFactory.swift in Sources */,
 				344FC71E1FE5BA0200958CE4 /* Result.swift in Sources */,
 				344FC7261FE5D76B00958CE4 /* ResultGenerator.swift in Sources */,
