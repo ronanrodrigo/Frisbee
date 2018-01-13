@@ -21,6 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		3409C9E02009EFBA00353DC4 /* Postable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9DE2009EFBA00353DC4 /* Postable.swift */; };
+		3409C9E12009EFBA00353DC4 /* NetworkPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9DF2009EFBA00353DC4 /* NetworkPost.swift */; };
+		3409C9E32009EFE000353DC4 /* NetworkPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E22009EFE000353DC4 /* NetworkPostTests.swift */; };
+		3409C9E52009F4E900353DC4 /* IntegrationNetworkPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */; };
 		3434A0B21FE7D9CC000659E5 /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0B01FE7D952000659E5 /* URLRequestFactory.swift */; };
 		3434A0B41FE7D9FF000659E5 /* URLSessionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0B31FE7D9FF000659E5 /* URLSessionFactory.swift */; };
 		3434A0B61FE7DA5A000659E5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0B51FE7DA5A000659E5 /* HTTPMethod.swift */; };
@@ -77,6 +81,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3409C9DE2009EFBA00353DC4 /* Postable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postable.swift; sourceTree = "<group>"; };
+		3409C9DF2009EFBA00353DC4 /* NetworkPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkPost.swift; sourceTree = "<group>"; };
+		3409C9E22009EFE000353DC4 /* NetworkPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPostTests.swift; sourceTree = "<group>"; };
+		3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkPostTests.swift; sourceTree = "<group>"; };
 		3434A0B01FE7D952000659E5 /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
 		3434A0B31FE7D9FF000659E5 /* URLSessionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFactory.swift; sourceTree = "<group>"; };
 		3434A0B51FE7DA5A000659E5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -163,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				3434A0BE1FE7E025000659E5 /* IntegrationNetworkGetTests.swift */,
+				3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */,
 			);
 			name = Integration;
 			path = Tests/FrisbeeTests/Integration;
@@ -184,6 +193,8 @@
 			children = (
 				344FC7191FE5B93200958CE4 /* Getable.swift */,
 				344FC71F1FE5BBFE00958CE4 /* NetworkGet.swift */,
+				3409C9DE2009EFBA00353DC4 /* Postable.swift */,
+				3409C9DF2009EFBA00353DC4 /* NetworkPost.swift */,
 			);
 			name = Requestables;
 			path = Sources/Frisbee/Requestables;
@@ -206,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_12 /* NetworkGetTests.swift */,
+				3409C9E22009EFE000353DC4 /* NetworkPostTests.swift */,
 			);
 			name = Requestables;
 			path = Tests/FrisbeeTests/Requestables;
@@ -447,11 +459,13 @@
 				34F91DA32008219600FFAE20 /* Movie.swift in Sources */,
 				578D2CA520019B1400EE3865 /* ResultTests.swift in Sources */,
 				579F534E200151DF00E9996A /* MockURLSession.swift in Sources */,
+				3409C9E32009EFE000353DC4 /* NetworkPostTests.swift in Sources */,
 				578D2CA720019C3D00EE3865 /* SequenceExtensions.swift in Sources */,
 				34F91DAC200823FA00FFAE20 /* SomeEntity.swift in Sources */,
 				3434A0BF1FE7E025000659E5 /* IntegrationNetworkGetTests.swift in Sources */,
 				3434A0BA1FE7DC30000659E5 /* URLRequestFactoryTests.swift in Sources */,
 				579F53512001525100E9996A /* SomeError.swift in Sources */,
+				3409C9E52009F4E900353DC4 /* IntegrationNetworkPostTests.swift in Sources */,
 				344FC7291FE5D7FC00958CE4 /* ResultGeneratorTests.swift in Sources */,
 				344DD87D1FFEFC910021350B /* URLWithQueryBuilderTests.swift in Sources */,
 				OBJ_27 /* NetworkGetTests.swift in Sources */,
@@ -469,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				3409C9E12009EFBA00353DC4 /* NetworkPost.swift in Sources */,
 				34C52E8720098A0F00DCD88C /* ResultGeneratorFactory.swift in Sources */,
 				344FC71A1FE5B93200958CE4 /* Getable.swift in Sources */,
 				344DD87B1FFEFBE40021350B /* URLWithQueryBuilder.swift in Sources */,
@@ -483,6 +498,7 @@
 				34C52E8920098A3100DCD88C /* FrisbeeDecodableFacotry.swift in Sources */,
 				34C52E8B20098D4100DCD88C /* FrisbeeJSONDecoder.swift in Sources */,
 				344FC71C1FE5B9D500958CE4 /* FrisbeeError.swift in Sources */,
+				3409C9E02009EFBA00353DC4 /* Postable.swift in Sources */,
 				34F9C72C1FE89F44002C1EB0 /* QueryItemBuilder.swift in Sources */,
 				34C52E8D20098D8D00DCD88C /* URLWithQueryBuildable.swift in Sources */,
 			);

@@ -13,7 +13,7 @@ var allTests = [
 ]
 
 #if !os(Linux)
-allTests.append(testCase(NetworkGetterTests.allTests))
+allTests.append(testCase(NetworkGetTests.allTests))
 #endif
 
 XCTMain(allTests)
