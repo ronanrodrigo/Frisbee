@@ -8,14 +8,12 @@ public class NetworkGet: Getable {
     let urlSession: URLSession
     private let queryBuildable: URLWithQueryBuildable
 
-    public init() {
-        self.urlSession = URLSessionFactory.make()
-        self.queryBuildable = URLWithQueryBuildableFactory.make()
+    public convenience init() {
+        self.init(queryBuildable: URLWithQueryBuildableFactory.make(), urlSession: URLSessionFactory.make())
     }
 
-    public init(urlSession: URLSession) {
-        self.urlSession = urlSession
-        self.queryBuildable = URLWithQueryBuildableFactory.make()
+    public convenience init(urlSession: URLSession) {
+        self.init(queryBuildable: URLWithQueryBuildableFactory.make(), urlSession: urlSession)
     }
 
     init(queryBuildable: URLWithQueryBuildable, urlSession: URLSession) {
