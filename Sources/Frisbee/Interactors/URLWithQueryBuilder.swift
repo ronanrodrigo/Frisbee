@@ -10,12 +10,12 @@ struct URLWithQueryBuilder: URLWithQueryBuildable {
     }
 
     func build<Query: Encodable>(withUrl url: URL, query: Query) throws -> URL {
+        var url = url
         var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
         urlComponents?.queryItems = try QueryItemBuilder.build(withEntity: query)
 
-        guard let url = urlComponents?.url else {
-            throw FrisbeeError.invalidUrl
-        }
+        if let componentsUrl = urlComponents?.url { url = componentsUrl }
+
         return url
     }
 }
