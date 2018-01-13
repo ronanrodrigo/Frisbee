@@ -3,65 +3,96 @@ import XCTest
 
 struct Fake: Codable { let fake: String }
 
+class FrisbeeStubDecodable: FrisbeeDecodable {
+    var error: FrisbeeError!
+
+    func decode<T: Decodable>(_ type: T.Type, from data: Data) throws -> T {
+        throw error
+    }
+
+}
+
 final class ResultGeneratorTests: XCTestCase {
 
     private let someError = NSError(domain: "Some error", code: 33, userInfo: nil)
     private let fakeString = "Fake Fake"
 
+    func testGenerateResultWhenEncoderTrhowAnerrorThenGenerateFailResult() {
+        let frisbeDecoder = FrisbeeStubDecodable()
+        frisbeDecoder.error = .invalidEntity
+        let data = try? JSONEncoder().encode(Fake(fake: fakeString))
+        let resultGenerator = ResultGenerator<Fake>(decoder: frisbeDecoder)
+
+        let result = resultGenerator.generate(data: data, error: nil)
+
+        XCTAssertEqual(result.error, .noData)
+    }
+
     func testGenerateResultWhenInvalidDataThenGenerateSuccessResult() {
         let noDataError = FrisbeeError.noData
         let data = try? JSONEncoder().encode(Data())
+        let resultGenerator: ResultGenerator<Fake> = ResultGeneratorFactory.make()
 
-        let result = ResultGenerator<Fake>.generate(data: data, error: nil)
+        let result = resultGenerator.generate(data: data, error: nil)
 
         XCTAssertEqual(result.error, noDataError)
     }
 
     func testGenerateResultWhenHasDataThenGenerateSuccessResult() {
         let data = try? JSONEncoder().encode(Fake(fake: fakeString))
+        let resultGenerator: ResultGenerator<Fake> = ResultGeneratorFactory.make()
 
-        let result = ResultGenerator<Fake>.generate(data: data, error: nil)
+        let result = resultGenerator.generate(data: data, error: nil)
 
         XCTAssertEqual(result.data?.fake, fakeString)
     }
 
     func testGenerateResultWhenHasDataThenResultFailErrorIsNil() {
         let data = try? JSONEncoder().encode(Fake(fake: fakeString))
+        let resultGenerator: ResultGenerator<Fake> = ResultGeneratorFactory.make()
 
-        let result = ResultGenerator<Fake>.generate(data: data, error: nil)
+        let result = resultGenerator.generate(data: data, error: nil)
 
         XCTAssertNil(result.error)
     }
 
     func testGenerateResultWhenHasNilDataThenGenerateNoDataErrorResult() {
         let noDataError = Result<Data>.fail(FrisbeeError.noData)
+        let resultGenerator: ResultGenerator<Data> = ResultGeneratorFactory.make()
 
-        let result = ResultGenerator<Data>.generate(data: nil, error: nil)
+        let result = resultGenerator.generate(data: nil, error: nil)
 
         XCTAssertEqual(result, noDataError)
     }
 
     func testGenerateResultWhenHasNilDataThenResultSuccessDataIsNil() {
-        let result = ResultGenerator<Data>.generate(data: nil, error: nil)
+        let resultGenerator: ResultGenerator<Data> = ResultGeneratorFactory.make()
+
+        let result = resultGenerator.generate(data: nil, error: nil)
 
         XCTAssertNil(result.data)
     }
 
     func testGenerateResultWhenHasErrorThenGenerateErrorResult() {
+        let resultGenerator: ResultGenerator<Data> = ResultGeneratorFactory.make()
         let noDataError = FrisbeeError.other(localizedDescription: someError.localizedDescription)
 
-        let result = ResultGenerator<Data>.generate(data: nil, error: someError)
+        let result = resultGenerator.generate(data: nil, error: someError)
 
         XCTAssertEqual(result.error, noDataError)
     }
 
     func testGenerateResultWhenHasErrorThenResultSuccessDataIsNil() {
-        let result = ResultGenerator<Data>.generate(data: nil, error: someError)
+        let resultGenerator: ResultGenerator<Data> = ResultGeneratorFactory.make()
+
+        let result = resultGenerator.generate(data: nil, error: someError)
 
         XCTAssertNil(result.data)
     }
 
     static var allTests = [
+        ("testGenerateResultWhenEncoderTrhowAnerrorThenGenerateFailResult",
+         testGenerateResultWhenEncoderTrhowAnerrorThenGenerateFailResult),
         ("testGenerateResultWhenHasDataThenGenerateSuccessResult",
          testGenerateResultWhenHasDataThenGenerateSuccessResult),
         ("testGenerateResultWhenHasDataThenResultFailErrorIsNil",

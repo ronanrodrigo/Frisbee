@@ -3,6 +3,13 @@ import XCTest
 
 class URLWithQueryBuilderTests: XCTestCase {
 
+    private var urlWithQueryBuilder: URLWithQueryBuildable!
+
+    override func setUp() {
+        super.setUp()
+        urlWithQueryBuilder = URLWithQueryBuildableFactory.make()
+    }
+
     struct MovieQuery: Encodable {
         let page: Int
         let keyAccess: String
@@ -20,7 +27,7 @@ class URLWithQueryBuilderTests: XCTestCase {
             return XCTFail("Invalid URL")
         }
 
-        let builtUrl = try? URLWithQueryBuilder.build(withUrl: url, query: query)
+        let builtUrl = try? urlWithQueryBuilder.build(withUrl: url, query: query)
 
         XCTAssertTrue(builtUrl?.absoluteString.starts(with: url.absoluteString) ?? false)
         XCTAssertEqual("\(query.page)", getQueryValue(builtUrl?.absoluteString, "page"))
@@ -32,7 +39,7 @@ class URLWithQueryBuilderTests: XCTestCase {
         let query = MovieQuery(page: 1, keyAccess: "a1d13so979", optionalInt: nil)
         let url = "http://www.com.br"
 
-        let builtUrl = try? URLWithQueryBuilder.build(withUrl: url, query: query)
+        let builtUrl = try? urlWithQueryBuilder.build(withUrl: url, query: query)
 
         XCTAssertTrue(builtUrl?.absoluteString.starts(with: url) ?? false)
         XCTAssertEqual("\(query.page)", getQueryValue(builtUrl?.absoluteString, "page"))
@@ -46,7 +53,7 @@ class URLWithQueryBuilderTests: XCTestCase {
             return XCTFail("Invalid URL")
         }
 
-        let builtUrl = try? URLWithQueryBuilder.build(withUrl: url, query: query)
+        let builtUrl = try? urlWithQueryBuilder.build(withUrl: url, query: query)
 
         XCTAssertTrue(builtUrl?.absoluteString.starts(with: url.absoluteString) ?? false)
         XCTAssertEqual("\(query.page)", getQueryValue(builtUrl?.absoluteString, "page"))
@@ -58,7 +65,7 @@ class URLWithQueryBuilderTests: XCTestCase {
         let query = MovieQuery(page: 1, keyAccess: "a1d13so979", optionalInt: 10)
         let url = "http://www.com.br"
 
-        let builtUrl = try? URLWithQueryBuilder.build(withUrl: url, query: query)
+        let builtUrl = try? urlWithQueryBuilder.build(withUrl: url, query: query)
 
         XCTAssertTrue(builtUrl?.absoluteString.starts(with: url) ?? false)
         XCTAssertEqual("\(query.page)", getQueryValue(builtUrl?.absoluteString, "page"))
@@ -70,7 +77,7 @@ class URLWithQueryBuilderTests: XCTestCase {
         let query = MovieQuery(page: 1, keyAccess: "a1d13so979", optionalInt: 10)
         let url = "http://www.çøµ.∫®"
 
-        XCTAssertThrowsError(try URLWithQueryBuilder.build(withUrl: url, query: query)) {
+        XCTAssertThrowsError(try urlWithQueryBuilder.build(withUrl: url, query: query)) {
             XCTAssertEqual($0 as? FrisbeeError, FrisbeeError.invalidUrl)
         }
     }

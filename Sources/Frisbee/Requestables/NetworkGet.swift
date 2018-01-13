@@ -6,12 +6,18 @@ typealias NetworkGetter = NetworkGet
 public class NetworkGet: Getable {
 
     let urlSession: URLSession
+    private let queryBuilder: URLWithQueryBuildable
 
-    public init() {
-        self.urlSession = URLSessionFactory.make()
+    public convenience init() {
+        self.init(queryBuildable: URLWithQueryBuildableFactory.make(), urlSession: URLSessionFactory.make())
     }
 
-    public init(urlSession: URLSession) {
+    public convenience init(urlSession: URLSession) {
+        self.init(queryBuildable: URLWithQueryBuildableFactory.make(), urlSession: urlSession)
+    }
+
+    init(queryBuildable: URLWithQueryBuildable, urlSession: URLSession) {
+        self.queryBuilder = queryBuildable
         self.urlSession = urlSession
     }
 
@@ -37,13 +43,10 @@ public class NetworkGet: Getable {
     public func get<Entity: Decodable, Query: Encodable>(url: URL, query: Query,
                                                          onComplete: @escaping (Result<Entity>) -> Void) {
         do {
-            let url = try URLWithQueryBuilder.build(withUrl: url, query: query)
+            let url = try queryBuilder.build(withUrl: url, query: query)
             makeRequest(url: url, onComplete: onComplete)
-        } catch where type(of: error) == FrisbeeError.self {
-            let error = error as? FrisbeeError ?? .unknown
-            return onComplete(.fail(error))
         } catch {
-            return onComplete(.fail(.other(localizedDescription: error.localizedDescription)))
+            return onComplete(.fail(FrisbeeError(error)))
         }
     }
 
@@ -51,7 +54,7 @@ public class NetworkGet: Getable {
         let request = URLRequestFactory.make(.GET, url)
 
         let task = urlSession.dataTask(with: request) { data, _, error in
-            onComplete(ResultGenerator.generate(data: data, error: error))
+            onComplete(ResultGeneratorFactory.make().generate(data: data, error: error))
         }
 
         task.resume()

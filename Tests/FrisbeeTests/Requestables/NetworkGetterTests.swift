@@ -1,12 +1,38 @@
 import XCTest
 @testable import Frisbee
 
+class URLWithQueryStubBuildable: URLWithQueryBuildable {
+    var errorToThrow: FrisbeeError!
+
+    func build<Query: Encodable>(withUrl url: String, query: Query) throws -> URL {
+        throw errorToThrow
+    }
+
+    func build<Query: Encodable>(withUrl url: URL, query: Query) throws -> URL {
+        throw errorToThrow
+    }
+}
+
 final class NetworkGetterTests: XCTestCase {
 
     private let invalidUrlString = "🤷‍♂️"
     private let validUrlString = "http://www.com.br"
 
     #if !os(Linux)
+
+    func testGetWhenThrowsAnErrorAtQueryBuilderThenGenerateFailResult() {
+        let session = MockURLSession(results: [.error(SomeError.some)])
+        let urlQueryBuilder = URLWithQueryStubBuildable()
+        urlQueryBuilder.errorToThrow = .invalidEntity
+        let query = Empty()
+        let getter = NetworkGet(queryBuildable: urlQueryBuilder, urlSession: session)
+        var generatedResult: Result<Empty>!
+
+        getter.get(url: validUrlString, query: query) { generatedResult = $0 }
+
+        XCTAssertEqual(generatedResult.error, .invalidEntity)
+        XCTAssertNil(generatedResult.data)
+    }
 
     func testInitWithCustomUrlSessionThenKeepSameReferenceOfUrlSession() {
         let urlSession = URLSession(configuration: .default)

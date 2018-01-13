@@ -1,6 +1,6 @@
 import Foundation
-import Frisbee
 import XCTest
+@testable import Frisbee
 
 class FrisbeeErrorTests: XCTestCase {
 
@@ -24,11 +24,29 @@ class FrisbeeErrorTests: XCTestCase {
         }
     }
 
+    func testInitFromInvalidURLErrorThenCreateFrisbeErrorInvalidURL() {
+        let error: Error = FrisbeeError.invalidUrl
+
+        let frisbeeError = FrisbeeError(error)
+
+        XCTAssertEqual(frisbeeError, .invalidUrl)
+    }
+
+    func testInitFromUnkownErrorThenCreateFrisbeErrorOtherWithLocalizedString() {
+        let error: Error = NSError(domain: "domain", code: 0)
+
+        let frisbeeError = FrisbeeError(error)
+
+        XCTAssertEqual(frisbeeError, .other(localizedDescription: error.localizedDescription))
+    }
+
     static var allTests = [
         ("testEquatableFromAllPossibleErrorsThenBeEqual",
          testEquatableFromAllPossibleErrorsThenBeEqual),
         ("testInequatableFromAllPossibleErrorsThenBeNotEqual",
-         testInequatableFromAllPossibleErrorsThenBeNotEqual)
+         testInequatableFromAllPossibleErrorsThenBeNotEqual),
+        ("testInitFromUnkownErrorThenCreateFrisbeErrorOtherWithLocalizedString",
+         testInitFromUnkownErrorThenCreateFrisbeErrorOtherWithLocalizedString)
     ]
 
 }
