@@ -13,7 +13,7 @@ class URLWithQueryStubBuildable: URLWithQueryBuildable {
     }
 }
 
-final class NetworkGetterTests: XCTestCase {
+final class NetworkGetTests: XCTestCase {
 
     private let invalidUrlString = "🤷‍♂️"
     private let validUrlString = "http://www.com.br"

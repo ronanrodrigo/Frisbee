@@ -55,7 +55,7 @@
 		579F534E200151DF00E9996A /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579F534C200151D700E9996A /* MockURLSession.swift */; };
 		579F53512001525100E9996A /* SomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579F534F2001521300E9996A /* SomeError.swift */; };
 		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_27 /* NetworkGetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NetworkGetterTests.swift */; };
+		OBJ_27 /* NetworkGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NetworkGetTests.swift */; };
 		OBJ_29 /* Frisbee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Frisbee::Frisbee::Product" /* Frisbee.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,7 +113,7 @@
 		579F534F2001521300E9996A /* SomeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeError.swift; sourceTree = "<group>"; };
 		"Frisbee::Frisbee::Product" /* Frisbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Frisbee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = FrisbeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_12 /* NetworkGetterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGetterTests.swift; sourceTree = "<group>"; };
+		OBJ_12 /* NetworkGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGetTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,7 +205,7 @@
 		344FC7321FE5DFD400958CE4 /* Requestables */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* NetworkGetterTests.swift */,
+				OBJ_12 /* NetworkGetTests.swift */,
 			);
 			name = Requestables;
 			path = Tests/FrisbeeTests/Requestables;
@@ -454,7 +454,7 @@
 				579F53512001525100E9996A /* SomeError.swift in Sources */,
 				344FC7291FE5D7FC00958CE4 /* ResultGeneratorTests.swift in Sources */,
 				344DD87D1FFEFC910021350B /* URLWithQueryBuilderTests.swift in Sources */,
-				OBJ_27 /* NetworkGetterTests.swift in Sources */,
+				OBJ_27 /* NetworkGetTests.swift in Sources */,
 				34F91DAE2008246700FFAE20 /* MovieQuery.swift in Sources */,
 				34F9C72A1FE89EF5002C1EB0 /* QueryItemBuilderTests.swift in Sources */,
 				34F91DA6200821B900FFAE20 /* XCTestCase+AssertContains.swift in Sources */,
