@@ -209,16 +209,6 @@
 			path = Tests/FrisbeeTests/Factories;
 			sourceTree = SOURCE_ROOT;
 		};
-		3434A0BD1FE7DFEF000659E5 /* Integration */ = {
-			isa = PBXGroup;
-			children = (
-				3434A0BE1FE7E025000659E5 /* IntegrationNetworkGetTests.swift */,
-				3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */,
-			);
-			name = Integration;
-			path = Tests/FrisbeeTests/Integration;
-			sourceTree = SOURCE_ROOT;
-		};
 		344FC7211FE5BDAE00958CE4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +248,8 @@
 		344FC7321FE5DFD400958CE4 /* Requestables */ = {
 			isa = PBXGroup;
 			children = (
+				3434A0BE1FE7E025000659E5 /* IntegrationNetworkGetTests.swift */,
+				3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */,
 				OBJ_12 /* NetworkGetTests.swift */,
 				3409C9E22009EFE000353DC4 /* NetworkPostTests.swift */,
 			);
@@ -326,7 +318,6 @@
 			children = (
 				578D2CA12001998500EE3865 /* Entities */,
 				3434A0B71FE7DBA8000659E5 /* Factories */,
-				3434A0BD1FE7DFEF000659E5 /* Integration */,
 				34F9C7241FE895F6002C1EB0 /* Interactors */,
 				344FC7321FE5DFD400958CE4 /* Requestables */,
 			);
