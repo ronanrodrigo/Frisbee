@@ -3,6 +3,7 @@ import XCTest
 
 var allTests = [
     testCase(IntegrationNetworkGetTests.allTests),
+    testCase(IntegrationNetworkPostTests.allTests),
     testCase(URLSessionFactoryTests.allTests),
     testCase(URLRequestFactoryTests.allTests),
     testCase(QueryItemBuilderTests.allTests),

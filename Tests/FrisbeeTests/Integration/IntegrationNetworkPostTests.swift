@@ -44,4 +44,11 @@ final class IntegrationNetworkPostTests: XCTestCase {
         }
     }
 
+    static var allTests = [
+        ("testPostWhenHasValidURLThenRequestAndTransformData",
+         testPostWhenHasValidURLThenRequestAndTransformData),
+        ("testPostWhenHasValidURLAndWithBodyThenRequestAndTransformData",
+         testPostWhenHasValidURLAndWithBodyThenRequestAndTransformData)
+    ]
+
 }
