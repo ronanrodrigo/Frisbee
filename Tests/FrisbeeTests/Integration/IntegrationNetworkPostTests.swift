@@ -11,7 +11,6 @@ final class IntegrationNetworkPostTests: XCTestCase {
     func testPostWhenHasValidURLThenRequestAndTransformData() {
         let url = URL(string: "https://putsreq.com/RrJlwsma8cM8TjC1ipmB")!
         let longRunningExpectation = expectation(description: "RequestMoviesWithSuccess")
-        let expectedUrlAtResponse = url.absoluteString
         var returnedData: Json?
 
         NetworkPost().post(url: url) { (result: Result<Json>) in
@@ -21,7 +20,7 @@ final class IntegrationNetworkPostTests: XCTestCase {
 
         waitForExpectations(timeout: 20) { expectationError in
             XCTAssertNil(expectationError, expectationError!.localizedDescription)
-            XCTAssertEqual(returnedData?.url, expectedUrlAtResponse)
+            XCTAssertEqual(returnedData?.url, url.absoluteString)
             XCTAssertEqual(returnedData?.content, "content")
         }
     }
