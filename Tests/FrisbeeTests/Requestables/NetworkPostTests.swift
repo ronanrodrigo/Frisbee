@@ -70,7 +70,7 @@ final class NetworkPostTests: XCTestCase {
 
     func testPostWithBodyWhenBodyBuilderThrowAnErrorThenGenerateFailResult() {
         let session = MockURLSession(results: [])
-        let networkPost = NetworkPost(urlSession: session, bodyBuilder: BodyStubBuilder())
+        let networkPost = NetworkPost(urlSession: session, bodyBuilder: BodyThrowErrorFakeBuilder())
         let body = Empty()
         var generatedResult: Result<Empty>!
 
@@ -109,12 +109,4 @@ final class NetworkPostTests: XCTestCase {
     ]
     #endif
 
-}
-
-struct BodyStubBuilder: BodyBuildable {
-    var errorToThrow = FrisbeeError.invalidEntity
-
-    func build<Entity: Encodable>(withBody body: Entity) throws -> [String: Any] {
-        throw errorToThrow
-    }
 }
