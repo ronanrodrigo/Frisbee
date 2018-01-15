@@ -18,37 +18,34 @@ public final class NetworkPost: Postable {
         self.bodyBuilder = bodyBuilder
     }
 
-    public func post<Entity: Decodable>(url: String, onComplete: @escaping (Result<Entity>) -> Void) {
+    public func post<T: Decodable>(url: String, onComplete: @escaping OnComplete<T>) {
         guard let url = URL(string: url) else {
             return onComplete(.fail(FrisbeeError.invalidUrl))
         }
         makeRequest(url: url, onComplete: onComplete)
     }
 
-    public func post<Entity: Decodable>(url: URL, onComplete: @escaping (Result<Entity>) -> Void) {
+    public func post<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) {
         makeRequest(url: url, onComplete: onComplete)
     }
 
-    public func post<Entity: Decodable, Body: Encodable>(url: String, body: Body,
-                                                         onComplete: @escaping (Result<Entity>) -> Void) {
+    public func post<T: Decodable, U: Encodable>(url: String, body: U, onComplete: @escaping OnComplete<T>) {
         guard let url = URL(string: url) else {
             return onComplete(.fail(FrisbeeError.invalidUrl))
         }
         makeRequest(url: url, body: body, onComplete: onComplete)
     }
 
-    public func post<Entity: Decodable, Body: Encodable>(url: URL, body: Body,
-                                                         onComplete: @escaping (Result<Entity>) -> Void) {
+    public func post<T: Decodable, U: Encodable>(url: URL, body: U, onComplete: @escaping OnComplete<T>) {
         makeRequest(url: url, body: body, onComplete: onComplete)
     }
 
-    private func makeRequest<Entity: Decodable>(url: URL, onComplete: @escaping (Result<Entity>) -> Void) {
+    private func makeRequest<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) {
         let request = URLRequestFactory.make(.POST, url)
         runTask(with: request, onComplete: onComplete)
     }
 
-    private func makeRequest<Entity: Decodable, Body: Encodable>(url: URL, body: Body,
-                                                                 onComplete: @escaping (Result<Entity>) -> Void) {
+    private func makeRequest<T: Decodable, U: Encodable>(url: URL, body: U, onComplete: @escaping OnComplete<T>) {
         var request = URLRequestFactory.make(.POST, url)
         do {
             let bodyObject = try bodyBuilder.build(withBody: body)
@@ -60,7 +57,7 @@ public final class NetworkPost: Postable {
         runTask(with: request, onComplete: onComplete)
     }
 
-    private func runTask<Entity: Decodable>(with request: URLRequest, onComplete: @escaping (Result<Entity>) -> Void) {
+    private func runTask<T: Decodable>(with request: URLRequest, onComplete: @escaping OnComplete<T>) {
         let task = urlSession.dataTask(with: request) { data, _, error in
             onComplete(ResultGeneratorFactory.make().generate(data: data, error: error))
         }

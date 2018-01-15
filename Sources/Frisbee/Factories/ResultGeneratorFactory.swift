@@ -1,6 +1,6 @@
 struct ResultGeneratorFactory {
 
-    static func make<Entity: Decodable>() -> ResultGenerator<Entity> {
+    static func make<T: Decodable>() -> ResultGenerator<T> {
         return ResultGenerator(decoder: FrisbeeDecodableFacotry.make())
     }
 

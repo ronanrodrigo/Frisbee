@@ -2,7 +2,7 @@ import Foundation
 
 struct BodyBuilder: BodyBuildable {
 
-    func build<Entity: Encodable>(withBody body: Entity) throws -> [String: Any] {
+    func build<T: Encodable>(withBody body: T) throws -> [String: Any] {
         var json: [String: Any] = [:]
 
         let data = try JSONEncoder().encode(body)

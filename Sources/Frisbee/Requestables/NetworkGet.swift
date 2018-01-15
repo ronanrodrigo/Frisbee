@@ -21,27 +21,25 @@ public class NetworkGet: Getable {
         self.urlSession = urlSession
     }
 
-    public func get<Entity: Decodable>(url: String, onComplete: @escaping (Result<Entity>) -> Void) {
+    public func get<T: Decodable>(url: String, onComplete: @escaping OnComplete<T>) {
         guard let url = URL(string: url) else {
             return onComplete(.fail(FrisbeeError.invalidUrl))
         }
         makeRequest(url: url, onComplete: onComplete)
     }
 
-    public func get<Entity: Decodable>(url: URL, onComplete: @escaping (Result<Entity>) -> Void) {
+    public func get<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) {
         makeRequest(url: url, onComplete: onComplete)
     }
 
-    public func get<Entity: Decodable, Query: Encodable>(url: String, query: Query,
-                                                         onComplete: @escaping (Result<Entity>) -> Void) {
+    public func get<T: Decodable, U: Encodable>(url: String, query: U, onComplete: @escaping OnComplete<T>) {
         guard let url = URL(string: url) else {
             return onComplete(.fail(FrisbeeError.invalidUrl))
         }
         get(url: url, query: query, onComplete: onComplete)
     }
 
-    public func get<Entity: Decodable, Query: Encodable>(url: URL, query: Query,
-                                                         onComplete: @escaping (Result<Entity>) -> Void) {
+    public func get<T: Decodable, U: Encodable>(url: URL, query: U, onComplete: @escaping OnComplete<T>) {
         do {
             let url = try queryBuilder.build(withUrl: url, query: query)
             makeRequest(url: url, onComplete: onComplete)
@@ -50,7 +48,7 @@ public class NetworkGet: Getable {
         }
     }
 
-    private func makeRequest<Entity: Decodable>(url: URL, onComplete: @escaping (Result<Entity>) -> Void) {
+    private func makeRequest<T: Decodable>(url: URL, onComplete: @escaping (Result<T>) -> Void) {
         let request = URLRequestFactory.make(.GET, url)
 
         let task = urlSession.dataTask(with: request) { data, _, error in

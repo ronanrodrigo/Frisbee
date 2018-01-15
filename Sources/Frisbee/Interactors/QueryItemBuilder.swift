@@ -1,8 +1,8 @@
 import Foundation
 
-struct QueryItemBuilder<Entity: Encodable> {
+struct QueryItemBuilder<T: Encodable> {
 
-    static func build(withEntity entity: Entity) throws -> [URLQueryItem] {
+    static func build(withEntity entity: T) throws -> [URLQueryItem] {
         var json: [String: Any] = [:]
 
         let data = try JSONEncoder().encode(entity)

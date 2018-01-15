@@ -4,7 +4,7 @@ import Foundation
 struct BodyThrowErrorFakeBuilder: BodyBuildable {
     private let errorToThrow = FrisbeeError.invalidEntity
 
-    func build<Entity: Encodable>(withBody body: Entity) throws -> [String: Any] {
+    func build<T: Encodable>(withBody body: T) throws -> [String: Any] {
         throw errorToThrow
     }
 }
