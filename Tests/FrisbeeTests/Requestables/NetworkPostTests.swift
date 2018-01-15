@@ -68,6 +68,18 @@ final class NetworkPostTests: XCTestCase {
         XCTAssertNil(generatedResult.data)
     }
 
+    func testPostWithBodyWhenBodyBuilderThrowAnErrorThenGenerateFailResult() {
+        let session = MockURLSession(results: [])
+        let networkPost = NetworkPost(urlSession: session, bodyBuilder: BodyStubBuilder())
+        let body = Empty()
+        var generatedResult: Result<Empty>!
+
+        networkPost.post(url: validUrlString, body: body) { generatedResult = $0 }
+
+        XCTAssertEqual(generatedResult.error, .invalidEntity)
+        XCTAssertNil(generatedResult.data)
+    }
+
     func testPostWhenValidURLAndRequestFailsThenGenerateFailResult() {
         let session = MockURLSession(results: [.error(SomeError.some)])
         let networkPost = NetworkPost(urlSession: session)
@@ -90,9 +102,19 @@ final class NetworkPostTests: XCTestCase {
          testPostWhenInvalidURLThenGenerateFailResult),
         ("testPostWithBodyWhenInvalidURLThenGenerateFailResult",
          testPostWithBodyWhenInvalidURLThenGenerateFailResult),
+        ("testPostWithBodyWhenBodyBuilderThrowAnErrorThenGenerateFailResult",
+         testPostWithBodyWhenBodyBuilderThrowAnErrorThenGenerateFailResult),
         ("testPostWhenValidURLAndRequestFailsThenGenerateFailResult",
          testPostWhenValidURLAndRequestFailsThenGenerateFailResult)
     ]
     #endif
 
+}
+
+struct BodyStubBuilder: BodyBuildable {
+    var errorToThrow = FrisbeeError.invalidEntity
+
+    func build<Entity: Encodable>(withBody body: Entity) throws -> [String: Any] {
+        throw errorToThrow
+    }
 }

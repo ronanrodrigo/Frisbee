@@ -25,6 +25,9 @@
 		3409C9E12009EFBA00353DC4 /* NetworkPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9DF2009EFBA00353DC4 /* NetworkPost.swift */; };
 		3409C9E32009EFE000353DC4 /* NetworkPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E22009EFE000353DC4 /* NetworkPostTests.swift */; };
 		3409C9E52009F4E900353DC4 /* IntegrationNetworkPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */; };
+		3409C9E7200C385100353DC4 /* BodyBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E6200C385100353DC4 /* BodyBuildable.swift */; };
+		3409C9E9200C385900353DC4 /* BodyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E8200C385900353DC4 /* BodyBuilder.swift */; };
+		3409C9EB200C388E00353DC4 /* BodyBuildableFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9EA200C388E00353DC4 /* BodyBuildableFactory.swift */; };
 		3434A0B21FE7D9CC000659E5 /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0B01FE7D952000659E5 /* URLRequestFactory.swift */; };
 		3434A0B41FE7D9FF000659E5 /* URLSessionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0B31FE7D9FF000659E5 /* URLSessionFactory.swift */; };
 		3434A0B61FE7DA5A000659E5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0B51FE7DA5A000659E5 /* HTTPMethod.swift */; };
@@ -85,6 +88,9 @@
 		3409C9DF2009EFBA00353DC4 /* NetworkPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkPost.swift; sourceTree = "<group>"; };
 		3409C9E22009EFE000353DC4 /* NetworkPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPostTests.swift; sourceTree = "<group>"; };
 		3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkPostTests.swift; sourceTree = "<group>"; };
+		3409C9E6200C385100353DC4 /* BodyBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyBuildable.swift; sourceTree = "<group>"; };
+		3409C9E8200C385900353DC4 /* BodyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyBuilder.swift; sourceTree = "<group>"; };
+		3409C9EA200C388E00353DC4 /* BodyBuildableFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyBuildableFactory.swift; sourceTree = "<group>"; };
 		3434A0B01FE7D952000659E5 /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
 		3434A0B31FE7D9FF000659E5 /* URLSessionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFactory.swift; sourceTree = "<group>"; };
 		3434A0B51FE7DA5A000659E5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 				3434A0B01FE7D952000659E5 /* URLRequestFactory.swift */,
 				3434A0B31FE7D9FF000659E5 /* URLSessionFactory.swift */,
 				34C52E802009841200DCD88C /* URLWithQueryBuildableFactory.swift */,
+				3409C9EA200C388E00353DC4 /* BodyBuildableFactory.swift */,
 			);
 			name = Factories;
 			path = Sources/Frisbee/Factories;
@@ -230,6 +237,8 @@
 				344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */,
 				34C52E8C20098D8D00DCD88C /* URLWithQueryBuildable.swift */,
 				344DD8791FFEFB120021350B /* URLWithQueryBuilder.swift */,
+				3409C9E6200C385100353DC4 /* BodyBuildable.swift */,
+				3409C9E8200C385900353DC4 /* BodyBuilder.swift */,
 			);
 			name = Interactors;
 			path = Sources/Frisbee/Interactors;
@@ -484,13 +493,16 @@
 			buildActionMask = 0;
 			files = (
 				3409C9E12009EFBA00353DC4 /* NetworkPost.swift in Sources */,
+				3409C9E9200C385900353DC4 /* BodyBuilder.swift in Sources */,
 				34C52E8720098A0F00DCD88C /* ResultGeneratorFactory.swift in Sources */,
 				344FC71A1FE5B93200958CE4 /* Getable.swift in Sources */,
 				344DD87B1FFEFBE40021350B /* URLWithQueryBuilder.swift in Sources */,
 				34C52E832009844400DCD88C /* URLWithQueryBuildableFactory.swift in Sources */,
 				3434A0B41FE7D9FF000659E5 /* URLSessionFactory.swift in Sources */,
 				344FC71E1FE5BA0200958CE4 /* Result.swift in Sources */,
+				3409C9E7200C385100353DC4 /* BodyBuildable.swift in Sources */,
 				344FC7261FE5D76B00958CE4 /* ResultGenerator.swift in Sources */,
+				3409C9EB200C388E00353DC4 /* BodyBuildableFactory.swift in Sources */,
 				3434A0B61FE7DA5A000659E5 /* HTTPMethod.swift in Sources */,
 				344FC7201FE5BBFE00958CE4 /* NetworkGet.swift in Sources */,
 				3434A0B21FE7D9CC000659E5 /* URLRequestFactory.swift in Sources */,
