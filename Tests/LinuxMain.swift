@@ -13,6 +13,7 @@ var allTests = [
 ]
 
 #if !os(Linux)
+allTests.append(testCase(NetworkPostTests.allTests))
 allTests.append(testCase(NetworkGetTests.allTests))
 #endif
 
