@@ -51,11 +51,7 @@ public class NetworkGet: Getable {
     private func makeRequest<T: Decodable>(url: URL, onComplete: @escaping (Result<T>) -> Void) {
         let request = URLRequestFactory.make(.GET, url)
 
-        let task = urlSession.dataTask(with: request) { data, _, error in
-            onComplete(ResultGeneratorFactory.make().generate(data: data, error: error))
-        }
-
-        task.resume()
+        DataTaskRunner.run(with: urlSession, request: request, onComplete: onComplete)
     }
 
 }

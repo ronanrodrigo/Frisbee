@@ -42,7 +42,7 @@ public final class NetworkPost: Postable {
 
     private func makeRequest<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) {
         let request = URLRequestFactory.make(.POST, url)
-        runTask(with: request, onComplete: onComplete)
+        DataTaskRunner.run(with: urlSession, request: request, onComplete: onComplete)
     }
 
     private func makeRequest<T: Decodable, U: Encodable>(url: URL, body: U, onComplete: @escaping OnComplete<T>) {
@@ -54,15 +54,7 @@ public final class NetworkPost: Postable {
             return onComplete(.fail(FrisbeeError(error)))
         }
 
-        runTask(with: request, onComplete: onComplete)
-    }
-
-    private func runTask<T: Decodable>(with request: URLRequest, onComplete: @escaping OnComplete<T>) {
-        let task = urlSession.dataTask(with: request) { data, _, error in
-            onComplete(ResultGeneratorFactory.make().generate(data: data, error: error))
-        }
-
-        task.resume()
+        DataTaskRunner.run(with: urlSession, request: request, onComplete: onComplete)
     }
 
 }
