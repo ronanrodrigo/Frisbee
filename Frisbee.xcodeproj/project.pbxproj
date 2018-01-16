@@ -116,12 +116,12 @@
 		3434A0B81FE7DBC4000659E5 /* URLRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactoryTests.swift; sourceTree = "<group>"; };
 		3434A0BB1FE7DD74000659E5 /* URLSessionFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFactoryTests.swift; sourceTree = "<group>"; };
 		3434A0BE1FE7E025000659E5 /* IntegrationNetworkGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkGetTests.swift; sourceTree = "<group>"; };
-		343ECB99200CC90000320259 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Tests/Support/Entities/Movie.swift; sourceTree = SOURCE_ROOT; };
-		343ECB9A200CC90000320259 /* Fake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fake.swift; path = Tests/Support/Entities/Fake.swift; sourceTree = SOURCE_ROOT; };
-		343ECB9B200CC90100320259 /* SomeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SomeError.swift; path = Tests/Support/Entities/SomeError.swift; sourceTree = SOURCE_ROOT; };
-		343ECB9C200CC90100320259 /* MovieQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieQuery.swift; path = Tests/Support/Entities/MovieQuery.swift; sourceTree = SOURCE_ROOT; };
-		343ECB9D200CC90100320259 /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Empty.swift; path = Tests/Support/Entities/Empty.swift; sourceTree = SOURCE_ROOT; };
-		343ECB9E200CC90100320259 /* SomeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SomeEntity.swift; path = Tests/Support/Entities/SomeEntity.swift; sourceTree = SOURCE_ROOT; };
+		343ECB99200CC90000320259 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		343ECB9A200CC90000320259 /* Fake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fake.swift; sourceTree = "<group>"; };
+		343ECB9B200CC90100320259 /* SomeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeError.swift; sourceTree = "<group>"; };
+		343ECB9C200CC90100320259 /* MovieQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieQuery.swift; sourceTree = "<group>"; };
+		343ECB9D200CC90100320259 /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
+		343ECB9E200CC90100320259 /* SomeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeEntity.swift; sourceTree = "<group>"; };
 		343ECBAB200CC93D00320259 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinuxMain.swift; path = Tests/LinuxMain.swift; sourceTree = SOURCE_ROOT; };
 		344DD8791FFEFB120021350B /* URLQueryAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryAdapter.swift; sourceTree = "<group>"; };
 		344DD87C1FFEFC910021350B /* URLQueryAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryAdapterTests.swift; sourceTree = "<group>"; };
