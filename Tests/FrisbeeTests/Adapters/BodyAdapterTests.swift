@@ -9,7 +9,7 @@ final class BodyAdapterTests: XCTestCase {
 
     func testBuildWithBodyWhenEncoderThrowsAnErrorThenThrows() {
         let adapter = BodyAdapter(encoder: EncoderThrowErrorFakeAdapter(),
-                                  serializer: JSONSerializableAdapterFactroy.make())
+                                  serializer: SerializableAdapterFactory.make())
 
         XCTAssertThrowsError(try adapter.build(withBody: Fake(fake: "")))
     }

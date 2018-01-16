@@ -55,12 +55,12 @@
 		3473C852200CD3810014C66E /* OnComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3473C851200CD3810014C66E /* OnComplete.swift */; };
 		3473C854200CD7570014C66E /* DataTaskRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3473C853200CD7570014C66E /* DataTaskRunner.swift */; };
 		3481FE9A200D575000D0AD6D /* BodyAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FE99200D575000D0AD6D /* BodyAdapterTests.swift */; };
-		3481FE9E200D59ED00D0AD6D /* JSONEncoderAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FE9D200D59ED00D0AD6D /* JSONEncoderAdapter.swift */; };
+		3481FE9E200D59ED00D0AD6D /* EncoderJSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FE9D200D59ED00D0AD6D /* EncoderJSONAdapter.swift */; };
 		3481FEA0200D5A0100D0AD6D /* EncodableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FE9F200D5A0100D0AD6D /* EncodableAdapter.swift */; };
 		3481FEA4200D5A6D00D0AD6D /* EncodableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA3200D5A6D00D0AD6D /* EncodableAdapterFactory.swift */; };
 		3481FEA6200D892F00D0AD6D /* SerializableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA5200D892F00D0AD6D /* SerializableAdapter.swift */; };
-		3481FEA8200D894400D0AD6D /* JSONSerializerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA7200D894400D0AD6D /* JSONSerializerAdapter.swift */; };
-		3481FEAA200D895300D0AD6D /* JSONSerializableAdapterFactroy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA9200D895300D0AD6D /* JSONSerializableAdapterFactroy.swift */; };
+		3481FEA8200D894400D0AD6D /* SerializerJSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA7200D894400D0AD6D /* SerializerJSONAdapter.swift */; };
+		3481FEAA200D895300D0AD6D /* SerializableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA9200D895300D0AD6D /* SerializableAdapterFactory.swift */; };
 		3481FEAC200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEAB200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift */; };
 		3481FEAE200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEAD200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift */; };
 		34C52E832009844400DCD88C /* URLQueriableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */; };
@@ -134,12 +134,12 @@
 		3473C851200CD3810014C66E /* OnComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnComplete.swift; sourceTree = "<group>"; };
 		3473C853200CD7570014C66E /* DataTaskRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskRunner.swift; sourceTree = "<group>"; };
 		3481FE99200D575000D0AD6D /* BodyAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyAdapterTests.swift; sourceTree = "<group>"; };
-		3481FE9D200D59ED00D0AD6D /* JSONEncoderAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoderAdapter.swift; sourceTree = "<group>"; };
+		3481FE9D200D59ED00D0AD6D /* EncoderJSONAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderJSONAdapter.swift; sourceTree = "<group>"; };
 		3481FE9F200D5A0100D0AD6D /* EncodableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableAdapter.swift; sourceTree = "<group>"; };
 		3481FEA3200D5A6D00D0AD6D /* EncodableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableAdapterFactory.swift; sourceTree = "<group>"; };
 		3481FEA5200D892F00D0AD6D /* SerializableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializableAdapter.swift; sourceTree = "<group>"; };
-		3481FEA7200D894400D0AD6D /* JSONSerializerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializerAdapter.swift; sourceTree = "<group>"; };
-		3481FEA9200D895300D0AD6D /* JSONSerializableAdapterFactroy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializableAdapterFactroy.swift; sourceTree = "<group>"; };
+		3481FEA7200D894400D0AD6D /* SerializerJSONAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializerJSONAdapter.swift; sourceTree = "<group>"; };
+		3481FEA9200D895300D0AD6D /* SerializableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializableAdapterFactory.swift; sourceTree = "<group>"; };
 		3481FEAB200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
 		3481FEAD200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializerThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
 		34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueriableAdapterFactory.swift; sourceTree = "<group>"; };
@@ -296,10 +296,10 @@
 				34C52E842009895D00DCD88C /* DecodableAdapter.swift */,
 				34C52E8A20098D4100DCD88C /* DecoderAdapter.swift */,
 				3481FE9F200D5A0100D0AD6D /* EncodableAdapter.swift */,
-				3481FE9D200D59ED00D0AD6D /* JSONEncoderAdapter.swift */,
-				3481FEA7200D894400D0AD6D /* JSONSerializerAdapter.swift */,
+				3481FE9D200D59ED00D0AD6D /* EncoderJSONAdapter.swift */,
 				34F9C72B1FE89F44002C1EB0 /* QueryItemAdapter.swift */,
 				3481FEA5200D892F00D0AD6D /* SerializableAdapter.swift */,
+				3481FEA7200D894400D0AD6D /* SerializerJSONAdapter.swift */,
 				34C52E8C20098D8D00DCD88C /* URLQueriableAdapter.swift */,
 				344DD8791FFEFB120021350B /* URLQueryAdapter.swift */,
 			);
@@ -325,7 +325,7 @@
 				3409C9EA200C388E00353DC4 /* BodyAdapterFactory.swift */,
 				34C52E8820098A3100DCD88C /* DecodableAdapterFacotry.swift */,
 				3481FEA3200D5A6D00D0AD6D /* EncodableAdapterFactory.swift */,
-				3481FEA9200D895300D0AD6D /* JSONSerializableAdapterFactroy.swift */,
+				3481FEA9200D895300D0AD6D /* SerializableAdapterFactory.swift */,
 			);
 			name = Adapters;
 			path = Sources/Frisbee/Factories/Adapters;
@@ -599,11 +599,11 @@
 				3434A0B61FE7DA5A000659E5 /* HTTPMethod.swift in Sources */,
 				344FC7201FE5BBFE00958CE4 /* NetworkGet.swift in Sources */,
 				3434A0B21FE7D9CC000659E5 /* URLRequestFactory.swift in Sources */,
-				3481FEAA200D895300D0AD6D /* JSONSerializableAdapterFactroy.swift in Sources */,
-				3481FEA8200D894400D0AD6D /* JSONSerializerAdapter.swift in Sources */,
+				3481FEAA200D895300D0AD6D /* SerializableAdapterFactory.swift in Sources */,
+				3481FEA8200D894400D0AD6D /* SerializerJSONAdapter.swift in Sources */,
 				34C52E852009895D00DCD88C /* DecodableAdapter.swift in Sources */,
 				34C52E8920098A3100DCD88C /* DecodableAdapterFacotry.swift in Sources */,
-				3481FE9E200D59ED00D0AD6D /* JSONEncoderAdapter.swift in Sources */,
+				3481FE9E200D59ED00D0AD6D /* EncoderJSONAdapter.swift in Sources */,
 				34C52E8B20098D4100DCD88C /* DecoderAdapter.swift in Sources */,
 				344FC71C1FE5B9D500958CE4 /* FrisbeeError.swift in Sources */,
 				3481FEA4200D5A6D00D0AD6D /* EncodableAdapterFactory.swift in Sources */,
