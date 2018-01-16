@@ -8,12 +8,12 @@ final class NetworkGetTests: XCTestCase {
 
     #if !os(Linux)
 
-    func testGetWhenThrowsAnErrorAtQueryBuilderThenGenerateFailResult() {
+    func testGetWhenThrowsAnErrorAtQueryAdapterThenGenerateFailResult() {
         let session = MockURLSession(results: [.error(SomeError.some)])
-        let urlQueryBuilder = URLWithQueryTrhrowErrorFakeBuildable()
-        urlQueryBuilder.errorToThrow = .invalidEntity
+        let urlQueryAdapter = URLWithQueryTrhrowErrorFakeBuildable()
+        urlQueryAdapter.errorToThrow = .invalidEntity
         let query = Empty()
-        let getter = NetworkGet(queryBuildable: urlQueryBuilder, urlSession: session)
+        let getter = NetworkGet(queryAdapter: urlQueryAdapter, urlSession: session)
         var generatedResult: Result<Empty>!
 
         getter.get(url: validUrlString, query: query) { generatedResult = $0 }
@@ -81,21 +81,6 @@ final class NetworkGetTests: XCTestCase {
         XCTAssertEqual(generatedResult.error, .other(localizedDescription: SomeError.some.localizedDescription))
         XCTAssertNil(generatedResult.data)
     }
-
-    static var allTests = [
-        ("testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError",
-         testGetWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError),
-        ("testInitWithCustomUrlSessionThenKeepSameReferenceOfUrlSession",
-         testInitWithCustomUrlSessionThenKeepSameReferenceOfUrlSession),
-        ("testGetWhenValidURLThenGenerateSuccessResult",
-         testGetWhenValidURLThenGenerateSuccessResult),
-        ("testGetWhenInvalidURLThenGenerateFailResult",
-         testGetWhenInvalidURLThenGenerateFailResult),
-        ("testGetWithQueryWhenInvalidURLThenGenerateFailResult",
-         testGetWithQueryWhenInvalidURLThenGenerateFailResult),
-        ("testGetWhenValidURLAndRequestFailsThenGenerateFailResult",
-         testGetWhenValidURLAndRequestFailsThenGenerateFailResult)
-    ]
     #endif
 
 }

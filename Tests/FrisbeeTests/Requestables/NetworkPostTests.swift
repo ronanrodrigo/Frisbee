@@ -68,9 +68,9 @@ final class NetworkPostTests: XCTestCase {
         XCTAssertNil(generatedResult.data)
     }
 
-    func testPostWithBodyWhenBodyBuilderThrowAnErrorThenGenerateFailResult() {
+    func testPostWithBodyWhenBodyAdapterThrowAnErrorThenGenerateFailResult() {
         let session = MockURLSession(results: [])
-        let networkPost = NetworkPost(urlSession: session, bodyBuilder: BodyThrowErrorFakeBuilder())
+        let networkPost = NetworkPost(urlSession: session, bodyAdapter: BodyThrowErrorFakeAdapter())
         let body = Empty()
         var generatedResult: Result<Empty>!
 
@@ -90,23 +90,6 @@ final class NetworkPostTests: XCTestCase {
         XCTAssertEqual(generatedResult.error, .other(localizedDescription: SomeError.some.localizedDescription))
         XCTAssertNil(generatedResult.data)
     }
-
-    static var allTests = [
-        ("testInitWithCustomUrlSessionThenKeepSameReferenceOfUrlSession",
-         testInitWithCustomUrlSessionThenKeepSameReferenceOfUrlSession),
-        ("testPostWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError",
-         testPostWhenURLStringIsInvalidFormatThenExecuteCompletionHandlerWithInvalidURLError),
-        ("testPostWhenValidURLThenGenerateSuccessResult",
-         testPostWhenValidURLThenGenerateSuccessResult),
-        ("testPostWhenInvalidURLThenGenerateFailResult",
-         testPostWhenInvalidURLThenGenerateFailResult),
-        ("testPostWithBodyWhenInvalidURLThenGenerateFailResult",
-         testPostWithBodyWhenInvalidURLThenGenerateFailResult),
-        ("testPostWithBodyWhenBodyBuilderThrowAnErrorThenGenerateFailResult",
-         testPostWithBodyWhenBodyBuilderThrowAnErrorThenGenerateFailResult),
-        ("testPostWhenValidURLAndRequestFailsThenGenerateFailResult",
-         testPostWhenValidURLAndRequestFailsThenGenerateFailResult)
-    ]
     #endif
 
 }

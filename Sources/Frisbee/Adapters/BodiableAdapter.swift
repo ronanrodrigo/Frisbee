@@ -1,5 +1,5 @@
 import Foundation
 
-protocol BodyBuildable {
+protocol BodiableAdapter {
     func build<T: Encodable>(withBody body: T) throws -> [String: Any]
 }

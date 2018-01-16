@@ -8,7 +8,7 @@ final class ResultGeneratorTests: XCTestCase {
 
     func testGenerateResultWhenEncoderTrhowAnerrorThenGenerateFailResult() {
         let data = try? JSONEncoder().encode(Fake(fake: fakeString))
-        let resultGenerator = ResultGenerator<Fake>(decoder: FrisbeeThrowErrorFakeDecodable())
+        let resultGenerator = ResultGenerator<Fake>(decoder: DecoderThrowErrorFakeAdapter())
 
         let result = resultGenerator.generate(data: data, error: nil)
 

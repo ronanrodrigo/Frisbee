@@ -1,7 +1,7 @@
 import Foundation
 @testable import Frisbee
 
-class URLWithQueryTrhrowErrorFakeBuildable: URLWithQueryBuildable {
+class URLWithQueryTrhrowErrorFakeBuildable: URLQueriableAdapter {
     var errorToThrow: FrisbeeError!
 
     func build<Query: Encodable>(withUrl url: String, query: Query) throws -> URL {

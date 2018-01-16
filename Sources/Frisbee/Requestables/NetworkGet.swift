@@ -6,18 +6,18 @@ typealias NetworkGetter = NetworkGet
 public class NetworkGet: Getable {
 
     let urlSession: URLSession
-    private let queryBuilder: URLWithQueryBuildable
+    private let queryAdapter: URLQueriableAdapter
 
     public convenience init() {
-        self.init(queryBuildable: URLWithQueryBuildableFactory.make(), urlSession: URLSessionFactory.make())
+        self.init(queryAdapter: URLQueriableAdapterFactory.make(), urlSession: URLSessionFactory.make())
     }
 
     public convenience init(urlSession: URLSession) {
-        self.init(queryBuildable: URLWithQueryBuildableFactory.make(), urlSession: urlSession)
+        self.init(queryAdapter: URLQueriableAdapterFactory.make(), urlSession: urlSession)
     }
 
-    init(queryBuildable: URLWithQueryBuildable, urlSession: URLSession) {
-        self.queryBuilder = queryBuildable
+    init(queryAdapter: URLQueriableAdapter, urlSession: URLSession) {
+        self.queryAdapter = queryAdapter
         self.urlSession = urlSession
     }
 
@@ -41,7 +41,7 @@ public class NetworkGet: Getable {
 
     public func get<T: Decodable, U: Encodable>(url: URL, query: U, onComplete: @escaping OnComplete<T>) {
         do {
-            let url = try queryBuilder.build(withUrl: url, query: query)
+            let url = try queryAdapter.build(withUrl: url, query: query)
             makeRequest(url: url, onComplete: onComplete)
         } catch {
             return onComplete(.fail(FrisbeeError(error)))

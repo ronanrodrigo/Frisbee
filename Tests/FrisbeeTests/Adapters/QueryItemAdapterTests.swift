@@ -1,12 +1,12 @@
 import XCTest
 @testable import Frisbee
 
-final class QueryItemBuilderTests: XCTestCase {
+final class QueryItemAdapterTests: XCTestCase {
 
     func testBuildWhenValidDictionaryThenReturnQueryItem() throws {
         let entity = Movie(name: "Ghostbuster", releaseYear: 1984)
 
-        let queryItems = try QueryItemBuilder.build(withEntity: entity)
+        let queryItems = try QueryItemAdapter.build(withEntity: entity)
 
         XCTAssertEqual(queryItems.count, 2)
         XCTAssertContains(queryItems, { $0.name == "release_year" })

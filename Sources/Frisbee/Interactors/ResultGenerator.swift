@@ -2,9 +2,9 @@ import Foundation
 
 struct ResultGenerator<T: Decodable> {
 
-    private let decoder: FrisbeeDecodable
+    private let decoder: DecodableAdapter
 
-    init(decoder: FrisbeeDecodable) {
+    init(decoder: DecodableAdapter) {
         self.decoder = decoder
     }
 

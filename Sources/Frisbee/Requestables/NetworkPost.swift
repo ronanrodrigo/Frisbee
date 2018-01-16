@@ -3,19 +3,19 @@ import Foundation
 public final class NetworkPost: Postable {
 
     let urlSession: URLSession
-    private let bodyBuilder: BodyBuildable
+    private let bodyAdapter: BodiableAdapter
 
     public convenience init() {
-        self.init(urlSession: URLSessionFactory.make(), bodyBuilder: BodyBuildableFactory.make())
+        self.init(urlSession: URLSessionFactory.make(), bodyAdapter: BodyAdapterFactory.make())
     }
 
     public convenience init(urlSession: URLSession) {
-        self.init(urlSession: urlSession, bodyBuilder: BodyBuildableFactory.make())
+        self.init(urlSession: urlSession, bodyAdapter: BodyAdapterFactory.make())
     }
 
-    init(urlSession: URLSession, bodyBuilder: BodyBuildable) {
+    init(urlSession: URLSession, bodyAdapter: BodiableAdapter) {
         self.urlSession = urlSession
-        self.bodyBuilder = bodyBuilder
+        self.bodyAdapter = bodyAdapter
     }
 
     public func post<T: Decodable>(url: String, onComplete: @escaping OnComplete<T>) {
@@ -48,7 +48,7 @@ public final class NetworkPost: Postable {
     private func makeRequest<T: Decodable, U: Encodable>(url: URL, body: U, onComplete: @escaping OnComplete<T>) {
         var request = URLRequestFactory.make(.POST, url)
         do {
-            let bodyObject = try bodyBuilder.build(withBody: body)
+            let bodyObject = try bodyAdapter.build(withBody: body)
             request.httpBody = try JSONSerialization.data(withJSONObject: bodyObject, options: [])
         } catch {
             return onComplete(.fail(FrisbeeError(error)))
