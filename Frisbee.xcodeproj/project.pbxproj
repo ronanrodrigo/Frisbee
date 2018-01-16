@@ -27,8 +27,8 @@
 		3409C9E52009F4E900353DC4 /* IntegrationNetworkPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */; };
 		3409C9E7200C385100353DC4 /* BodiableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E6200C385100353DC4 /* BodiableAdapter.swift */; };
 		3409C9E9200C385900353DC4 /* BodyAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E8200C385900353DC4 /* BodyAdapter.swift */; };
-		3409C9EB200C388E00353DC4 /* BodyBuildableFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9EA200C388E00353DC4 /* BodyBuildableFactory.swift */; };
-		3409C9EE200CC66A00353DC4 /* BodyThrowErrorFakeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9ED200CC66A00353DC4 /* BodyThrowErrorFakeBuilder.swift */; };
+		3409C9EB200C388E00353DC4 /* BodyAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9EA200C388E00353DC4 /* BodyAdapterFactory.swift */; };
+		3409C9EE200CC66A00353DC4 /* BodyThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9ED200CC66A00353DC4 /* BodyThrowErrorFakeAdapter.swift */; };
 		3409C9F0200CC6AB00353DC4 /* DecoderThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9EF200CC6AB00353DC4 /* DecoderThrowErrorFakeAdapter.swift */; };
 		3409C9F2200CC72300353DC4 /* URLWithQueryTrhrowErrorFakeBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9F1200CC72300353DC4 /* URLWithQueryTrhrowErrorFakeBuildable.swift */; };
 		3434A0B21FE7D9CC000659E5 /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0B01FE7D952000659E5 /* URLRequestFactory.swift */; };
@@ -57,16 +57,16 @@
 		3481FE9A200D575000D0AD6D /* BodyAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FE99200D575000D0AD6D /* BodyAdapterTests.swift */; };
 		3481FE9E200D59ED00D0AD6D /* JSONEncoderAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FE9D200D59ED00D0AD6D /* JSONEncoderAdapter.swift */; };
 		3481FEA0200D5A0100D0AD6D /* EncodableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FE9F200D5A0100D0AD6D /* EncodableAdapter.swift */; };
-		3481FEA4200D5A6D00D0AD6D /* FrisbeeEncodableFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA3200D5A6D00D0AD6D /* FrisbeeEncodableFactory.swift */; };
+		3481FEA4200D5A6D00D0AD6D /* EncodableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA3200D5A6D00D0AD6D /* EncodableAdapterFactory.swift */; };
 		3481FEA6200D892F00D0AD6D /* SerializableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA5200D892F00D0AD6D /* SerializableAdapter.swift */; };
 		3481FEA8200D894400D0AD6D /* JSONSerializerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA7200D894400D0AD6D /* JSONSerializerAdapter.swift */; };
-		3481FEAA200D895300D0AD6D /* FrisbeeJSONSerializableFactroy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA9200D895300D0AD6D /* FrisbeeJSONSerializableFactroy.swift */; };
+		3481FEAA200D895300D0AD6D /* JSONSerializableAdapterFactroy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA9200D895300D0AD6D /* JSONSerializableAdapterFactroy.swift */; };
 		3481FEAC200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEAB200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift */; };
 		3481FEAE200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEAD200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift */; };
-		34C52E832009844400DCD88C /* URLWithQueryBuildableFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E802009841200DCD88C /* URLWithQueryBuildableFactory.swift */; };
+		34C52E832009844400DCD88C /* URLQueriableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */; };
 		34C52E852009895D00DCD88C /* DecodableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E842009895D00DCD88C /* DecodableAdapter.swift */; };
 		34C52E8720098A0F00DCD88C /* ResultGeneratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8620098A0F00DCD88C /* ResultGeneratorFactory.swift */; };
-		34C52E8920098A3100DCD88C /* FrisbeeDecodableFacotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8820098A3100DCD88C /* FrisbeeDecodableFacotry.swift */; };
+		34C52E8920098A3100DCD88C /* DecodableAdapterFacotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8820098A3100DCD88C /* DecodableAdapterFacotry.swift */; };
 		34C52E8B20098D4100DCD88C /* DecoderAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8A20098D4100DCD88C /* DecoderAdapter.swift */; };
 		34C52E8D20098D8D00DCD88C /* URLQueriableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8C20098D8D00DCD88C /* URLQueriableAdapter.swift */; };
 		34F91DA6200821B900FFAE20 /* XCTestCase+AssertContains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F91DA4200821A500FFAE20 /* XCTestCase+AssertContains.swift */; };
@@ -106,8 +106,8 @@
 		3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkPostTests.swift; sourceTree = "<group>"; };
 		3409C9E6200C385100353DC4 /* BodiableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodiableAdapter.swift; sourceTree = "<group>"; };
 		3409C9E8200C385900353DC4 /* BodyAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyAdapter.swift; sourceTree = "<group>"; };
-		3409C9EA200C388E00353DC4 /* BodyBuildableFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyBuildableFactory.swift; sourceTree = "<group>"; };
-		3409C9ED200CC66A00353DC4 /* BodyThrowErrorFakeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyThrowErrorFakeBuilder.swift; sourceTree = "<group>"; };
+		3409C9EA200C388E00353DC4 /* BodyAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyAdapterFactory.swift; sourceTree = "<group>"; };
+		3409C9ED200CC66A00353DC4 /* BodyThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
 		3409C9EF200CC6AB00353DC4 /* DecoderThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
 		3409C9F1200CC72300353DC4 /* URLWithQueryTrhrowErrorFakeBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLWithQueryTrhrowErrorFakeBuildable.swift; sourceTree = "<group>"; };
 		3434A0B01FE7D952000659E5 /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
@@ -136,16 +136,16 @@
 		3481FE99200D575000D0AD6D /* BodyAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyAdapterTests.swift; sourceTree = "<group>"; };
 		3481FE9D200D59ED00D0AD6D /* JSONEncoderAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoderAdapter.swift; sourceTree = "<group>"; };
 		3481FE9F200D5A0100D0AD6D /* EncodableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableAdapter.swift; sourceTree = "<group>"; };
-		3481FEA3200D5A6D00D0AD6D /* FrisbeeEncodableFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrisbeeEncodableFactory.swift; sourceTree = "<group>"; };
+		3481FEA3200D5A6D00D0AD6D /* EncodableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableAdapterFactory.swift; sourceTree = "<group>"; };
 		3481FEA5200D892F00D0AD6D /* SerializableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializableAdapter.swift; sourceTree = "<group>"; };
 		3481FEA7200D894400D0AD6D /* JSONSerializerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializerAdapter.swift; sourceTree = "<group>"; };
-		3481FEA9200D895300D0AD6D /* FrisbeeJSONSerializableFactroy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrisbeeJSONSerializableFactroy.swift; sourceTree = "<group>"; };
+		3481FEA9200D895300D0AD6D /* JSONSerializableAdapterFactroy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializableAdapterFactroy.swift; sourceTree = "<group>"; };
 		3481FEAB200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
 		3481FEAD200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializerThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
-		34C52E802009841200DCD88C /* URLWithQueryBuildableFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLWithQueryBuildableFactory.swift; sourceTree = "<group>"; };
+		34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueriableAdapterFactory.swift; sourceTree = "<group>"; };
 		34C52E842009895D00DCD88C /* DecodableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableAdapter.swift; sourceTree = "<group>"; };
 		34C52E8620098A0F00DCD88C /* ResultGeneratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeneratorFactory.swift; sourceTree = "<group>"; };
-		34C52E8820098A3100DCD88C /* FrisbeeDecodableFacotry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrisbeeDecodableFacotry.swift; sourceTree = "<group>"; };
+		34C52E8820098A3100DCD88C /* DecodableAdapterFacotry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableAdapterFacotry.swift; sourceTree = "<group>"; };
 		34C52E8A20098D4100DCD88C /* DecoderAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderAdapter.swift; sourceTree = "<group>"; };
 		34C52E8C20098D8D00DCD88C /* URLQueriableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueriableAdapter.swift; sourceTree = "<group>"; };
 		34F91DA4200821A500FFAE20 /* XCTestCase+AssertContains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AssertContains.swift"; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				579F534C200151D700E9996A /* MockURLSession.swift */,
-				3409C9ED200CC66A00353DC4 /* BodyThrowErrorFakeBuilder.swift */,
+				3409C9ED200CC66A00353DC4 /* BodyThrowErrorFakeAdapter.swift */,
 				3409C9EF200CC6AB00353DC4 /* DecoderThrowErrorFakeAdapter.swift */,
 				3409C9F1200CC72300353DC4 /* URLWithQueryTrhrowErrorFakeBuildable.swift */,
 				3481FEAB200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift */,
@@ -212,14 +212,10 @@
 		3434A0AF1FE7D912000659E5 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				3409C9EA200C388E00353DC4 /* BodyBuildableFactory.swift */,
-				34C52E8820098A3100DCD88C /* FrisbeeDecodableFacotry.swift */,
-				3481FEA3200D5A6D00D0AD6D /* FrisbeeEncodableFactory.swift */,
-				3481FEA9200D895300D0AD6D /* FrisbeeJSONSerializableFactroy.swift */,
+				3481FEB1200D98D400D0AD6D /* Adapters */,
 				34C52E8620098A0F00DCD88C /* ResultGeneratorFactory.swift */,
 				3434A0B01FE7D952000659E5 /* URLRequestFactory.swift */,
 				3434A0B31FE7D9FF000659E5 /* URLSessionFactory.swift */,
-				34C52E802009841200DCD88C /* URLWithQueryBuildableFactory.swift */,
 			);
 			name = Factories;
 			path = Sources/Frisbee/Factories;
@@ -320,6 +316,19 @@
 			);
 			name = Adapters;
 			path = Tests/FrisbeeTests/Adapters;
+			sourceTree = SOURCE_ROOT;
+		};
+		3481FEB1200D98D400D0AD6D /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */,
+				3409C9EA200C388E00353DC4 /* BodyAdapterFactory.swift */,
+				34C52E8820098A3100DCD88C /* DecodableAdapterFacotry.swift */,
+				3481FEA3200D5A6D00D0AD6D /* EncodableAdapterFactory.swift */,
+				3481FEA9200D895300D0AD6D /* JSONSerializableAdapterFactroy.swift */,
+			);
+			name = Adapters;
+			path = Sources/Frisbee/Factories/Adapters;
 			sourceTree = SOURCE_ROOT;
 		};
 		34F9C7241FE895F6002C1EB0 /* Interactors */ = {
@@ -552,7 +561,7 @@
 				344DD87D1FFEFC910021350B /* URLQueryAdapterTests.swift in Sources */,
 				343ECBA5200CC90500320259 /* Empty.swift in Sources */,
 				343ECBA8200CC90500320259 /* MovieQuery.swift in Sources */,
-				3409C9EE200CC66A00353DC4 /* BodyThrowErrorFakeBuilder.swift in Sources */,
+				3409C9EE200CC66A00353DC4 /* BodyThrowErrorFakeAdapter.swift in Sources */,
 				343ECBA9200CC90500320259 /* SomeEntity.swift in Sources */,
 				3481FEAE200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift in Sources */,
 				OBJ_27 /* NetworkGetTests.swift in Sources */,
@@ -581,24 +590,24 @@
 				34C52E8720098A0F00DCD88C /* ResultGeneratorFactory.swift in Sources */,
 				344FC71A1FE5B93200958CE4 /* Getable.swift in Sources */,
 				344DD87B1FFEFBE40021350B /* URLQueryAdapter.swift in Sources */,
-				34C52E832009844400DCD88C /* URLWithQueryBuildableFactory.swift in Sources */,
+				34C52E832009844400DCD88C /* URLQueriableAdapterFactory.swift in Sources */,
 				3434A0B41FE7D9FF000659E5 /* URLSessionFactory.swift in Sources */,
 				3473C852200CD3810014C66E /* OnComplete.swift in Sources */,
 				344FC71E1FE5BA0200958CE4 /* Result.swift in Sources */,
 				3409C9E7200C385100353DC4 /* BodiableAdapter.swift in Sources */,
 				344FC7261FE5D76B00958CE4 /* ResultGenerator.swift in Sources */,
-				3409C9EB200C388E00353DC4 /* BodyBuildableFactory.swift in Sources */,
+				3409C9EB200C388E00353DC4 /* BodyAdapterFactory.swift in Sources */,
 				3434A0B61FE7DA5A000659E5 /* HTTPMethod.swift in Sources */,
 				344FC7201FE5BBFE00958CE4 /* NetworkGet.swift in Sources */,
 				3434A0B21FE7D9CC000659E5 /* URLRequestFactory.swift in Sources */,
-				3481FEAA200D895300D0AD6D /* FrisbeeJSONSerializableFactroy.swift in Sources */,
+				3481FEAA200D895300D0AD6D /* JSONSerializableAdapterFactroy.swift in Sources */,
 				3481FEA8200D894400D0AD6D /* JSONSerializerAdapter.swift in Sources */,
 				34C52E852009895D00DCD88C /* DecodableAdapter.swift in Sources */,
-				34C52E8920098A3100DCD88C /* FrisbeeDecodableFacotry.swift in Sources */,
+				34C52E8920098A3100DCD88C /* DecodableAdapterFacotry.swift in Sources */,
 				3481FE9E200D59ED00D0AD6D /* JSONEncoderAdapter.swift in Sources */,
 				34C52E8B20098D4100DCD88C /* DecoderAdapter.swift in Sources */,
 				344FC71C1FE5B9D500958CE4 /* FrisbeeError.swift in Sources */,
-				3481FEA4200D5A6D00D0AD6D /* FrisbeeEncodableFactory.swift in Sources */,
+				3481FEA4200D5A6D00D0AD6D /* EncodableAdapterFactory.swift in Sources */,
 				3409C9E02009EFBA00353DC4 /* Postable.swift in Sources */,
 				3473C854200CD7570014C66E /* DataTaskRunner.swift in Sources */,
 				34F9C72C1FE89F44002C1EB0 /* QueryItemAdapter.swift in Sources */,

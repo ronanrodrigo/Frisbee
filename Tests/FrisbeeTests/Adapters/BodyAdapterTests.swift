@@ -8,17 +8,17 @@ final class BodyAdapterTests: XCTestCase {
     }
 
     func testBuildWithBodyWhenEncoderThrowsAnErrorThenThrows() {
-        let builder = BodyAdapter(encoder: EncoderThrowErrorFakeAdapter(),
-                                  serializer: FrisbeeJSONSerializableFactroy.make())
+        let adapter = BodyAdapter(encoder: EncoderThrowErrorFakeAdapter(),
+                                  serializer: JSONSerializableAdapterFactroy.make())
 
-        XCTAssertThrowsError(try builder.build(withBody: Fake(fake: "")))
+        XCTAssertThrowsError(try adapter.build(withBody: Fake(fake: "")))
     }
 
     func testBuildWithBodyWhenSerializerThrowsAnErrorThenThrows() {
-        let builder = BodyAdapter(encoder: FrisbeeEncodableFactory.make(),
+        let adapter = BodyAdapter(encoder: EncodableAdapterFactory.make(),
                                   serializer: SerializerThrowErrorFakeAdapter())
 
-        XCTAssertThrowsError(try builder.build(withBody: Fake(fake: "")))
+        XCTAssertThrowsError(try adapter.build(withBody: Fake(fake: "")))
     }
 
     static let allTests = [
