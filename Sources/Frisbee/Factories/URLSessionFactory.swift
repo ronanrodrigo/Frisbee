@@ -1,6 +1,6 @@
 import Foundation
 
-struct URLSessionFactory {
+final class URLSessionFactory {
 
     static func make() -> URLSession {
         let configuration = URLSessionConfiguration.default

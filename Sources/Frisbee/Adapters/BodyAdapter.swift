@@ -1,6 +1,6 @@
 import Foundation
 
-struct BodyAdapter: BodiableAdapter {
+final class BodyAdapter: BodiableAdapter {
 
     private let encoder: EncodableAdapter
     private let serializer: SerializableAdapter

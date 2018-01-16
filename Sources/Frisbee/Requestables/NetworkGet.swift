@@ -3,7 +3,7 @@ import Foundation
 @available(*, deprecated, message: "use NetworkGet")
 typealias NetworkGetter = NetworkGet
 
-public class NetworkGet: Getable {
+public final class NetworkGet: Getable {
 
     let urlSession: URLSession
     private let queryAdapter: URLQueriableAdapter

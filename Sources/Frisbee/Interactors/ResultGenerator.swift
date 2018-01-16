@@ -1,6 +1,6 @@
 import Foundation
 
-struct ResultGenerator<T: Decodable> {
+final class ResultGenerator<T: Decodable> {
 
     private let decoder: DecodableAdapter
 

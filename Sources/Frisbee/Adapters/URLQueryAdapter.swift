@@ -1,6 +1,6 @@
 import Foundation
 
-struct URLQueryAdapter: URLQueriableAdapter {
+final class URLQueryAdapter: URLQueriableAdapter {
 
     func build<T: Encodable>(withUrl url: String, query: T) throws -> URL {
         guard let actualUrl = URL(string: url) else {
