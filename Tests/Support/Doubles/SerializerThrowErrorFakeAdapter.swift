@@ -1,7 +1,8 @@
 import Foundation
+@testable import Frisbee
 
-class FrisbeeJSONSerializable: FrisbeeSerializable {
+class SerializerThrowErrorFakeAdapter: SerializableAdapter {
     func object(with data: Data, options opt: JSONSerialization.ReadingOptions = []) throws -> Any {
-        return try JSONSerialization.jsonObject(with: data, options: opt)
+        throw FrisbeeError.invalidEntity
     }
 }

@@ -1,7 +1,7 @@
 class FrisbeeEncodableFactory {
 
-    static func make() -> FrisbeeEncodable {
-        return FrisbeeJSONEncoder()
+    static func make() -> EncodableAdapter {
+        return JSONEncoderAdapter()
     }
 
 }

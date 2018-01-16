@@ -1,7 +1,7 @@
 class FrisbeeJSONSerializableFactroy {
 
-    static func make() -> FrisbeeSerializable {
-        return FrisbeeJSONSerializable()
+    static func make() -> SerializableAdapter {
+        return JSONSerializerAdapter()
     }
 
 }

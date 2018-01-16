@@ -1,9 +1,9 @@
 import XCTest
 @testable import Frisbee
 
-class URLWithQueryBuilderTests: XCTestCase {
+class URLQueryAdapterTests: XCTestCase {
 
-    private var urlWithQueryBuilder: URLWithQueryBuildable!
+    private var urlWithQueryBuilder: URLQueriableAdapter!
 
     override func setUp() {
         super.setUp()

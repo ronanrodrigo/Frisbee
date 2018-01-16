@@ -1,5 +1,5 @@
 import Foundation
 
-protocol FrisbeeEncodable {
+protocol EncodableAdapter {
     func encode<T: Encodable>(_ value: T) throws -> Data
 }

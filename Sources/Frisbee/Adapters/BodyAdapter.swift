@@ -1,11 +1,11 @@
 import Foundation
 
-struct BodyBuilder: BodyBuildable {
+struct BodyAdapter: BodiableAdapter {
 
-    private let encoder: FrisbeeEncodable
-    private let serializer: FrisbeeSerializable
+    private let encoder: EncodableAdapter
+    private let serializer: SerializableAdapter
 
-    init(encoder: FrisbeeEncodable, serializer: FrisbeeSerializable) {
+    init(encoder: EncodableAdapter, serializer: SerializableAdapter) {
         self.encoder = encoder
         self.serializer = serializer
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-struct QueryItemBuilder<T: Encodable> {
+struct QueryItemAdapter<T: Encodable> {
 
     static func build(withEntity entity: T) throws -> [URLQueryItem] {
         var json: [String: Any] = [:]

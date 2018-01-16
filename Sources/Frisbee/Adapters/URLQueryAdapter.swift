@@ -1,6 +1,6 @@
 import Foundation
 
-struct URLWithQueryBuilder: URLWithQueryBuildable {
+struct URLQueryAdapter: URLQueriableAdapter {
 
     func build<T: Encodable>(withUrl url: String, query: T) throws -> URL {
         guard let actualUrl = URL(string: url) else {
@@ -12,7 +12,7 @@ struct URLWithQueryBuilder: URLWithQueryBuildable {
     func build<T: Encodable>(withUrl url: URL, query: T) throws -> URL {
         var url = url
         var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
-        urlComponents?.queryItems = try QueryItemBuilder.build(withEntity: query)
+        urlComponents?.queryItems = try QueryItemAdapter.build(withEntity: query)
 
         if let componentsUrl = urlComponents?.url { url = componentsUrl }
 

@@ -6,7 +6,7 @@ typealias NetworkGetter = NetworkGet
 public class NetworkGet: Getable {
 
     let urlSession: URLSession
-    private let queryBuilder: URLWithQueryBuildable
+    private let queryBuilder: URLQueriableAdapter
 
     public convenience init() {
         self.init(queryBuildable: URLWithQueryBuildableFactory.make(), urlSession: URLSessionFactory.make())
@@ -16,7 +16,7 @@ public class NetworkGet: Getable {
         self.init(queryBuildable: URLWithQueryBuildableFactory.make(), urlSession: urlSession)
     }
 
-    init(queryBuildable: URLWithQueryBuildable, urlSession: URLSession) {
+    init(queryBuildable: URLQueriableAdapter, urlSession: URLSession) {
         self.queryBuilder = queryBuildable
         self.urlSession = urlSession
     }

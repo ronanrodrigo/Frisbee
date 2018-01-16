@@ -1,7 +1,7 @@
 struct FrisbeeDecodableFacotry {
 
-    static func make() -> FrisbeeDecodable {
-        return FrisbeeJSONDecoder()
+    static func make() -> DecodableAdapter {
+        return DecoderAdapter()
     }
 
 }

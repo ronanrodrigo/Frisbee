@@ -1,7 +1,7 @@
 struct BodyBuildableFactory {
 
-    static func make() -> BodyBuildable {
-        return BodyBuilder(encoder: FrisbeeEncodableFactory.make(),
+    static func make() -> BodiableAdapter {
+        return BodyAdapter(encoder: FrisbeeEncodableFactory.make(),
                            serializer: FrisbeeJSONSerializableFactroy.make())
     }
 

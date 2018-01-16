@@ -1,22 +1,22 @@
 import XCTest
 @testable import Frisbee
 
-final class BodyBuilderTests: XCTestCase {
+final class BodyAdapterTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
     }
 
     func testBuildWithBodyWhenEncoderThrowsAnErrorThenThrows() {
-        let builder = BodyBuilder(encoder: FrisbeeThrowErrorFakeEncoder(),
+        let builder = BodyAdapter(encoder: EncoderThrowErrorFakeAdapter(),
                                   serializer: FrisbeeJSONSerializableFactroy.make())
 
         XCTAssertThrowsError(try builder.build(withBody: Fake(fake: "")))
     }
 
     func testBuildWithBodyWhenSerializerThrowsAnErrorThenThrows() {
-        let builder = BodyBuilder(encoder: FrisbeeEncodableFactory.make(),
-                                  serializer: FrisbeeThrowErrorFakeSerializer())
+        let builder = BodyAdapter(encoder: FrisbeeEncodableFactory.make(),
+                                  serializer: SerializerThrowErrorFakeAdapter())
 
         XCTAssertThrowsError(try builder.build(withBody: Fake(fake: "")))
     }

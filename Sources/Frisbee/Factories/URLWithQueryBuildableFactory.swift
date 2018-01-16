@@ -1,7 +1,7 @@
 struct URLWithQueryBuildableFactory {
 
-    static func make() -> URLWithQueryBuildable {
-        return URLWithQueryBuilder()
+    static func make() -> URLQueriableAdapter {
+        return URLQueryAdapter()
     }
 
 }

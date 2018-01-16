@@ -3,7 +3,7 @@ import Foundation
 public final class NetworkPost: Postable {
 
     let urlSession: URLSession
-    private let bodyBuilder: BodyBuildable
+    private let bodyBuilder: BodiableAdapter
 
     public convenience init() {
         self.init(urlSession: URLSessionFactory.make(), bodyBuilder: BodyBuildableFactory.make())
@@ -13,7 +13,7 @@ public final class NetworkPost: Postable {
         self.init(urlSession: urlSession, bodyBuilder: BodyBuildableFactory.make())
     }
 
-    init(urlSession: URLSession, bodyBuilder: BodyBuildable) {
+    init(urlSession: URLSession, bodyBuilder: BodiableAdapter) {
         self.urlSession = urlSession
         self.bodyBuilder = bodyBuilder
     }
