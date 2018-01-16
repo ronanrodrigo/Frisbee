@@ -1,6 +1,6 @@
 import Foundation
 
-struct ResultGenerator<Entity: Decodable> {
+struct ResultGenerator<T: Decodable> {
 
     private let decoder: FrisbeeDecodable
 
@@ -8,11 +8,11 @@ struct ResultGenerator<Entity: Decodable> {
         self.decoder = decoder
     }
 
-    func generate(data: Data?, error: Error?) -> Result<Entity> {
+    func generate(data: Data?, error: Error?) -> Result<T> {
         if let data = data {
-            let result: Result<Entity>
+            let result: Result<T>
             do {
-                let entityDecoded = try decoder.decode(Entity.self, from: data)
+                let entityDecoded = try decoder.decode(T.self, from: data)
                 result = Result.success(entityDecoded)
             } catch {
                 let noDataError = FrisbeeError.noData

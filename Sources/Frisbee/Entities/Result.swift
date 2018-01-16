@@ -1,10 +1,10 @@
-public enum Result<Entity> {
-    case success(Entity)
+public enum Result<T> {
+    case success(T)
     case fail(FrisbeeError)
 }
 
 extension Result {
-    public var data: Entity? {
+    public var data: T? {
         guard case let .success(data) = self else {
             return nil
         }
@@ -30,7 +30,7 @@ extension Result: Equatable {
     }
 }
 
-extension Result where Entity: Equatable {
+extension Result where T: Equatable {
     public static func == (lhs: Result, rhs: Result) -> Bool {
         switch (lhs, rhs) {
         case let (.success(lhs), .success(rhs)):

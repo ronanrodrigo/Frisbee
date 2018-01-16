@@ -1,6 +1,6 @@
 import Foundation
 
 protocol URLWithQueryBuildable {
-    func build<Query: Encodable>(withUrl url: String, query: Query) throws -> URL
-    func build<Query: Encodable>(withUrl url: URL, query: Query) throws -> URL
+    func build<T: Encodable>(withUrl url: String, query: T) throws -> URL
+    func build<T: Encodable>(withUrl url: URL, query: T) throws -> URL
 }

@@ -1,18 +1,6 @@
 import XCTest
 @testable import Frisbee
 
-class URLWithQueryStubBuildable: URLWithQueryBuildable {
-    var errorToThrow: FrisbeeError!
-
-    func build<Query: Encodable>(withUrl url: String, query: Query) throws -> URL {
-        throw errorToThrow
-    }
-
-    func build<Query: Encodable>(withUrl url: URL, query: Query) throws -> URL {
-        throw errorToThrow
-    }
-}
-
 final class NetworkGetTests: XCTestCase {
 
     private let invalidUrlString = "🤷‍♂️"
@@ -22,7 +10,7 @@ final class NetworkGetTests: XCTestCase {
 
     func testGetWhenThrowsAnErrorAtQueryBuilderThenGenerateFailResult() {
         let session = MockURLSession(results: [.error(SomeError.some)])
-        let urlQueryBuilder = URLWithQueryStubBuildable()
+        let urlQueryBuilder = URLWithQueryTrhrowErrorFakeBuildable()
         urlQueryBuilder.errorToThrow = .invalidEntity
         let query = Empty()
         let getter = NetworkGet(queryBuildable: urlQueryBuilder, urlSession: session)

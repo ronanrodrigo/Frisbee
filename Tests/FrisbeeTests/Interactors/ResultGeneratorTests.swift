@@ -1,27 +1,14 @@
 import XCTest
 @testable import Frisbee
 
-struct Fake: Codable { let fake: String }
-
-class FrisbeeStubDecodable: FrisbeeDecodable {
-    var error: FrisbeeError!
-
-    func decode<T: Decodable>(_ type: T.Type, from data: Data) throws -> T {
-        throw error
-    }
-
-}
-
 final class ResultGeneratorTests: XCTestCase {
 
     private let someError = NSError(domain: "Some error", code: 33, userInfo: nil)
     private let fakeString = "Fake Fake"
 
     func testGenerateResultWhenEncoderTrhowAnerrorThenGenerateFailResult() {
-        let frisbeDecoder = FrisbeeStubDecodable()
-        frisbeDecoder.error = .invalidEntity
         let data = try? JSONEncoder().encode(Fake(fake: fakeString))
-        let resultGenerator = ResultGenerator<Fake>(decoder: frisbeDecoder)
+        let resultGenerator = ResultGenerator<Fake>(decoder: FrisbeeThrowErrorFakeDecodable())
 
         let result = resultGenerator.generate(data: data, error: nil)
 
