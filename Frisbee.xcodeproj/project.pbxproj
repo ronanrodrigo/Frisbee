@@ -192,7 +192,7 @@
 				3481FEAD200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift */,
 			);
 			name = Doubles;
-			path = Tests/Support/Doubles;
+			path = Tests/FrisbeeTests/Support/Doubles;
 			sourceTree = SOURCE_ROOT;
 		};
 		3409C9F5200CC7CD00353DC4 /* Entities */ = {
@@ -206,7 +206,7 @@
 				343ECB9B200CC90100320259 /* SomeError.swift */,
 			);
 			name = Entities;
-			path = Tests/Support/Entities;
+			path = Tests/FrisbeeTests/Support/Entities;
 			sourceTree = SOURCE_ROOT;
 		};
 		3434A0AF1FE7D912000659E5 /* Factories */ = {
@@ -239,7 +239,7 @@
 				34F91DA7200822E000FFAE20 /* FrisbeeError+All.swift */,
 			);
 			name = Extensions;
-			path = Tests/Support/Extensions;
+			path = Tests/FrisbeeTests/Support/Extensions;
 			sourceTree = SOURCE_ROOT;
 		};
 		344FC7301FE5DB7700958CE4 /* Requestables */ = {
@@ -358,14 +358,12 @@
 				3409C9EC200CC60300353DC4 /* Doubles */,
 				3409C9F5200CC7CD00353DC4 /* Entities */,
 			);
-			name = Support;
-			path = Tests/Support;
+			path = Support;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				579F5348200151A300E9996A /* Support */,
 				OBJ_11 /* FrisbeeTests */,
 			);
 			name = Tests;
@@ -374,6 +372,7 @@
 		OBJ_11 /* FrisbeeTests */ = {
 			isa = PBXGroup;
 			children = (
+				579F5348200151A300E9996A /* Support */,
 				3481FEB0200D947300D0AD6D /* Adapters */,
 				578D2CA12001998500EE3865 /* Entities */,
 				3434A0B71FE7DBA8000659E5 /* Factories */,
