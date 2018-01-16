@@ -10,6 +10,7 @@ var allTests = [
     testCase(URLWithQueryBuilderTests.allTests),
     testCase(ResultGeneratorTests.allTests),
     testCase(FrisbeeErrorTests.allTests),
+    testCase(BodyBuilderTests.allTests),
     testCase(ResultTests.allTests)
 ]
 
