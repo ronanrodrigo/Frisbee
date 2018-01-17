@@ -23,4 +23,3 @@ final class ResultGenerator<T: Decodable> {
     }
 
 }
-
