@@ -9,22 +9,17 @@ final class ResultGenerator<T: Decodable> {
     }
 
     func generate(data: Data?, error: Error?) -> Result<T> {
-        if let data = data {
-            let result: Result<T>
-            do {
-                let entityDecoded = try decoder.decode(T.self, from: data)
-                result = Result.success(entityDecoded)
-            } catch {
-                let noDataError = FrisbeeError.noData
-                result = Result.fail(noDataError)
-            }
-            return result
-        } else if let error = error {
-            let otherError = FrisbeeError.other(localizedDescription: error.localizedDescription)
-            return Result.fail(otherError)
+        guard let data = data else {
+            let frisbeeError = FrisbeeError(error ?? FrisbeeError.noData)
+            return .fail(frisbeeError)
         }
-        let noDataError = FrisbeeError.noData
-        return Result.fail(noDataError)
+
+        do {
+            let entityDecoded = try decoder.decode(T.self, from: data)
+            return .success(entityDecoded)
+        } catch {
+            return .fail(.noData)
+        }
     }
 
 }
