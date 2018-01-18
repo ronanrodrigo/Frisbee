@@ -5,6 +5,17 @@
 # Frisbee
 Another network wrapper for URLSession. Built to be simple, small and easy to create tests at the network layer of your application.
 
+- [Install](#install)
+	- [Carthage](#carthage)
+	- [CocoaPods](#cocoapods)
+	- [Swift Package Manager](#swift-package-manager)
+- [Usage](#usage)
+	- [GET Request](#get-request)
+	- [POST Request](#post-request)
+- [Usage in Tests](#usage-in-tests)
+- [Frisbee Next Teatures](#frisbee-next-features)
+- [Telegram](#telegram)
+
 ## Install
 #### Carthage
 To integrate Frisbee into your Xcode project using Carthage, specify it in your Cartfile:
@@ -193,7 +204,7 @@ class MoviesControllerTests: XCTestCase {
 }
 ```
 
-# Frisbee next features
+# Frisbee Next Features
 - [x] Get request
 - [x] Create Carthage distribution
 - [x] Create Cocoapod distribution
@@ -201,5 +212,6 @@ class MoviesControllerTests: XCTestCase {
 - [ ] [Issue # 8](https://github.com/ronanrodrigo/Frisbee/issues/8) Implement other HTTP verbs
 - [ ] [Issue # 7](https://github.com/ronanrodrigo/Frisbee/issues/7) Ready for use mock
 - [ ] [Issue # 2](https://github.com/ronanrodrigo/Frisbee/issues/2) Propagate Swift Errors
+
 # Telegram
 To collaborate, resolve questions and find out what's new about the Frisbee library, join the group on Telegram: https://t.me/FrisbeeLib
