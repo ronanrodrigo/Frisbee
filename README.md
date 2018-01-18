@@ -120,7 +120,7 @@ It is the same logic as GET request.
 class MoviesController {
     private let postRequest: Postable
 
-    // Expect something that conforms to Getable
+    // Expect something that conforms to Postable
     init(postRequest: Postable) {
         self.postRequest = postRequest
     }
