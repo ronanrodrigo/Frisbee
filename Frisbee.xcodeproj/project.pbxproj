@@ -52,7 +52,7 @@
 		344FC7201FE5BBFE00958CE4 /* NetworkGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC71F1FE5BBFE00958CE4 /* NetworkGet.swift */; };
 		344FC7261FE5D76B00958CE4 /* ResultGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */; };
 		344FC7291FE5D7FC00958CE4 /* ResultGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */; };
-		34672DA720132FC600F574F4 /* DecodableDataAdapterFacotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34672DA620132FC600F574F4 /* DecodableDataAdapterFacotry.swift */; };
+		34672DA720132FC600F574F4 /* DecodableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34672DA620132FC600F574F4 /* DecodableAdapterFactory.swift */; };
 		34672DA920132FE600F574F4 /* DecoderDataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34672DA820132FE600F574F4 /* DecoderDataAdapter.swift */; };
 		34672DAB2013307600F574F4 /* DecoderDataAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34672DAA2013307600F574F4 /* DecoderDataAdapterTests.swift */; };
 		3473C852200CD3810014C66E /* OnComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3473C851200CD3810014C66E /* OnComplete.swift */; };
@@ -69,7 +69,6 @@
 		34C52E832009844400DCD88C /* URLQueriableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */; };
 		34C52E852009895D00DCD88C /* DecodableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E842009895D00DCD88C /* DecodableAdapter.swift */; };
 		34C52E8720098A0F00DCD88C /* ResultGeneratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8620098A0F00DCD88C /* ResultGeneratorFactory.swift */; };
-		34C52E8920098A3100DCD88C /* DecodableJSONAdapterFacotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8820098A3100DCD88C /* DecodableJSONAdapterFacotry.swift */; };
 		34C52E8B20098D4100DCD88C /* DecoderJSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8A20098D4100DCD88C /* DecoderJSONAdapter.swift */; };
 		34C52E8D20098D8D00DCD88C /* URLQueriableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8C20098D8D00DCD88C /* URLQueriableAdapter.swift */; };
 		34F91DA6200821B900FFAE20 /* XCTestCase+AssertContains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F91DA4200821A500FFAE20 /* XCTestCase+AssertContains.swift */; };
@@ -133,7 +132,7 @@
 		344FC71F1FE5BBFE00958CE4 /* NetworkGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGet.swift; sourceTree = "<group>"; };
 		344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGenerator.swift; sourceTree = "<group>"; };
 		344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeneratorTests.swift; sourceTree = "<group>"; };
-		34672DA620132FC600F574F4 /* DecodableDataAdapterFacotry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDataAdapterFacotry.swift; sourceTree = "<group>"; };
+		34672DA620132FC600F574F4 /* DecodableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableAdapterFactory.swift; sourceTree = "<group>"; };
 		34672DA820132FE600F574F4 /* DecoderDataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderDataAdapter.swift; sourceTree = "<group>"; };
 		34672DAA2013307600F574F4 /* DecoderDataAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderDataAdapterTests.swift; sourceTree = "<group>"; };
 		3473C851200CD3810014C66E /* OnComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnComplete.swift; sourceTree = "<group>"; };
@@ -150,7 +149,6 @@
 		34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueriableAdapterFactory.swift; sourceTree = "<group>"; };
 		34C52E842009895D00DCD88C /* DecodableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableAdapter.swift; sourceTree = "<group>"; };
 		34C52E8620098A0F00DCD88C /* ResultGeneratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeneratorFactory.swift; sourceTree = "<group>"; };
-		34C52E8820098A3100DCD88C /* DecodableJSONAdapterFacotry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableJSONAdapterFacotry.swift; sourceTree = "<group>"; };
 		34C52E8A20098D4100DCD88C /* DecoderJSONAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderJSONAdapter.swift; sourceTree = "<group>"; };
 		34C52E8C20098D8D00DCD88C /* URLQueriableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueriableAdapter.swift; sourceTree = "<group>"; };
 		34F91DA4200821A500FFAE20 /* XCTestCase+AssertContains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AssertContains.swift"; sourceTree = "<group>"; };
@@ -329,10 +327,9 @@
 			children = (
 				34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */,
 				3409C9EA200C388E00353DC4 /* BodyAdapterFactory.swift */,
-				34C52E8820098A3100DCD88C /* DecodableJSONAdapterFacotry.swift */,
 				3481FEA3200D5A6D00D0AD6D /* EncodableAdapterFactory.swift */,
 				3481FEA9200D895300D0AD6D /* SerializableAdapterFactory.swift */,
-				34672DA620132FC600F574F4 /* DecodableDataAdapterFacotry.swift */,
+				34672DA620132FC600F574F4 /* DecodableAdapterFactory.swift */,
 			);
 			name = Adapters;
 			path = Sources/Frisbee/Factories/Adapters;
@@ -600,11 +597,10 @@
 				3481FEAA200D895300D0AD6D /* SerializableAdapterFactory.swift in Sources */,
 				3481FEA8200D894400D0AD6D /* SerializerJSONAdapter.swift in Sources */,
 				34C52E852009895D00DCD88C /* DecodableAdapter.swift in Sources */,
-				34C52E8920098A3100DCD88C /* DecodableJSONAdapterFacotry.swift in Sources */,
 				3481FE9E200D59ED00D0AD6D /* EncoderJSONAdapter.swift in Sources */,
 				34C52E8B20098D4100DCD88C /* DecoderJSONAdapter.swift in Sources */,
 				344FC71C1FE5B9D500958CE4 /* FrisbeeError.swift in Sources */,
-				34672DA720132FC600F574F4 /* DecodableDataAdapterFacotry.swift in Sources */,
+				34672DA720132FC600F574F4 /* DecodableAdapterFactory.swift in Sources */,
 				3481FEA4200D5A6D00D0AD6D /* EncodableAdapterFactory.swift in Sources */,
 				34672DA920132FE600F574F4 /* DecoderDataAdapter.swift in Sources */,
 				3409C9E02009EFBA00353DC4 /* Postable.swift in Sources */,
