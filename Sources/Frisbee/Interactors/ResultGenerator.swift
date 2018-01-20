@@ -14,12 +14,14 @@ final class ResultGenerator<T: Decodable> {
             return .fail(frisbeeError)
         }
 
+        let result: Result<T>
         do {
             let entityDecoded = try decoder.decode(T.self, from: data)
-            return .success(entityDecoded)
+            result = .success(entityDecoded)
         } catch {
-            return .fail(.noData)
+            result = .fail(.noData)
         }
+        return result
     }
 
 }

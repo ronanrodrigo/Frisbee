@@ -52,6 +52,9 @@
 		344FC7201FE5BBFE00958CE4 /* NetworkGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC71F1FE5BBFE00958CE4 /* NetworkGet.swift */; };
 		344FC7261FE5D76B00958CE4 /* ResultGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */; };
 		344FC7291FE5D7FC00958CE4 /* ResultGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */; };
+		34672DA720132FC600F574F4 /* DecodableDataAdapterFacotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34672DA620132FC600F574F4 /* DecodableDataAdapterFacotry.swift */; };
+		34672DA920132FE600F574F4 /* DecoderDataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34672DA820132FE600F574F4 /* DecoderDataAdapter.swift */; };
+		34672DAB2013307600F574F4 /* DecoderDataAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34672DAA2013307600F574F4 /* DecoderDataAdapterTests.swift */; };
 		3473C852200CD3810014C66E /* OnComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3473C851200CD3810014C66E /* OnComplete.swift */; };
 		3473C854200CD7570014C66E /* DataTaskRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3473C853200CD7570014C66E /* DataTaskRunner.swift */; };
 		3481FE9A200D575000D0AD6D /* BodyAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FE99200D575000D0AD6D /* BodyAdapterTests.swift */; };
@@ -66,8 +69,8 @@
 		34C52E832009844400DCD88C /* URLQueriableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */; };
 		34C52E852009895D00DCD88C /* DecodableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E842009895D00DCD88C /* DecodableAdapter.swift */; };
 		34C52E8720098A0F00DCD88C /* ResultGeneratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8620098A0F00DCD88C /* ResultGeneratorFactory.swift */; };
-		34C52E8920098A3100DCD88C /* DecodableAdapterFacotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8820098A3100DCD88C /* DecodableAdapterFacotry.swift */; };
-		34C52E8B20098D4100DCD88C /* DecoderAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8A20098D4100DCD88C /* DecoderAdapter.swift */; };
+		34C52E8920098A3100DCD88C /* DecodableJSONAdapterFacotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8820098A3100DCD88C /* DecodableJSONAdapterFacotry.swift */; };
+		34C52E8B20098D4100DCD88C /* DecoderJSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8A20098D4100DCD88C /* DecoderJSONAdapter.swift */; };
 		34C52E8D20098D8D00DCD88C /* URLQueriableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8C20098D8D00DCD88C /* URLQueriableAdapter.swift */; };
 		34F91DA6200821B900FFAE20 /* XCTestCase+AssertContains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F91DA4200821A500FFAE20 /* XCTestCase+AssertContains.swift */; };
 		34F91DA9200822F500FFAE20 /* FrisbeeError+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F91DA7200822E000FFAE20 /* FrisbeeError+All.swift */; };
@@ -79,7 +82,6 @@
 		579F534E200151DF00E9996A /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579F534C200151D700E9996A /* MockURLSession.swift */; };
 		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_27 /* NetworkGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NetworkGetTests.swift */; };
-		OBJ_29 /* Frisbee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Frisbee::Frisbee::Product" /* Frisbee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,9 @@
 		344FC71F1FE5BBFE00958CE4 /* NetworkGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGet.swift; sourceTree = "<group>"; };
 		344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGenerator.swift; sourceTree = "<group>"; };
 		344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeneratorTests.swift; sourceTree = "<group>"; };
+		34672DA620132FC600F574F4 /* DecodableDataAdapterFacotry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDataAdapterFacotry.swift; sourceTree = "<group>"; };
+		34672DA820132FE600F574F4 /* DecoderDataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderDataAdapter.swift; sourceTree = "<group>"; };
+		34672DAA2013307600F574F4 /* DecoderDataAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderDataAdapterTests.swift; sourceTree = "<group>"; };
 		3473C851200CD3810014C66E /* OnComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnComplete.swift; sourceTree = "<group>"; };
 		3473C853200CD7570014C66E /* DataTaskRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskRunner.swift; sourceTree = "<group>"; };
 		3481FE99200D575000D0AD6D /* BodyAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyAdapterTests.swift; sourceTree = "<group>"; };
@@ -145,8 +150,8 @@
 		34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueriableAdapterFactory.swift; sourceTree = "<group>"; };
 		34C52E842009895D00DCD88C /* DecodableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableAdapter.swift; sourceTree = "<group>"; };
 		34C52E8620098A0F00DCD88C /* ResultGeneratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeneratorFactory.swift; sourceTree = "<group>"; };
-		34C52E8820098A3100DCD88C /* DecodableAdapterFacotry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableAdapterFacotry.swift; sourceTree = "<group>"; };
-		34C52E8A20098D4100DCD88C /* DecoderAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderAdapter.swift; sourceTree = "<group>"; };
+		34C52E8820098A3100DCD88C /* DecodableJSONAdapterFacotry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableJSONAdapterFacotry.swift; sourceTree = "<group>"; };
+		34C52E8A20098D4100DCD88C /* DecoderJSONAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderJSONAdapter.swift; sourceTree = "<group>"; };
 		34C52E8C20098D8D00DCD88C /* URLQueriableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueriableAdapter.swift; sourceTree = "<group>"; };
 		34F91DA4200821A500FFAE20 /* XCTestCase+AssertContains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AssertContains.swift"; sourceTree = "<group>"; };
 		34F91DA7200822E000FFAE20 /* FrisbeeError+All.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrisbeeError+All.swift"; sourceTree = "<group>"; };
@@ -156,8 +161,8 @@
 		578D2CA420019B1400EE3865 /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		578D2CA620019C3D00EE3865 /* SequenceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensions.swift; sourceTree = "<group>"; };
 		579F534C200151D700E9996A /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
-		"Frisbee::Frisbee::Product" /* Frisbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Frisbee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = FrisbeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Frisbee::Frisbee::Product" /* Frisbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Frisbee.framework; path = /Users/ronan/Developer/Frisbee/build/Debug/Frisbee.framework; sourceTree = "<absolute>"; };
+		"Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; name = FrisbeeTests.xctest; path = /Users/ronan/Developer/Frisbee/build/Debug/FrisbeeTests.xctest; sourceTree = "<absolute>"; };
 		OBJ_12 /* NetworkGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGetTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,7 +172,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_29 /* Frisbee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +298,8 @@
 				3409C9E6200C385100353DC4 /* BodiableAdapter.swift */,
 				3409C9E8200C385900353DC4 /* BodyAdapter.swift */,
 				34C52E842009895D00DCD88C /* DecodableAdapter.swift */,
-				34C52E8A20098D4100DCD88C /* DecoderAdapter.swift */,
+				34672DA820132FE600F574F4 /* DecoderDataAdapter.swift */,
+				34C52E8A20098D4100DCD88C /* DecoderJSONAdapter.swift */,
 				3481FE9F200D5A0100D0AD6D /* EncodableAdapter.swift */,
 				3481FE9D200D59ED00D0AD6D /* EncoderJSONAdapter.swift */,
 				34F9C72B1FE89F44002C1EB0 /* QueryItemAdapter.swift */,
@@ -313,6 +318,7 @@
 				344DD87C1FFEFC910021350B /* URLQueryAdapterTests.swift */,
 				3481FE99200D575000D0AD6D /* BodyAdapterTests.swift */,
 				34F9C7291FE89EF5002C1EB0 /* QueryItemAdapterTests.swift */,
+				34672DAA2013307600F574F4 /* DecoderDataAdapterTests.swift */,
 			);
 			name = Adapters;
 			path = Tests/FrisbeeTests/Adapters;
@@ -323,9 +329,10 @@
 			children = (
 				34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */,
 				3409C9EA200C388E00353DC4 /* BodyAdapterFactory.swift */,
-				34C52E8820098A3100DCD88C /* DecodableAdapterFacotry.swift */,
+				34C52E8820098A3100DCD88C /* DecodableJSONAdapterFacotry.swift */,
 				3481FEA3200D5A6D00D0AD6D /* EncodableAdapterFactory.swift */,
 				3481FEA9200D895300D0AD6D /* SerializableAdapterFactory.swift */,
+				34672DA620132FC600F574F4 /* DecodableDataAdapterFacotry.swift */,
 			);
 			name = Adapters;
 			path = Sources/Frisbee/Factories/Adapters;
@@ -383,20 +390,10 @@
 			path = Tests/FrisbeeTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_13 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				"Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */,
-				"Frisbee::Frisbee::Product" /* Frisbee.framework */,
-			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
-				OBJ_13 /* Products */,
 				OBJ_7 /* Sources */,
 				OBJ_10 /* Tests */,
 			);
@@ -491,7 +488,7 @@
 				en,
 			);
 			mainGroup = OBJ_5;
-			productRefGroup = OBJ_13 /* Products */;
+			productRefGroup = OBJ_5;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -556,6 +553,7 @@
 				3434A0BA1FE7DC30000659E5 /* URLRequestFactoryTests.swift in Sources */,
 				3409C9E52009F4E900353DC4 /* IntegrationNetworkPostTests.swift in Sources */,
 				3409C9F2200CC72300353DC4 /* URLWithQueryTrhrowErrorFakeBuildable.swift in Sources */,
+				34672DAB2013307600F574F4 /* DecoderDataAdapterTests.swift in Sources */,
 				344FC7291FE5D7FC00958CE4 /* ResultGeneratorTests.swift in Sources */,
 				344DD87D1FFEFC910021350B /* URLQueryAdapterTests.swift in Sources */,
 				343ECBA5200CC90500320259 /* Empty.swift in Sources */,
@@ -602,11 +600,13 @@
 				3481FEAA200D895300D0AD6D /* SerializableAdapterFactory.swift in Sources */,
 				3481FEA8200D894400D0AD6D /* SerializerJSONAdapter.swift in Sources */,
 				34C52E852009895D00DCD88C /* DecodableAdapter.swift in Sources */,
-				34C52E8920098A3100DCD88C /* DecodableAdapterFacotry.swift in Sources */,
+				34C52E8920098A3100DCD88C /* DecodableJSONAdapterFacotry.swift in Sources */,
 				3481FE9E200D59ED00D0AD6D /* EncoderJSONAdapter.swift in Sources */,
-				34C52E8B20098D4100DCD88C /* DecoderAdapter.swift in Sources */,
+				34C52E8B20098D4100DCD88C /* DecoderJSONAdapter.swift in Sources */,
 				344FC71C1FE5B9D500958CE4 /* FrisbeeError.swift in Sources */,
+				34672DA720132FC600F574F4 /* DecodableDataAdapterFacotry.swift in Sources */,
 				3481FEA4200D5A6D00D0AD6D /* EncodableAdapterFactory.swift in Sources */,
+				34672DA920132FE600F574F4 /* DecoderDataAdapter.swift in Sources */,
 				3409C9E02009EFBA00353DC4 /* Postable.swift in Sources */,
 				3473C854200CD7570014C66E /* DataTaskRunner.swift in Sources */,
 				34F9C72C1FE89F44002C1EB0 /* QueryItemAdapter.swift in Sources */,
