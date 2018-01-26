@@ -10,8 +10,14 @@ final class ResultGenerator<T: Decodable> {
 
     func generate(data: Data?, error: Error?) -> Result<T> {
         guard let data = data else {
-            let frisbeeError = FrisbeeError(error ?? FrisbeeError.noData)
-            return .fail(frisbeeError)
+            switch error {
+                case .some(URLError.cancelled):
+                    return .fail(FrisbeeError.requestCancelled)
+                case .some(let error):
+                    return .fail(FrisbeeError(error))
+                case .none:
+                    return .fail(FrisbeeError.noData)
+            }
         }
 
         let result: Result<T>

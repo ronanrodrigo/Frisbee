@@ -4,6 +4,7 @@ public enum FrisbeeError: Error {
     case noData
     case invalidQuery
     case invalidEntity
+    case requestCancelled
 
     init(_ error: Error) {
         guard let frisbeeError = error as? FrisbeeError else {
@@ -19,7 +20,8 @@ extension FrisbeeError: Equatable {
         case (.invalidUrl, .invalidUrl),
              (.noData, .noData),
              (.invalidQuery, .invalidQuery),
-             (.invalidEntity, .invalidEntity):
+             (.invalidEntity, .invalidEntity),
+             (.requestCancelled, .requestCancelled):
             return true
         case let (.other(lhs), .other(rhs)):
             return lhs == rhs

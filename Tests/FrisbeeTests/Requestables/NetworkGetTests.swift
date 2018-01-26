@@ -16,7 +16,9 @@ final class NetworkGetTests: XCTestCase {
         let getter = NetworkGet(queryAdapter: urlQueryAdapter, urlSession: session)
         var generatedResult: Result<Empty>!
 
-        getter.get(url: validUrlString, query: query) { generatedResult = $0 }
+        let cancellabe = getter.get(url: validUrlString, query: query) { generatedResult = $0 }
+        //run NillCancellable
+        cancellabe.cancel()
 
         XCTAssertEqual(generatedResult.error, .invalidEntity)
         XCTAssertNil(generatedResult.data)

@@ -50,5 +50,8 @@ class MockDataTask: URLSessionDataTask {
             callback(nil, nil, error)
         }
     }
+
+    //to avoid error `cancel cannot be sent to abstract instance of class` when using MockURLSession
+    override func cancel() { }
 }
 #endif

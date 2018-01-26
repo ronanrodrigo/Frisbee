@@ -79,6 +79,7 @@
 		578D2CA520019B1400EE3865 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578D2CA420019B1400EE3865 /* ResultTests.swift */; };
 		578D2CA720019C3D00EE3865 /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578D2CA620019C3D00EE3865 /* SequenceExtensions.swift */; };
 		579F534E200151DF00E9996A /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579F534C200151D700E9996A /* MockURLSession.swift */; };
+		A444E82B201AC648002A6927 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444E82A201AC648002A6927 /* Cancellable.swift */; };
 		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_27 /* NetworkGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NetworkGetTests.swift */; };
 /* End PBXBuildFile section */
@@ -161,6 +162,7 @@
 		579F534C200151D700E9996A /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		"Frisbee::Frisbee::Product" /* Frisbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Frisbee.framework; path = /Users/ronan/Developer/Frisbee/build/Debug/Frisbee.framework; sourceTree = "<absolute>"; };
 		"Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; name = FrisbeeTests.xctest; path = /Users/ronan/Developer/Frisbee/build/Debug/FrisbeeTests.xctest; sourceTree = "<absolute>"; };
+		A444E82A201AC648002A6927 /* Cancellable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		OBJ_12 /* NetworkGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGetTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -285,6 +287,7 @@
 			children = (
 				344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */,
 				3473C853200CD7570014C66E /* DataTaskRunner.swift */,
+				A444E82A201AC648002A6927 /* Cancellable.swift */,
 			);
 			name = Interactors;
 			path = Sources/Frisbee/Interactors;
@@ -594,6 +597,7 @@
 				3434A0B61FE7DA5A000659E5 /* HTTPMethod.swift in Sources */,
 				344FC7201FE5BBFE00958CE4 /* NetworkGet.swift in Sources */,
 				3434A0B21FE7D9CC000659E5 /* URLRequestFactory.swift in Sources */,
+				A444E82B201AC648002A6927 /* Cancellable.swift in Sources */,
 				3481FEAA200D895300D0AD6D /* SerializableAdapterFactory.swift in Sources */,
 				3481FEA8200D894400D0AD6D /* SerializerJSONAdapter.swift in Sources */,
 				34C52E852009895D00DCD88C /* DecodableAdapter.swift in Sources */,

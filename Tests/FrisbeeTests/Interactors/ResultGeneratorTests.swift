@@ -77,6 +77,15 @@ final class ResultGeneratorTests: XCTestCase {
         XCTAssertNil(result.data)
     }
 
+    func testGenerateResultWhenHasUrlCancelledThenResultCancelledError() {
+        let resultGenerator: ResultGenerator<Data> = ResultGeneratorFactory.make()
+        let urlCancelled = NSError(domain: NSURLErrorDomain, code: URLError.cancelled.rawValue, userInfo: [:])
+
+        let result = resultGenerator.generate(data: nil, error: urlCancelled)
+
+        XCTAssertEqual(result.error, FrisbeeError.requestCancelled)
+    }
+
     static var allTests = [
         ("testGenerateResultWhenEncoderTrhowAnerrorThenGenerateFailResult",
          testGenerateResultWhenEncoderTrhowAnerrorThenGenerateFailResult),
