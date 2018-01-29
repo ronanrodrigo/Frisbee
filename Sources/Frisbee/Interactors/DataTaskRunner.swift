@@ -3,14 +3,12 @@ import Foundation
 final class DataTaskRunner {
 
     static func run<T: Decodable>(with urlSession: URLSession, request: URLRequest,
-                                  onComplete: @escaping OnComplete<T>) -> Cancellable {
+                                  onComplete: @escaping OnComplete<T>) -> CancellableAdapter {
         let task = urlSession.dataTask(with: request) { data, _, error in
             onComplete(ResultGeneratorFactory.make().generate(data: data, error: error))
         }
         task.resume()
-        return task
+        return URLSessionTaskAdapter(task: task)
     }
 
 }
-
-extension URLSessionTask: Cancellable {}

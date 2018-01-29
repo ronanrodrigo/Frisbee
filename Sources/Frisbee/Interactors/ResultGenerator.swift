@@ -11,8 +11,6 @@ final class ResultGenerator<T: Decodable> {
     func generate(data: Data?, error: Error?) -> Result<T> {
         guard let data = data else {
             switch error {
-                case .some(URLError.cancelled):
-                    return .fail(FrisbeeError.requestCancelled)
                 case .some(let error):
                     return .fail(FrisbeeError(error))
                 case .none:

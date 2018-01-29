@@ -22,7 +22,7 @@ public final class NetworkGet: Getable {
     }
 
     @discardableResult
-    public func get<T: Decodable>(url: String, onComplete: @escaping OnComplete<T>) -> Cancellable {
+    public func get<T: Decodable>(url: String, onComplete: @escaping OnComplete<T>) -> CancellableAdapter {
         guard let url = URL(string: url) else {
             onComplete(.fail(FrisbeeError.invalidUrl))
             return NilCancellable()
@@ -31,13 +31,13 @@ public final class NetworkGet: Getable {
     }
 
     @discardableResult
-    public func get<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) -> Cancellable {
+    public func get<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) -> CancellableAdapter {
         return makeRequest(url: url, onComplete: onComplete)
     }
 
     @discardableResult
     public func get<T: Decodable, U: Encodable>(url: String, query: U,
-                                                onComplete: @escaping OnComplete<T>) -> Cancellable {
+                                                onComplete: @escaping OnComplete<T>) -> CancellableAdapter {
         guard let url = URL(string: url) else {
             onComplete(.fail(FrisbeeError.invalidUrl))
             return NilCancellable()
@@ -47,7 +47,7 @@ public final class NetworkGet: Getable {
 
     @discardableResult
     public func get<T: Decodable, U: Encodable>(url: URL, query: U,
-                                                onComplete: @escaping OnComplete<T>) -> Cancellable {
+                                                onComplete: @escaping OnComplete<T>) -> CancellableAdapter {
         do {
             let url = try queryAdapter.build(withUrl: url, query: query)
             return makeRequest(url: url, onComplete: onComplete)
@@ -57,7 +57,7 @@ public final class NetworkGet: Getable {
         }
     }
 
-    private func makeRequest<T: Decodable>(url: URL, onComplete: @escaping (Result<T>) -> Void) -> Cancellable {
+    private func makeRequest<T: Decodable>(url: URL, onComplete: @escaping (Result<T>) -> Void) -> CancellableAdapter {
         let request = URLRequestFactory.make(.GET, url)
 
         return DataTaskRunner.run(with: urlSession, request: request, onComplete: onComplete)

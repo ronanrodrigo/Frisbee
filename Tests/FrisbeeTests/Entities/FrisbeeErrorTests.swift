@@ -40,13 +40,23 @@ class FrisbeeErrorTests: XCTestCase {
         XCTAssertEqual(frisbeeError, .other(localizedDescription: error.localizedDescription))
     }
 
+    func testInitWhenURLErrorCanceledThenCreateRequestCancelled() {
+        let error = NSError(domain: NSURLErrorDomain, code: URLError.cancelled.rawValue, userInfo: [:])
+
+        let frisbeeError = FrisbeeError(error)
+
+        XCTAssertEqual(frisbeeError, .requestCancelled)
+    }
+
     static var allTests = [
         ("testEquatableFromAllPossibleErrorsThenBeEqual",
          testEquatableFromAllPossibleErrorsThenBeEqual),
         ("testInequatableFromAllPossibleErrorsThenBeNotEqual",
          testInequatableFromAllPossibleErrorsThenBeNotEqual),
         ("testInitFromUnkownErrorThenCreateFrisbeErrorOtherWithLocalizedString",
-         testInitFromUnkownErrorThenCreateFrisbeErrorOtherWithLocalizedString)
+         testInitFromUnkownErrorThenCreateFrisbeErrorOtherWithLocalizedString),
+        ("testInitWhenURLErrorCanceledThenCreateRequestCancelled",
+         testInitWhenURLErrorCanceledThenCreateRequestCancelled)
     ]
 
 }

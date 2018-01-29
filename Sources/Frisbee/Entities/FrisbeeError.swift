@@ -1,3 +1,5 @@
+import Foundation
+
 public enum FrisbeeError: Error {
     case invalidUrl
     case other(localizedDescription: String)
@@ -7,10 +9,18 @@ public enum FrisbeeError: Error {
     case requestCancelled
 
     init(_ error: Error) {
-        guard let frisbeeError = error as? FrisbeeError else {
-            self = .other(localizedDescription: error.localizedDescription); return
+        if let frisbeeError = error as? FrisbeeError {
+            self = frisbeeError
+            return
         }
-        self = frisbeeError
+
+        switch error {
+        case URLError.cancelled:
+            self = .requestCancelled
+        default:
+            self = .other(localizedDescription: error.localizedDescription)
+        }
+
     }
 }
 
