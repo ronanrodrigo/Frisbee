@@ -79,7 +79,7 @@
 		578D2CA520019B1400EE3865 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578D2CA420019B1400EE3865 /* ResultTests.swift */; };
 		578D2CA720019C3D00EE3865 /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578D2CA620019C3D00EE3865 /* SequenceExtensions.swift */; };
 		579F534E200151DF00E9996A /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579F534C200151D700E9996A /* MockURLSession.swift */; };
-		A444E82B201AC648002A6927 /* CancellableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444E82A201AC648002A6927 /* CancellableAdapter.swift */; };
+		A444E82B201AC648002A6927 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444E82A201AC648002A6927 /* Cancellable.swift */; };
 		A4477649201FC748001B4D35 /* URLSessionTaskAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4477648201FC748001B4D35 /* URLSessionTaskAdapter.swift */; };
 		A447764B201FC91C001B4D35 /* URLSessionTaskAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447764A201FC91C001B4D35 /* URLSessionTaskAdapterTests.swift */; };
 		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -164,7 +164,7 @@
 		579F534C200151D700E9996A /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		"Frisbee::Frisbee::Product" /* Frisbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Frisbee.framework; path = /Users/ronan/Developer/Frisbee/build/Debug/Frisbee.framework; sourceTree = "<absolute>"; };
 		"Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; name = FrisbeeTests.xctest; path = /Users/ronan/Developer/Frisbee/build/Debug/FrisbeeTests.xctest; sourceTree = "<absolute>"; };
-		A444E82A201AC648002A6927 /* CancellableAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancellableAdapter.swift; sourceTree = "<group>"; };
+		A444E82A201AC648002A6927 /* Cancellable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		A4477648201FC748001B4D35 /* URLSessionTaskAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTaskAdapter.swift; sourceTree = "<group>"; };
 		A447764A201FC91C001B4D35 /* URLSessionTaskAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTaskAdapterTests.swift; sourceTree = "<group>"; };
 		OBJ_12 /* NetworkGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGetTests.swift; sourceTree = "<group>"; };
@@ -311,7 +311,7 @@
 				3481FEA7200D894400D0AD6D /* SerializerJSONAdapter.swift */,
 				34C52E8C20098D8D00DCD88C /* URLQueriableAdapter.swift */,
 				344DD8791FFEFB120021350B /* URLQueryAdapter.swift */,
-				A444E82A201AC648002A6927 /* CancellableAdapter.swift */,
+				A444E82A201AC648002A6927 /* Cancellable.swift */,
 				A4477648201FC748001B4D35 /* URLSessionTaskAdapter.swift */,
 			);
 			name = Adapters;
@@ -605,7 +605,7 @@
 				3434A0B61FE7DA5A000659E5 /* HTTPMethod.swift in Sources */,
 				344FC7201FE5BBFE00958CE4 /* NetworkGet.swift in Sources */,
 				3434A0B21FE7D9CC000659E5 /* URLRequestFactory.swift in Sources */,
-				A444E82B201AC648002A6927 /* CancellableAdapter.swift in Sources */,
+				A444E82B201AC648002A6927 /* Cancellable.swift in Sources */,
 				3481FEAA200D895300D0AD6D /* SerializableAdapterFactory.swift in Sources */,
 				3481FEA8200D894400D0AD6D /* SerializerJSONAdapter.swift in Sources */,
 				34C52E852009895D00DCD88C /* DecodableAdapter.swift in Sources */,

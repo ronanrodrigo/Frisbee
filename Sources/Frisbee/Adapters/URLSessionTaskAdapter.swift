@@ -1,6 +1,6 @@
 import Foundation
 
-final class URLSessionTaskAdapter: CancellableAdapter {
+final class URLSessionTaskAdapter: Cancellable {
     private let task: URLSessionTask
 
     init(task: URLSessionTask) {
