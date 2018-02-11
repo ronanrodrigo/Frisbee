@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "Frisbee"
-  s.version = "0.1.8"
+  s.version = "0.1.9"
   s.summary = "Another network wrapper for URLSession"
   s.description = "Built to make it easy to create tests for your application's network layer."
   s.homepage = "https://github.com/ronanrodrigo/Frisbee"
