@@ -35,6 +35,7 @@ class MockDataTask: URLSessionDataTask {
 
     let result: Result
     let callback: (Data?, URLResponse?, Error?) -> Void
+    var didCallCancel = false
 
     init(result: Result, callback: @escaping URLSessionCallback) {
         self.result = result
@@ -49,6 +50,10 @@ class MockDataTask: URLSessionDataTask {
         case let .error(error):
             callback(nil, nil, error)
         }
+    }
+
+    override func cancel() {
+        didCallCancel = true
     }
 }
 #endif

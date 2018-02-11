@@ -21,37 +21,50 @@ public final class NetworkGet: Getable {
         self.urlSession = urlSession
     }
 
-    public func get<T: Decodable>(url: String, onComplete: @escaping OnComplete<T>) {
+    @discardableResult
+    public func get<T: Decodable>(url: String, onComplete: @escaping OnComplete<T>) -> Cancellable {
         guard let url = URL(string: url) else {
-            return onComplete(.fail(FrisbeeError.invalidUrl))
+            onComplete(.fail(FrisbeeError.invalidUrl))
+            return NilCancellable()
         }
-        makeRequest(url: url, onComplete: onComplete)
+        return get(url: url, onComplete: onComplete)
     }
 
-    public func get<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) {
-        makeRequest(url: url, onComplete: onComplete)
+    @discardableResult
+    public func get<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) -> Cancellable {
+        return makeRequest(url: url, onComplete: onComplete)
     }
 
-    public func get<T: Decodable, U: Encodable>(url: String, query: U, onComplete: @escaping OnComplete<T>) {
+    @discardableResult
+    public func get<T: Decodable, U: Encodable>(url: String, query: U,
+                                                onComplete: @escaping OnComplete<T>) -> Cancellable {
         guard let url = URL(string: url) else {
-            return onComplete(.fail(FrisbeeError.invalidUrl))
+            onComplete(.fail(FrisbeeError.invalidUrl))
+            return NilCancellable()
         }
-        get(url: url, query: query, onComplete: onComplete)
+        return get(url: url, query: query, onComplete: onComplete)
     }
 
-    public func get<T: Decodable, U: Encodable>(url: URL, query: U, onComplete: @escaping OnComplete<T>) {
+    @discardableResult
+    public func get<T: Decodable, U: Encodable>(url: URL, query: U,
+                                                onComplete: @escaping OnComplete<T>) -> Cancellable {
+        //we're only doing this way (instead of returning on the do block) to avoid uncoverage curly brace on tests
+        //similar issue: https://stackoverflow.com/questions/34622082/why-is-a-closing-brace-showing-no-code-coverage
+        var url = url
         do {
-            let url = try queryAdapter.build(withUrl: url, query: query)
-            makeRequest(url: url, onComplete: onComplete)
+            url = try queryAdapter.build(withUrl: url, query: query)
         } catch {
-            return onComplete(.fail(FrisbeeError(error)))
+            onComplete(.fail(FrisbeeError(error)))
+            return NilCancellable()
         }
+
+        return makeRequest(url: url, onComplete: onComplete)
     }
 
-    private func makeRequest<T: Decodable>(url: URL, onComplete: @escaping (Result<T>) -> Void) {
+    private func makeRequest<T: Decodable>(url: URL, onComplete: @escaping (Result<T>) -> Void) -> Cancellable {
         let request = URLRequestFactory.make(.GET, url)
 
-        DataTaskRunner.run(with: urlSession, request: request, onComplete: onComplete)
+        return DataTaskRunner.run(with: urlSession, request: request, onComplete: onComplete)
     }
 
 }

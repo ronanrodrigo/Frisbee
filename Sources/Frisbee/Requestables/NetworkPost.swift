@@ -18,43 +18,53 @@ public final class NetworkPost: Postable {
         self.bodyAdapter = bodyAdapter
     }
 
-    public func post<T: Decodable>(url: String, onComplete: @escaping OnComplete<T>) {
+    @discardableResult
+    public func post<T: Decodable>(url: String, onComplete: @escaping OnComplete<T>) -> Cancellable {
         guard let url = URL(string: url) else {
-            return onComplete(.fail(FrisbeeError.invalidUrl))
+            onComplete(.fail(FrisbeeError.invalidUrl))
+            return NilCancellable()
         }
-        makeRequest(url: url, onComplete: onComplete)
+        return post(url: url, onComplete: onComplete)
     }
 
-    public func post<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) {
-        makeRequest(url: url, onComplete: onComplete)
+    @discardableResult
+    public func post<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) -> Cancellable {
+        return makeRequest(url: url, onComplete: onComplete)
     }
 
-    public func post<T: Decodable, U: Encodable>(url: String, body: U, onComplete: @escaping OnComplete<T>) {
+    @discardableResult
+    public func post<T: Decodable, U: Encodable>(url: String, body: U,
+                                                 onComplete: @escaping OnComplete<T>) -> Cancellable {
         guard let url = URL(string: url) else {
-            return onComplete(.fail(FrisbeeError.invalidUrl))
+            onComplete(.fail(FrisbeeError.invalidUrl))
+            return NilCancellable()
         }
-        makeRequest(url: url, body: body, onComplete: onComplete)
+        return post(url: url, body: body, onComplete: onComplete)
     }
 
-    public func post<T: Decodable, U: Encodable>(url: URL, body: U, onComplete: @escaping OnComplete<T>) {
-        makeRequest(url: url, body: body, onComplete: onComplete)
+    @discardableResult
+    public func post<T: Decodable, U: Encodable>(url: URL, body: U,
+                                                 onComplete: @escaping OnComplete<T>) -> Cancellable {
+        return makeRequest(url: url, body: body, onComplete: onComplete)
     }
 
-    private func makeRequest<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) {
+    private func makeRequest<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) -> Cancellable {
         let request = URLRequestFactory.make(.POST, url)
-        DataTaskRunner.run(with: urlSession, request: request, onComplete: onComplete)
+        return DataTaskRunner.run(with: urlSession, request: request, onComplete: onComplete)
     }
 
-    private func makeRequest<T: Decodable, U: Encodable>(url: URL, body: U, onComplete: @escaping OnComplete<T>) {
+    private func makeRequest<T: Decodable, U: Encodable>(url: URL, body: U,
+                                                         onComplete: @escaping OnComplete<T>) -> Cancellable {
         var request = URLRequestFactory.make(.POST, url)
         do {
             let bodyObject = try bodyAdapter.build(withBody: body)
             request.httpBody = try JSONSerialization.data(withJSONObject: bodyObject, options: [])
         } catch {
-            return onComplete(.fail(FrisbeeError(error)))
+            onComplete(.fail(FrisbeeError(error)))
+            return NilCancellable()
         }
 
-        DataTaskRunner.run(with: urlSession, request: request, onComplete: onComplete)
+        return DataTaskRunner.run(with: urlSession, request: request, onComplete: onComplete)
     }
 
 }
