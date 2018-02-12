@@ -21,6 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2ECE84AF203155AB00FF9767 /* IntegrationNetworkPutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE84AD203155A200FF9767 /* IntegrationNetworkPutTests.swift */; };
+		2ECE84B02031568C00FF9767 /* NetworkPut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE84AB2031521100FF9767 /* NetworkPut.swift */; };
+		2ECE84B12031568F00FF9767 /* Putable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE84A92031519700FF9767 /* Putable.swift */; };
 		3409C9E02009EFBA00353DC4 /* Postable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9DE2009EFBA00353DC4 /* Postable.swift */; };
 		3409C9E12009EFBA00353DC4 /* NetworkPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9DF2009EFBA00353DC4 /* NetworkPost.swift */; };
 		3409C9E32009EFE000353DC4 /* NetworkPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E22009EFE000353DC4 /* NetworkPostTests.swift */; };
@@ -104,6 +107,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2ECE84A720314CE600FF9767 /* FrisbeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrisbeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ECE84A820314CE600FF9767 /* Frisbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Frisbee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ECE84A92031519700FF9767 /* Putable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Putable.swift; sourceTree = "<group>"; };
+		2ECE84AB2031521100FF9767 /* NetworkPut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPut.swift; sourceTree = "<group>"; };
+		2ECE84AD203155A200FF9767 /* IntegrationNetworkPutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkPutTests.swift; sourceTree = "<group>"; };
 		3409C9DE2009EFBA00353DC4 /* Postable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postable.swift; sourceTree = "<group>"; };
 		3409C9DF2009EFBA00353DC4 /* NetworkPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkPost.swift; sourceTree = "<group>"; };
 		3409C9E22009EFE000353DC4 /* NetworkPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPostTests.swift; sourceTree = "<group>"; };
@@ -162,8 +170,6 @@
 		578D2CA420019B1400EE3865 /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		578D2CA620019C3D00EE3865 /* SequenceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensions.swift; sourceTree = "<group>"; };
 		579F534C200151D700E9996A /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
-		"Frisbee::Frisbee::Product" /* Frisbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Frisbee.framework; path = /Users/ronan/Developer/Frisbee/build/Debug/Frisbee.framework; sourceTree = "<absolute>"; };
-		"Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; name = FrisbeeTests.xctest; path = /Users/ronan/Developer/Frisbee/build/Debug/FrisbeeTests.xctest; sourceTree = "<absolute>"; };
 		A444E82A201AC648002A6927 /* Cancellable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		A4477648201FC748001B4D35 /* URLSessionTaskAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTaskAdapter.swift; sourceTree = "<group>"; };
 		A447764A201FC91C001B4D35 /* URLSessionTaskAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTaskAdapterTests.swift; sourceTree = "<group>"; };
@@ -257,7 +263,9 @@
 				344FC71F1FE5BBFE00958CE4 /* NetworkGet.swift */,
 				3409C9DE2009EFBA00353DC4 /* Postable.swift */,
 				3409C9DF2009EFBA00353DC4 /* NetworkPost.swift */,
+				2ECE84AB2031521100FF9767 /* NetworkPut.swift */,
 				3473C851200CD3810014C66E /* OnComplete.swift */,
+				2ECE84A92031519700FF9767 /* Putable.swift */,
 			);
 			name = Requestables;
 			path = Sources/Frisbee/Requestables;
@@ -281,6 +289,7 @@
 				3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */,
 				OBJ_12 /* NetworkGetTests.swift */,
 				3409C9E22009EFE000353DC4 /* NetworkPostTests.swift */,
+				2ECE84AD203155A200FF9767 /* IntegrationNetworkPutTests.swift */,
 			);
 			name = Requestables;
 			path = Tests/FrisbeeTests/Requestables;
@@ -402,6 +411,8 @@
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_10 /* Tests */,
+				2ECE84A720314CE600FF9767 /* FrisbeeTests.xctest */,
+				2ECE84A820314CE600FF9767 /* Frisbee.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -443,7 +454,7 @@
 			);
 			name = Frisbee;
 			productName = Frisbee;
-			productReference = "Frisbee::Frisbee::Product" /* Frisbee.framework */;
+			productReference = 2ECE84A820314CE600FF9767 /* Frisbee.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		"Frisbee::FrisbeeTests" /* FrisbeeTests */ = {
@@ -460,7 +471,7 @@
 			);
 			name = FrisbeeTests;
 			productName = FrisbeeTests;
-			productReference = "Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */;
+			productReference = 2ECE84A720314CE600FF9767 /* FrisbeeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		"Frisbee::SwiftPMPackageDescription" /* FrisbeePackageDescription */ = {
@@ -579,6 +590,7 @@
 				3481FEAC200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift in Sources */,
 				578D2CA3200199A500EE3865 /* FrisbeeErrorTests.swift in Sources */,
 				34F91DA9200822F500FFAE20 /* FrisbeeError+All.swift in Sources */,
+				2ECE84AF203155AB00FF9767 /* IntegrationNetworkPutTests.swift in Sources */,
 				3409C9F0200CC6AB00353DC4 /* DecoderThrowErrorFakeAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,8 +609,10 @@
 				344DD87B1FFEFBE40021350B /* URLQueryAdapter.swift in Sources */,
 				34C52E832009844400DCD88C /* URLQueriableAdapterFactory.swift in Sources */,
 				3434A0B41FE7D9FF000659E5 /* URLSessionFactory.swift in Sources */,
+				2ECE84B02031568C00FF9767 /* NetworkPut.swift in Sources */,
 				3473C852200CD3810014C66E /* OnComplete.swift in Sources */,
 				344FC71E1FE5BA0200958CE4 /* Result.swift in Sources */,
+				2ECE84B12031568F00FF9767 /* Putable.swift in Sources */,
 				3409C9E7200C385100353DC4 /* BodiableAdapter.swift in Sources */,
 				344FC7261FE5D76B00958CE4 /* ResultGenerator.swift in Sources */,
 				3409C9EB200C388E00353DC4 /* BodyAdapterFactory.swift in Sources */,
