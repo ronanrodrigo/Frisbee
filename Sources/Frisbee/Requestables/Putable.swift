@@ -1,6 +1,6 @@
 import Foundation
 
-protocol Putable {
+public protocol Putable {
     @discardableResult
     func put<T: Decodable>(url: String,
                             onComplete: @escaping OnComplete<T>) -> Cancellable
