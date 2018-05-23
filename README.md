@@ -2,7 +2,8 @@
 
 [![Build Status](https://www.bitrise.io/app/27a5e39dc511ba7c/status.svg?token=HZCmnpdBTIy3rOQdUv6HOg&branch=master)](https://www.bitrise.io/app/27a5e39dc511ba7c) [![CocoaPods](https://img.shields.io/cocoapods/v/Frisbee.svg)]() [![CocoaPods](https://img.shields.io/cocoapods/p/Frisbee.svg)]() [![Carthage](https://img.shields.io/badge/carthage-compatible-brightgreen.svg)]() [![codecov](https://codecov.io/gh/ronanrodrigo/frisbee/branch/master/graph/badge.svg)](https://codecov.io/gh/ronanrodrigo/frisbee) [![codebeat badge](https://codebeat.co/badges/f5cf675c-2fca-4689-a42e-a7029a984fe3)](https://codebeat.co/projects/github-com-ronanrodrigo-frisbee-master) [![Join at Telegram](https://img.shields.io/badge/telegram-join-319FD7.svg)](https://t.me/FrisbeeLib) [![Linux Compatible](https://img.shields.io/badge/linux-compatible-brightgreen.svg)]()
 
-# Frisbee
+---
+
 Another network wrapper for URLSession. Built to be simple, small and easy to create tests at the network layer of your application.
 
 - [Install](#install)
