@@ -14,4 +14,3 @@ public protocol Putable {
     func put<T: Decodable, U: Encodable>(url: URL, body: U,
                                           onComplete: @escaping OnComplete<T>) -> Cancellable
 }
-
