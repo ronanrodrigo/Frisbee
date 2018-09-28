@@ -245,11 +245,11 @@
 			children = (
 				OBJ_42 /* Getable.swift */,
 				OBJ_43 /* NetworkGet.swift */,
-				OBJ_44 /* NetworkPost.swift */,
-				OBJ_45 /* NetworkPut.swift */,
-				OBJ_46 /* OnComplete.swift */,
-				OBJ_47 /* Postable.swift */,
 				OBJ_48 /* Putable.swift */,
+				OBJ_45 /* NetworkPut.swift */,
+				OBJ_47 /* Postable.swift */,
+				OBJ_44 /* NetworkPost.swift */,
+				OBJ_46 /* OnComplete.swift */,
 			);
 			path = Requestables;
 			sourceTree = "<group>";
