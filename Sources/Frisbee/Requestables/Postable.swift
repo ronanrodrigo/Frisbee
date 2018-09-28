@@ -1,6 +1,6 @@
 import Foundation
 
-protocol Postable {
+public protocol Postable {
     @discardableResult
     func post<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) -> Cancellable
     @discardableResult
