@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"Frisbee::FrisbeePackageTests::ProductTarget" /* FrisbeePackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_39 /* Build configuration list for PBXAggregateTarget "FrisbeePackageTests" */;
+			buildConfigurationList = OBJ_142 /* Build configuration list for PBXAggregateTarget "FrisbeePackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_42 /* PBXTargetDependency */,
+				OBJ_145 /* PBXTargetDependency */,
 			);
 			name = FrisbeePackageTests;
 			productName = FrisbeePackageTests;
@@ -21,84 +21,84 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2ECE84AF203155AB00FF9767 /* IntegrationNetworkPutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE84AD203155A200FF9767 /* IntegrationNetworkPutTests.swift */; };
-		2ECE84B02031568C00FF9767 /* NetworkPut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE84AB2031521100FF9767 /* NetworkPut.swift */; };
-		2ECE84B12031568F00FF9767 /* Putable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE84A92031519700FF9767 /* Putable.swift */; };
-		3409C9E02009EFBA00353DC4 /* Postable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9DE2009EFBA00353DC4 /* Postable.swift */; };
-		3409C9E12009EFBA00353DC4 /* NetworkPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9DF2009EFBA00353DC4 /* NetworkPost.swift */; };
-		3409C9E32009EFE000353DC4 /* NetworkPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E22009EFE000353DC4 /* NetworkPostTests.swift */; };
-		3409C9E52009F4E900353DC4 /* IntegrationNetworkPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */; };
-		3409C9E7200C385100353DC4 /* BodiableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E6200C385100353DC4 /* BodiableAdapter.swift */; };
-		3409C9E9200C385900353DC4 /* BodyAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9E8200C385900353DC4 /* BodyAdapter.swift */; };
-		3409C9EB200C388E00353DC4 /* BodyAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9EA200C388E00353DC4 /* BodyAdapterFactory.swift */; };
-		3409C9EE200CC66A00353DC4 /* BodyThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9ED200CC66A00353DC4 /* BodyThrowErrorFakeAdapter.swift */; };
-		3409C9F0200CC6AB00353DC4 /* DecoderThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9EF200CC6AB00353DC4 /* DecoderThrowErrorFakeAdapter.swift */; };
-		3409C9F2200CC72300353DC4 /* URLWithQueryTrhrowErrorFakeBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409C9F1200CC72300353DC4 /* URLWithQueryTrhrowErrorFakeBuildable.swift */; };
-		3434A0B21FE7D9CC000659E5 /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0B01FE7D952000659E5 /* URLRequestFactory.swift */; };
-		3434A0B41FE7D9FF000659E5 /* URLSessionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0B31FE7D9FF000659E5 /* URLSessionFactory.swift */; };
-		3434A0B61FE7DA5A000659E5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0B51FE7DA5A000659E5 /* HTTPMethod.swift */; };
-		3434A0BA1FE7DC30000659E5 /* URLRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0B81FE7DBC4000659E5 /* URLRequestFactoryTests.swift */; };
-		3434A0BC1FE7DD74000659E5 /* URLSessionFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0BB1FE7DD74000659E5 /* URLSessionFactoryTests.swift */; };
-		3434A0BF1FE7E025000659E5 /* IntegrationNetworkGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434A0BE1FE7E025000659E5 /* IntegrationNetworkGetTests.swift */; };
-		343ECBA5200CC90500320259 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343ECB9D200CC90100320259 /* Empty.swift */; };
-		343ECBA6200CC90500320259 /* Fake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343ECB9A200CC90000320259 /* Fake.swift */; };
-		343ECBA7200CC90500320259 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343ECB99200CC90000320259 /* Movie.swift */; };
-		343ECBA8200CC90500320259 /* MovieQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343ECB9C200CC90100320259 /* MovieQuery.swift */; };
-		343ECBA9200CC90500320259 /* SomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343ECB9E200CC90100320259 /* SomeEntity.swift */; };
-		343ECBAA200CC90500320259 /* SomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343ECB9B200CC90100320259 /* SomeError.swift */; };
-		343ECBAC200CC93D00320259 /* LinuxMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343ECBAB200CC93D00320259 /* LinuxMain.swift */; };
-		344DD87B1FFEFBE40021350B /* URLQueryAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344DD8791FFEFB120021350B /* URLQueryAdapter.swift */; };
-		344DD87D1FFEFC910021350B /* URLQueryAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344DD87C1FFEFC910021350B /* URLQueryAdapterTests.swift */; };
-		344FC71A1FE5B93200958CE4 /* Getable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7191FE5B93200958CE4 /* Getable.swift */; };
-		344FC71C1FE5B9D500958CE4 /* FrisbeeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC71B1FE5B9D500958CE4 /* FrisbeeError.swift */; };
-		344FC71E1FE5BA0200958CE4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC71D1FE5BA0200958CE4 /* Result.swift */; };
-		344FC7201FE5BBFE00958CE4 /* NetworkGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC71F1FE5BBFE00958CE4 /* NetworkGet.swift */; };
-		344FC7261FE5D76B00958CE4 /* ResultGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */; };
-		344FC7291FE5D7FC00958CE4 /* ResultGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */; };
-		34672DA720132FC600F574F4 /* DecodableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34672DA620132FC600F574F4 /* DecodableAdapterFactory.swift */; };
-		34672DA920132FE600F574F4 /* DecoderDataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34672DA820132FE600F574F4 /* DecoderDataAdapter.swift */; };
-		34672DAB2013307600F574F4 /* DecoderDataAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34672DAA2013307600F574F4 /* DecoderDataAdapterTests.swift */; };
-		3473C852200CD3810014C66E /* OnComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3473C851200CD3810014C66E /* OnComplete.swift */; };
-		3473C854200CD7570014C66E /* DataTaskRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3473C853200CD7570014C66E /* DataTaskRunner.swift */; };
-		3481FE9A200D575000D0AD6D /* BodyAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FE99200D575000D0AD6D /* BodyAdapterTests.swift */; };
-		3481FE9E200D59ED00D0AD6D /* EncoderJSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FE9D200D59ED00D0AD6D /* EncoderJSONAdapter.swift */; };
-		3481FEA0200D5A0100D0AD6D /* EncodableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FE9F200D5A0100D0AD6D /* EncodableAdapter.swift */; };
-		3481FEA4200D5A6D00D0AD6D /* EncodableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA3200D5A6D00D0AD6D /* EncodableAdapterFactory.swift */; };
-		3481FEA6200D892F00D0AD6D /* SerializableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA5200D892F00D0AD6D /* SerializableAdapter.swift */; };
-		3481FEA8200D894400D0AD6D /* SerializerJSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA7200D894400D0AD6D /* SerializerJSONAdapter.swift */; };
-		3481FEAA200D895300D0AD6D /* SerializableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEA9200D895300D0AD6D /* SerializableAdapterFactory.swift */; };
-		3481FEAC200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEAB200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift */; };
-		3481FEAE200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481FEAD200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift */; };
-		34C52E832009844400DCD88C /* URLQueriableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */; };
-		34C52E852009895D00DCD88C /* DecodableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E842009895D00DCD88C /* DecodableAdapter.swift */; };
-		34C52E8720098A0F00DCD88C /* ResultGeneratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8620098A0F00DCD88C /* ResultGeneratorFactory.swift */; };
-		34C52E8B20098D4100DCD88C /* DecoderJSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8A20098D4100DCD88C /* DecoderJSONAdapter.swift */; };
-		34C52E8D20098D8D00DCD88C /* URLQueriableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C52E8C20098D8D00DCD88C /* URLQueriableAdapter.swift */; };
-		34F91DA6200821B900FFAE20 /* XCTestCase+AssertContains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F91DA4200821A500FFAE20 /* XCTestCase+AssertContains.swift */; };
-		34F91DA9200822F500FFAE20 /* FrisbeeError+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F91DA7200822E000FFAE20 /* FrisbeeError+All.swift */; };
-		34F9C72A1FE89EF5002C1EB0 /* QueryItemAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F9C7291FE89EF5002C1EB0 /* QueryItemAdapterTests.swift */; };
-		34F9C72C1FE89F44002C1EB0 /* QueryItemAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F9C72B1FE89F44002C1EB0 /* QueryItemAdapter.swift */; };
-		578D2CA3200199A500EE3865 /* FrisbeeErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578D2CA2200199A500EE3865 /* FrisbeeErrorTests.swift */; };
-		578D2CA520019B1400EE3865 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578D2CA420019B1400EE3865 /* ResultTests.swift */; };
-		578D2CA720019C3D00EE3865 /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578D2CA620019C3D00EE3865 /* SequenceExtensions.swift */; };
-		579F534E200151DF00E9996A /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579F534C200151D700E9996A /* MockURLSession.swift */; };
-		6564990F209C806100B918B9 /* NetworkPutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6564990E209C806100B918B9 /* NetworkPutTests.swift */; };
-		A444E82B201AC648002A6927 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444E82A201AC648002A6927 /* Cancellable.swift */; };
-		A4477649201FC748001B4D35 /* URLSessionTaskAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4477648201FC748001B4D35 /* URLSessionTaskAdapter.swift */; };
-		A447764B201FC91C001B4D35 /* URLSessionTaskAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447764A201FC91C001B4D35 /* URLSessionTaskAdapterTests.swift */; };
-		OBJ_21 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_27 /* NetworkGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NetworkGetTests.swift */; };
+		OBJ_100 /* BodiableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* BodiableAdapter.swift */; };
+		OBJ_101 /* BodyAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* BodyAdapter.swift */; };
+		OBJ_102 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Cancellable.swift */; };
+		OBJ_103 /* DecodableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* DecodableAdapter.swift */; };
+		OBJ_104 /* DecoderDataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* DecoderDataAdapter.swift */; };
+		OBJ_105 /* DecoderJSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* DecoderJSONAdapter.swift */; };
+		OBJ_106 /* EncodableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* EncodableAdapter.swift */; };
+		OBJ_107 /* EncoderJSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* EncoderJSONAdapter.swift */; };
+		OBJ_108 /* QueryItemAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* QueryItemAdapter.swift */; };
+		OBJ_109 /* SerializableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* SerializableAdapter.swift */; };
+		OBJ_110 /* SerializerJSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* SerializerJSONAdapter.swift */; };
+		OBJ_111 /* URLQueriableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* URLQueriableAdapter.swift */; };
+		OBJ_112 /* URLQueryAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* URLQueryAdapter.swift */; };
+		OBJ_113 /* URLSessionTaskAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* URLSessionTaskAdapter.swift */; };
+		OBJ_114 /* FrisbeeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* FrisbeeError.swift */; };
+		OBJ_115 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* HTTPMethod.swift */; };
+		OBJ_116 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Result.swift */; };
+		OBJ_117 /* BodyAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* BodyAdapterFactory.swift */; };
+		OBJ_118 /* DecodableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* DecodableAdapterFactory.swift */; };
+		OBJ_119 /* EncodableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* EncodableAdapterFactory.swift */; };
+		OBJ_120 /* SerializableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* SerializableAdapterFactory.swift */; };
+		OBJ_121 /* URLQueriableAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* URLQueriableAdapterFactory.swift */; };
+		OBJ_122 /* ResultGeneratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* ResultGeneratorFactory.swift */; };
+		OBJ_123 /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* URLRequestFactory.swift */; };
+		OBJ_124 /* URLSessionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* URLSessionFactory.swift */; };
+		OBJ_125 /* DataTaskRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* DataTaskRunner.swift */; };
+		OBJ_126 /* ResultGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* ResultGenerator.swift */; };
+		OBJ_127 /* Getable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Getable.swift */; };
+		OBJ_128 /* NetworkGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* NetworkGet.swift */; };
+		OBJ_129 /* NetworkPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* NetworkPost.swift */; };
+		OBJ_130 /* NetworkPut.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* NetworkPut.swift */; };
+		OBJ_131 /* OnComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* OnComplete.swift */; };
+		OBJ_132 /* Postable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Postable.swift */; };
+		OBJ_133 /* Putable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Putable.swift */; };
+		OBJ_140 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_151 /* BodyAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* BodyAdapterTests.swift */; };
+		OBJ_152 /* DecoderDataAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* DecoderDataAdapterTests.swift */; };
+		OBJ_153 /* QueryItemAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* QueryItemAdapterTests.swift */; };
+		OBJ_154 /* URLQueryAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* URLQueryAdapterTests.swift */; };
+		OBJ_155 /* URLSessionTaskAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* URLSessionTaskAdapterTests.swift */; };
+		OBJ_156 /* FrisbeeErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* FrisbeeErrorTests.swift */; };
+		OBJ_157 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* ResultTests.swift */; };
+		OBJ_158 /* URLRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* URLRequestFactoryTests.swift */; };
+		OBJ_159 /* URLSessionFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* URLSessionFactoryTests.swift */; };
+		OBJ_160 /* ResultGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* ResultGeneratorTests.swift */; };
+		OBJ_161 /* IntegrationNetworkGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* IntegrationNetworkGetTests.swift */; };
+		OBJ_162 /* IntegrationNetworkPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* IntegrationNetworkPostTests.swift */; };
+		OBJ_163 /* IntegrationNetworkPutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* IntegrationNetworkPutTests.swift */; };
+		OBJ_164 /* NetworkGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* NetworkGetTests.swift */; };
+		OBJ_165 /* NetworkPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* NetworkPostTests.swift */; };
+		OBJ_166 /* NetworkPutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* NetworkPutTests.swift */; };
+		OBJ_167 /* BodyThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* BodyThrowErrorFakeAdapter.swift */; };
+		OBJ_168 /* DecoderThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* DecoderThrowErrorFakeAdapter.swift */; };
+		OBJ_169 /* EncoderThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* EncoderThrowErrorFakeAdapter.swift */; };
+		OBJ_170 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* MockURLSession.swift */; };
+		OBJ_171 /* SerializerThrowErrorFakeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* SerializerThrowErrorFakeAdapter.swift */; };
+		OBJ_172 /* URLWithQueryTrhrowErrorFakeBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* URLWithQueryTrhrowErrorFakeBuildable.swift */; };
+		OBJ_173 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* Empty.swift */; };
+		OBJ_174 /* Fake.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* Fake.swift */; };
+		OBJ_175 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* Movie.swift */; };
+		OBJ_176 /* MovieQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* MovieQuery.swift */; };
+		OBJ_177 /* SomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* SomeEntity.swift */; };
+		OBJ_178 /* SomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* SomeError.swift */; };
+		OBJ_179 /* FrisbeeError+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* FrisbeeError+All.swift */; };
+		OBJ_180 /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* SequenceExtensions.swift */; };
+		OBJ_181 /* XCTestCase+AssertContains.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* XCTestCase+AssertContains.swift */; };
+		OBJ_183 /* Frisbee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Frisbee::Frisbee::Product" /* Frisbee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		344FC7171FE5B41500958CE4 /* PBXContainerItemProxy */ = {
+		347AE580215E978300EF0623 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Frisbee::Frisbee";
 			remoteInfo = Frisbee;
 		};
-		344FC7181FE5B41600958CE4 /* PBXContainerItemProxy */ = {
+		347AE581215E978400EF0623 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -108,315 +108,235 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2ECE84A720314CE600FF9767 /* FrisbeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrisbeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ECE84A820314CE600FF9767 /* Frisbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Frisbee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ECE84A92031519700FF9767 /* Putable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Putable.swift; sourceTree = "<group>"; };
-		2ECE84AB2031521100FF9767 /* NetworkPut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPut.swift; sourceTree = "<group>"; };
-		2ECE84AD203155A200FF9767 /* IntegrationNetworkPutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkPutTests.swift; sourceTree = "<group>"; };
-		3409C9DE2009EFBA00353DC4 /* Postable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Postable.swift; sourceTree = "<group>"; };
-		3409C9DF2009EFBA00353DC4 /* NetworkPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkPost.swift; sourceTree = "<group>"; };
-		3409C9E22009EFE000353DC4 /* NetworkPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPostTests.swift; sourceTree = "<group>"; };
-		3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkPostTests.swift; sourceTree = "<group>"; };
-		3409C9E6200C385100353DC4 /* BodiableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodiableAdapter.swift; sourceTree = "<group>"; };
-		3409C9E8200C385900353DC4 /* BodyAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyAdapter.swift; sourceTree = "<group>"; };
-		3409C9EA200C388E00353DC4 /* BodyAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyAdapterFactory.swift; sourceTree = "<group>"; };
-		3409C9ED200CC66A00353DC4 /* BodyThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
-		3409C9EF200CC6AB00353DC4 /* DecoderThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
-		3409C9F1200CC72300353DC4 /* URLWithQueryTrhrowErrorFakeBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLWithQueryTrhrowErrorFakeBuildable.swift; sourceTree = "<group>"; };
-		3434A0B01FE7D952000659E5 /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
-		3434A0B31FE7D9FF000659E5 /* URLSessionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFactory.swift; sourceTree = "<group>"; };
-		3434A0B51FE7DA5A000659E5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		3434A0B81FE7DBC4000659E5 /* URLRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactoryTests.swift; sourceTree = "<group>"; };
-		3434A0BB1FE7DD74000659E5 /* URLSessionFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFactoryTests.swift; sourceTree = "<group>"; };
-		3434A0BE1FE7E025000659E5 /* IntegrationNetworkGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkGetTests.swift; sourceTree = "<group>"; };
-		343ECB99200CC90000320259 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		343ECB9A200CC90000320259 /* Fake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fake.swift; sourceTree = "<group>"; };
-		343ECB9B200CC90100320259 /* SomeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeError.swift; sourceTree = "<group>"; };
-		343ECB9C200CC90100320259 /* MovieQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieQuery.swift; sourceTree = "<group>"; };
-		343ECB9D200CC90100320259 /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
-		343ECB9E200CC90100320259 /* SomeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeEntity.swift; sourceTree = "<group>"; };
-		343ECBAB200CC93D00320259 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinuxMain.swift; path = Tests/LinuxMain.swift; sourceTree = SOURCE_ROOT; };
-		344DD8791FFEFB120021350B /* URLQueryAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryAdapter.swift; sourceTree = "<group>"; };
-		344DD87C1FFEFC910021350B /* URLQueryAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryAdapterTests.swift; sourceTree = "<group>"; };
-		344FC7191FE5B93200958CE4 /* Getable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Getable.swift; sourceTree = "<group>"; };
-		344FC71B1FE5B9D500958CE4 /* FrisbeeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrisbeeError.swift; sourceTree = "<group>"; };
-		344FC71D1FE5BA0200958CE4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		344FC71F1FE5BBFE00958CE4 /* NetworkGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGet.swift; sourceTree = "<group>"; };
-		344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGenerator.swift; sourceTree = "<group>"; };
-		344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeneratorTests.swift; sourceTree = "<group>"; };
-		34672DA620132FC600F574F4 /* DecodableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableAdapterFactory.swift; sourceTree = "<group>"; };
-		34672DA820132FE600F574F4 /* DecoderDataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderDataAdapter.swift; sourceTree = "<group>"; };
-		34672DAA2013307600F574F4 /* DecoderDataAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderDataAdapterTests.swift; sourceTree = "<group>"; };
-		3473C851200CD3810014C66E /* OnComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnComplete.swift; sourceTree = "<group>"; };
-		3473C853200CD7570014C66E /* DataTaskRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskRunner.swift; sourceTree = "<group>"; };
-		3481FE99200D575000D0AD6D /* BodyAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyAdapterTests.swift; sourceTree = "<group>"; };
-		3481FE9D200D59ED00D0AD6D /* EncoderJSONAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderJSONAdapter.swift; sourceTree = "<group>"; };
-		3481FE9F200D5A0100D0AD6D /* EncodableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableAdapter.swift; sourceTree = "<group>"; };
-		3481FEA3200D5A6D00D0AD6D /* EncodableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableAdapterFactory.swift; sourceTree = "<group>"; };
-		3481FEA5200D892F00D0AD6D /* SerializableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializableAdapter.swift; sourceTree = "<group>"; };
-		3481FEA7200D894400D0AD6D /* SerializerJSONAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializerJSONAdapter.swift; sourceTree = "<group>"; };
-		3481FEA9200D895300D0AD6D /* SerializableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializableAdapterFactory.swift; sourceTree = "<group>"; };
-		3481FEAB200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
-		3481FEAD200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializerThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
-		34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueriableAdapterFactory.swift; sourceTree = "<group>"; };
-		34C52E842009895D00DCD88C /* DecodableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableAdapter.swift; sourceTree = "<group>"; };
-		34C52E8620098A0F00DCD88C /* ResultGeneratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeneratorFactory.swift; sourceTree = "<group>"; };
-		34C52E8A20098D4100DCD88C /* DecoderJSONAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderJSONAdapter.swift; sourceTree = "<group>"; };
-		34C52E8C20098D8D00DCD88C /* URLQueriableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueriableAdapter.swift; sourceTree = "<group>"; };
-		34F91DA4200821A500FFAE20 /* XCTestCase+AssertContains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AssertContains.swift"; sourceTree = "<group>"; };
-		34F91DA7200822E000FFAE20 /* FrisbeeError+All.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrisbeeError+All.swift"; sourceTree = "<group>"; };
-		34F9C7291FE89EF5002C1EB0 /* QueryItemAdapterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryItemAdapterTests.swift; sourceTree = "<group>"; };
-		34F9C72B1FE89F44002C1EB0 /* QueryItemAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryItemAdapter.swift; sourceTree = "<group>"; };
-		578D2CA2200199A500EE3865 /* FrisbeeErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrisbeeErrorTests.swift; sourceTree = "<group>"; };
-		578D2CA420019B1400EE3865 /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
-		578D2CA620019C3D00EE3865 /* SequenceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensions.swift; sourceTree = "<group>"; };
-		579F534C200151D700E9996A /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
-		6564990E209C806100B918B9 /* NetworkPutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPutTests.swift; sourceTree = "<group>"; };
-		A444E82A201AC648002A6927 /* Cancellable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
-		A4477648201FC748001B4D35 /* URLSessionTaskAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTaskAdapter.swift; sourceTree = "<group>"; };
-		A447764A201FC91C001B4D35 /* URLSessionTaskAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTaskAdapterTests.swift; sourceTree = "<group>"; };
-		OBJ_12 /* NetworkGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGetTests.swift; sourceTree = "<group>"; };
+		"Frisbee::Frisbee::Product" /* Frisbee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Frisbee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = FrisbeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* BodiableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodiableAdapter.swift; sourceTree = "<group>"; };
+		OBJ_11 /* BodyAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyAdapter.swift; sourceTree = "<group>"; };
+		OBJ_12 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		OBJ_13 /* DecodableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableAdapter.swift; sourceTree = "<group>"; };
+		OBJ_14 /* DecoderDataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderDataAdapter.swift; sourceTree = "<group>"; };
+		OBJ_15 /* DecoderJSONAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderJSONAdapter.swift; sourceTree = "<group>"; };
+		OBJ_16 /* EncodableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableAdapter.swift; sourceTree = "<group>"; };
+		OBJ_17 /* EncoderJSONAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderJSONAdapter.swift; sourceTree = "<group>"; };
+		OBJ_18 /* QueryItemAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItemAdapter.swift; sourceTree = "<group>"; };
+		OBJ_19 /* SerializableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializableAdapter.swift; sourceTree = "<group>"; };
+		OBJ_20 /* SerializerJSONAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializerJSONAdapter.swift; sourceTree = "<group>"; };
+		OBJ_21 /* URLQueriableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueriableAdapter.swift; sourceTree = "<group>"; };
+		OBJ_22 /* URLQueryAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryAdapter.swift; sourceTree = "<group>"; };
+		OBJ_23 /* URLSessionTaskAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTaskAdapter.swift; sourceTree = "<group>"; };
+		OBJ_25 /* FrisbeeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrisbeeError.swift; sourceTree = "<group>"; };
+		OBJ_26 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		OBJ_30 /* BodyAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyAdapterFactory.swift; sourceTree = "<group>"; };
+		OBJ_31 /* DecodableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableAdapterFactory.swift; sourceTree = "<group>"; };
+		OBJ_32 /* EncodableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableAdapterFactory.swift; sourceTree = "<group>"; };
+		OBJ_33 /* SerializableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializableAdapterFactory.swift; sourceTree = "<group>"; };
+		OBJ_34 /* URLQueriableAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueriableAdapterFactory.swift; sourceTree = "<group>"; };
+		OBJ_35 /* ResultGeneratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeneratorFactory.swift; sourceTree = "<group>"; };
+		OBJ_36 /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
+		OBJ_37 /* URLSessionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFactory.swift; sourceTree = "<group>"; };
+		OBJ_39 /* DataTaskRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskRunner.swift; sourceTree = "<group>"; };
+		OBJ_40 /* ResultGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGenerator.swift; sourceTree = "<group>"; };
+		OBJ_42 /* Getable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Getable.swift; sourceTree = "<group>"; };
+		OBJ_43 /* NetworkGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGet.swift; sourceTree = "<group>"; };
+		OBJ_44 /* NetworkPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPost.swift; sourceTree = "<group>"; };
+		OBJ_45 /* NetworkPut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPut.swift; sourceTree = "<group>"; };
+		OBJ_46 /* OnComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnComplete.swift; sourceTree = "<group>"; };
+		OBJ_47 /* Postable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postable.swift; sourceTree = "<group>"; };
+		OBJ_48 /* Putable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Putable.swift; sourceTree = "<group>"; };
+		OBJ_52 /* BodyAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyAdapterTests.swift; sourceTree = "<group>"; };
+		OBJ_53 /* DecoderDataAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderDataAdapterTests.swift; sourceTree = "<group>"; };
+		OBJ_54 /* QueryItemAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItemAdapterTests.swift; sourceTree = "<group>"; };
+		OBJ_55 /* URLQueryAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryAdapterTests.swift; sourceTree = "<group>"; };
+		OBJ_56 /* URLSessionTaskAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTaskAdapterTests.swift; sourceTree = "<group>"; };
+		OBJ_58 /* FrisbeeErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrisbeeErrorTests.swift; sourceTree = "<group>"; };
+		OBJ_59 /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_61 /* URLRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactoryTests.swift; sourceTree = "<group>"; };
+		OBJ_62 /* URLSessionFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFactoryTests.swift; sourceTree = "<group>"; };
+		OBJ_64 /* ResultGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGeneratorTests.swift; sourceTree = "<group>"; };
+		OBJ_66 /* IntegrationNetworkGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkGetTests.swift; sourceTree = "<group>"; };
+		OBJ_67 /* IntegrationNetworkPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkPostTests.swift; sourceTree = "<group>"; };
+		OBJ_68 /* IntegrationNetworkPutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationNetworkPutTests.swift; sourceTree = "<group>"; };
+		OBJ_69 /* NetworkGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGetTests.swift; sourceTree = "<group>"; };
+		OBJ_70 /* NetworkPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPostTests.swift; sourceTree = "<group>"; };
+		OBJ_71 /* NetworkPutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPutTests.swift; sourceTree = "<group>"; };
+		OBJ_74 /* BodyThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
+		OBJ_75 /* DecoderThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
+		OBJ_76 /* EncoderThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
+		OBJ_77 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		OBJ_78 /* SerializerThrowErrorFakeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializerThrowErrorFakeAdapter.swift; sourceTree = "<group>"; };
+		OBJ_79 /* URLWithQueryTrhrowErrorFakeBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLWithQueryTrhrowErrorFakeBuildable.swift; sourceTree = "<group>"; };
+		OBJ_81 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
+		OBJ_82 /* Fake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fake.swift; sourceTree = "<group>"; };
+		OBJ_83 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		OBJ_84 /* MovieQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuery.swift; sourceTree = "<group>"; };
+		OBJ_85 /* SomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeEntity.swift; sourceTree = "<group>"; };
+		OBJ_86 /* SomeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeError.swift; sourceTree = "<group>"; };
+		OBJ_88 /* FrisbeeError+All.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrisbeeError+All.swift"; sourceTree = "<group>"; };
+		OBJ_89 /* SequenceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensions.swift; sourceTree = "<group>"; };
+		OBJ_90 /* XCTestCase+AssertContains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+AssertContains.swift"; sourceTree = "<group>"; };
+		OBJ_91 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_28 /* Frameworks */ = {
+		OBJ_134 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_37 /* Frameworks */ = {
+		OBJ_182 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				OBJ_183 /* Frisbee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3409C9EC200CC60300353DC4 /* Doubles */ = {
+		OBJ_24 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				579F534C200151D700E9996A /* MockURLSession.swift */,
-				3409C9ED200CC66A00353DC4 /* BodyThrowErrorFakeAdapter.swift */,
-				3409C9EF200CC6AB00353DC4 /* DecoderThrowErrorFakeAdapter.swift */,
-				3409C9F1200CC72300353DC4 /* URLWithQueryTrhrowErrorFakeBuildable.swift */,
-				3481FEAB200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift */,
-				3481FEAD200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift */,
+				OBJ_25 /* FrisbeeError.swift */,
+				OBJ_26 /* HTTPMethod.swift */,
+				OBJ_27 /* Result.swift */,
 			);
-			name = Doubles;
-			path = Tests/FrisbeeTests/Support/Doubles;
-			sourceTree = SOURCE_ROOT;
-		};
-		3409C9F5200CC7CD00353DC4 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				343ECB9D200CC90100320259 /* Empty.swift */,
-				343ECB9A200CC90000320259 /* Fake.swift */,
-				343ECB99200CC90000320259 /* Movie.swift */,
-				343ECB9C200CC90100320259 /* MovieQuery.swift */,
-				343ECB9E200CC90100320259 /* SomeEntity.swift */,
-				343ECB9B200CC90100320259 /* SomeError.swift */,
-			);
-			name = Entities;
-			path = Tests/FrisbeeTests/Support/Entities;
-			sourceTree = SOURCE_ROOT;
-		};
-		3434A0AF1FE7D912000659E5 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				3481FEB1200D98D400D0AD6D /* Adapters */,
-				34C52E8620098A0F00DCD88C /* ResultGeneratorFactory.swift */,
-				3434A0B01FE7D952000659E5 /* URLRequestFactory.swift */,
-				3434A0B31FE7D9FF000659E5 /* URLSessionFactory.swift */,
-			);
-			name = Factories;
-			path = Sources/Frisbee/Factories;
-			sourceTree = SOURCE_ROOT;
-		};
-		3434A0B71FE7DBA8000659E5 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				3434A0B81FE7DBC4000659E5 /* URLRequestFactoryTests.swift */,
-				3434A0BB1FE7DD74000659E5 /* URLSessionFactoryTests.swift */,
-			);
-			name = Factories;
-			path = Tests/FrisbeeTests/Factories;
-			sourceTree = SOURCE_ROOT;
-		};
-		344FC7211FE5BDAE00958CE4 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				578D2CA620019C3D00EE3865 /* SequenceExtensions.swift */,
-				34F91DA4200821A500FFAE20 /* XCTestCase+AssertContains.swift */,
-				34F91DA7200822E000FFAE20 /* FrisbeeError+All.swift */,
-			);
-			name = Extensions;
-			path = Tests/FrisbeeTests/Support/Extensions;
-			sourceTree = SOURCE_ROOT;
-		};
-		344FC7301FE5DB7700958CE4 /* Requestables */ = {
-			isa = PBXGroup;
-			children = (
-				344FC7191FE5B93200958CE4 /* Getable.swift */,
-				344FC71F1FE5BBFE00958CE4 /* NetworkGet.swift */,
-				3409C9DE2009EFBA00353DC4 /* Postable.swift */,
-				3409C9DF2009EFBA00353DC4 /* NetworkPost.swift */,
-				2ECE84AB2031521100FF9767 /* NetworkPut.swift */,
-				3473C851200CD3810014C66E /* OnComplete.swift */,
-				2ECE84A92031519700FF9767 /* Putable.swift */,
-			);
-			name = Requestables;
-			path = Sources/Frisbee/Requestables;
-			sourceTree = SOURCE_ROOT;
-		};
-		344FC7311FE5DBAB00958CE4 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				344FC71B1FE5B9D500958CE4 /* FrisbeeError.swift */,
-				3434A0B51FE7DA5A000659E5 /* HTTPMethod.swift */,
-				344FC71D1FE5BA0200958CE4 /* Result.swift */,
-			);
-			name = Entities;
-			path = Sources/Frisbee/Entities;
-			sourceTree = SOURCE_ROOT;
-		};
-		344FC7321FE5DFD400958CE4 /* Requestables */ = {
-			isa = PBXGroup;
-			children = (
-				3434A0BE1FE7E025000659E5 /* IntegrationNetworkGetTests.swift */,
-				3409C9E42009F4E900353DC4 /* IntegrationNetworkPostTests.swift */,
-				OBJ_12 /* NetworkGetTests.swift */,
-				3409C9E22009EFE000353DC4 /* NetworkPostTests.swift */,
-				2ECE84AD203155A200FF9767 /* IntegrationNetworkPutTests.swift */,
-				6564990E209C806100B918B9 /* NetworkPutTests.swift */,
-			);
-			name = Requestables;
-			path = Tests/FrisbeeTests/Requestables;
-			sourceTree = SOURCE_ROOT;
-		};
-		344FC7331FE5DFFD00958CE4 /* Interactors */ = {
-			isa = PBXGroup;
-			children = (
-				344FC7251FE5D76B00958CE4 /* ResultGenerator.swift */,
-				3473C853200CD7570014C66E /* DataTaskRunner.swift */,
-			);
-			name = Interactors;
-			path = Sources/Frisbee/Interactors;
-			sourceTree = SOURCE_ROOT;
-		};
-		3481FEAF200D915F00D0AD6D /* Adapters */ = {
-			isa = PBXGroup;
-			children = (
-				3409C9E6200C385100353DC4 /* BodiableAdapter.swift */,
-				3409C9E8200C385900353DC4 /* BodyAdapter.swift */,
-				34C52E842009895D00DCD88C /* DecodableAdapter.swift */,
-				34672DA820132FE600F574F4 /* DecoderDataAdapter.swift */,
-				34C52E8A20098D4100DCD88C /* DecoderJSONAdapter.swift */,
-				3481FE9F200D5A0100D0AD6D /* EncodableAdapter.swift */,
-				3481FE9D200D59ED00D0AD6D /* EncoderJSONAdapter.swift */,
-				34F9C72B1FE89F44002C1EB0 /* QueryItemAdapter.swift */,
-				3481FEA5200D892F00D0AD6D /* SerializableAdapter.swift */,
-				3481FEA7200D894400D0AD6D /* SerializerJSONAdapter.swift */,
-				34C52E8C20098D8D00DCD88C /* URLQueriableAdapter.swift */,
-				344DD8791FFEFB120021350B /* URLQueryAdapter.swift */,
-				A444E82A201AC648002A6927 /* Cancellable.swift */,
-				A4477648201FC748001B4D35 /* URLSessionTaskAdapter.swift */,
-			);
-			name = Adapters;
-			path = Sources/Frisbee/Adapters;
-			sourceTree = SOURCE_ROOT;
-		};
-		3481FEB0200D947300D0AD6D /* Adapters */ = {
-			isa = PBXGroup;
-			children = (
-				344DD87C1FFEFC910021350B /* URLQueryAdapterTests.swift */,
-				3481FE99200D575000D0AD6D /* BodyAdapterTests.swift */,
-				34F9C7291FE89EF5002C1EB0 /* QueryItemAdapterTests.swift */,
-				34672DAA2013307600F574F4 /* DecoderDataAdapterTests.swift */,
-				A447764A201FC91C001B4D35 /* URLSessionTaskAdapterTests.swift */,
-			);
-			name = Adapters;
-			path = Tests/FrisbeeTests/Adapters;
-			sourceTree = SOURCE_ROOT;
-		};
-		3481FEB1200D98D400D0AD6D /* Adapters */ = {
-			isa = PBXGroup;
-			children = (
-				34C52E802009841200DCD88C /* URLQueriableAdapterFactory.swift */,
-				3409C9EA200C388E00353DC4 /* BodyAdapterFactory.swift */,
-				3481FEA3200D5A6D00D0AD6D /* EncodableAdapterFactory.swift */,
-				3481FEA9200D895300D0AD6D /* SerializableAdapterFactory.swift */,
-				34672DA620132FC600F574F4 /* DecodableAdapterFactory.swift */,
-			);
-			name = Adapters;
-			path = Sources/Frisbee/Factories/Adapters;
-			sourceTree = SOURCE_ROOT;
-		};
-		34F9C7241FE895F6002C1EB0 /* Interactors */ = {
-			isa = PBXGroup;
-			children = (
-				344FC7271FE5D7F900958CE4 /* ResultGeneratorTests.swift */,
-			);
-			name = Interactors;
-			path = Tests/FrisbeeTests/Interactors;
-			sourceTree = SOURCE_ROOT;
-		};
-		578D2CA12001998500EE3865 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				578D2CA2200199A500EE3865 /* FrisbeeErrorTests.swift */,
-				578D2CA420019B1400EE3865 /* ResultTests.swift */,
-			);
-			name = Entities;
-			path = Tests/FrisbeeTests/Entities;
-			sourceTree = SOURCE_ROOT;
-		};
-		579F5348200151A300E9996A /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				343ECBAB200CC93D00320259 /* LinuxMain.swift */,
-				344FC7211FE5BDAE00958CE4 /* Extensions */,
-				3409C9EC200CC60300353DC4 /* Doubles */,
-				3409C9F5200CC7CD00353DC4 /* Entities */,
-			);
-			path = Support;
+			path = Entities;
 			sourceTree = "<group>";
 		};
-		OBJ_10 /* Tests */ = {
+		OBJ_28 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* FrisbeeTests */,
+				OBJ_29 /* Adapters */,
+				OBJ_35 /* ResultGeneratorFactory.swift */,
+				OBJ_36 /* URLRequestFactory.swift */,
+				OBJ_37 /* URLSessionFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		OBJ_29 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_30 /* BodyAdapterFactory.swift */,
+				OBJ_31 /* DecodableAdapterFactory.swift */,
+				OBJ_32 /* EncodableAdapterFactory.swift */,
+				OBJ_33 /* SerializableAdapterFactory.swift */,
+				OBJ_34 /* URLQueriableAdapterFactory.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		OBJ_38 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_39 /* DataTaskRunner.swift */,
+				OBJ_40 /* ResultGenerator.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		OBJ_41 /* Requestables */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_42 /* Getable.swift */,
+				OBJ_43 /* NetworkGet.swift */,
+				OBJ_44 /* NetworkPost.swift */,
+				OBJ_45 /* NetworkPut.swift */,
+				OBJ_46 /* OnComplete.swift */,
+				OBJ_47 /* Postable.swift */,
+				OBJ_48 /* Putable.swift */,
+			);
+			path = Requestables;
+			sourceTree = "<group>";
+		};
+		OBJ_49 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_50 /* FrisbeeTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_11 /* FrisbeeTests */ = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
-				579F5348200151A300E9996A /* Support */,
-				3481FEB0200D947300D0AD6D /* Adapters */,
-				578D2CA12001998500EE3865 /* Entities */,
-				3434A0B71FE7DBA8000659E5 /* Factories */,
-				34F9C7241FE895F6002C1EB0 /* Interactors */,
-				344FC7321FE5DFD400958CE4 /* Requestables */,
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_49 /* Tests */,
+				OBJ_91 /* build */,
+				OBJ_92 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_50 /* FrisbeeTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_51 /* Adapters */,
+				OBJ_57 /* Entities */,
+				OBJ_60 /* Factories */,
+				OBJ_63 /* Interactors */,
+				OBJ_65 /* Requestables */,
+				OBJ_72 /* Support */,
 			);
 			name = FrisbeeTests;
 			path = Tests/FrisbeeTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 = {
+		OBJ_51 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_6 /* Package.swift */,
-				OBJ_7 /* Sources */,
-				OBJ_10 /* Tests */,
-				2ECE84A720314CE600FF9767 /* FrisbeeTests.xctest */,
-				2ECE84A820314CE600FF9767 /* Frisbee.framework */,
+				OBJ_52 /* BodyAdapterTests.swift */,
+				OBJ_53 /* DecoderDataAdapterTests.swift */,
+				OBJ_54 /* QueryItemAdapterTests.swift */,
+				OBJ_55 /* URLQueryAdapterTests.swift */,
+				OBJ_56 /* URLSessionTaskAdapterTests.swift */,
 			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		OBJ_57 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_58 /* FrisbeeErrorTests.swift */,
+				OBJ_59 /* ResultTests.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		OBJ_60 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_61 /* URLRequestFactoryTests.swift */,
+				OBJ_62 /* URLSessionFactoryTests.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		OBJ_63 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_64 /* ResultGeneratorTests.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		OBJ_65 /* Requestables */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_66 /* IntegrationNetworkGetTests.swift */,
+				OBJ_67 /* IntegrationNetworkPostTests.swift */,
+				OBJ_68 /* IntegrationNetworkPutTests.swift */,
+				OBJ_69 /* NetworkGetTests.swift */,
+				OBJ_70 /* NetworkPostTests.swift */,
+				OBJ_71 /* NetworkPutTests.swift */,
+			);
+			path = Requestables;
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -427,29 +347,104 @@
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
+		OBJ_72 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_73 /* Doubles */,
+				OBJ_80 /* Entities */,
+				OBJ_87 /* Extensions */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		OBJ_73 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_74 /* BodyThrowErrorFakeAdapter.swift */,
+				OBJ_75 /* DecoderThrowErrorFakeAdapter.swift */,
+				OBJ_76 /* EncoderThrowErrorFakeAdapter.swift */,
+				OBJ_77 /* MockURLSession.swift */,
+				OBJ_78 /* SerializerThrowErrorFakeAdapter.swift */,
+				OBJ_79 /* URLWithQueryTrhrowErrorFakeBuildable.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
 		OBJ_8 /* Frisbee */ = {
 			isa = PBXGroup;
 			children = (
-				3481FEAF200D915F00D0AD6D /* Adapters */,
-				344FC7311FE5DBAB00958CE4 /* Entities */,
-				3434A0AF1FE7D912000659E5 /* Factories */,
-				344FC7331FE5DFFD00958CE4 /* Interactors */,
-				344FC7301FE5DB7700958CE4 /* Requestables */,
+				OBJ_9 /* Adapters */,
+				OBJ_24 /* Entities */,
+				OBJ_28 /* Factories */,
+				OBJ_38 /* Interactors */,
+				OBJ_41 /* Requestables */,
 			);
 			name = Frisbee;
 			path = Sources/Frisbee;
 			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_80 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_81 /* Empty.swift */,
+				OBJ_82 /* Fake.swift */,
+				OBJ_83 /* Movie.swift */,
+				OBJ_84 /* MovieQuery.swift */,
+				OBJ_85 /* SomeEntity.swift */,
+				OBJ_86 /* SomeError.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		OBJ_87 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_88 /* FrisbeeError+All.swift */,
+				OBJ_89 /* SequenceExtensions.swift */,
+				OBJ_90 /* XCTestCase+AssertContains.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		OBJ_9 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* BodiableAdapter.swift */,
+				OBJ_11 /* BodyAdapter.swift */,
+				OBJ_12 /* Cancellable.swift */,
+				OBJ_13 /* DecodableAdapter.swift */,
+				OBJ_14 /* DecoderDataAdapter.swift */,
+				OBJ_15 /* DecoderJSONAdapter.swift */,
+				OBJ_16 /* EncodableAdapter.swift */,
+				OBJ_17 /* EncoderJSONAdapter.swift */,
+				OBJ_18 /* QueryItemAdapter.swift */,
+				OBJ_19 /* SerializableAdapter.swift */,
+				OBJ_20 /* SerializerJSONAdapter.swift */,
+				OBJ_21 /* URLQueriableAdapter.swift */,
+				OBJ_22 /* URLQueryAdapter.swift */,
+				OBJ_23 /* URLSessionTaskAdapter.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		OBJ_92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Frisbee::Frisbee::Product" /* Frisbee.framework */,
+				"Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		"Frisbee::Frisbee" /* Frisbee */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_32 /* Build configuration list for PBXNativeTarget "Frisbee" */;
+			buildConfigurationList = OBJ_96 /* Build configuration list for PBXNativeTarget "Frisbee" */;
 			buildPhases = (
-				OBJ_35 /* Sources */,
-				OBJ_37 /* Frameworks */,
-				344BCCE41FE606D600E0A2B7 /* Swiftlint */,
+				OBJ_99 /* Sources */,
+				OBJ_134 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -457,32 +452,31 @@
 			);
 			name = Frisbee;
 			productName = Frisbee;
-			productReference = 2ECE84A820314CE600FF9767 /* Frisbee.framework */;
+			productReference = "Frisbee::Frisbee::Product" /* Frisbee.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		"Frisbee::FrisbeeTests" /* FrisbeeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_23 /* Build configuration list for PBXNativeTarget "FrisbeeTests" */;
+			buildConfigurationList = OBJ_147 /* Build configuration list for PBXNativeTarget "FrisbeeTests" */;
 			buildPhases = (
-				OBJ_26 /* Sources */,
-				OBJ_28 /* Frameworks */,
+				OBJ_150 /* Sources */,
+				OBJ_182 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_30 /* PBXTargetDependency */,
+				OBJ_184 /* PBXTargetDependency */,
 			);
 			name = FrisbeeTests;
 			productName = FrisbeeTests;
-			productReference = 2ECE84A720314CE600FF9767 /* FrisbeeTests.xctest */;
+			productReference = "Frisbee::FrisbeeTests::Product" /* FrisbeeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		"Frisbee::SwiftPMPackageDescription" /* FrisbeePackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_17 /* Build configuration list for PBXNativeTarget "FrisbeePackageDescription" */;
+			buildConfigurationList = OBJ_136 /* Build configuration list for PBXNativeTarget "FrisbeePackageDescription" */;
 			buildPhases = (
-				OBJ_20 /* Sources */,
-				344BCCE31FE606B400E0A2B7 /* Swiftlint */,
+				OBJ_139 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -507,174 +501,154 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_5;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_92 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"Frisbee::SwiftPMPackageDescription" /* FrisbeePackageDescription */,
-				"Frisbee::FrisbeeTests" /* FrisbeeTests */,
 				"Frisbee::Frisbee" /* Frisbee */,
+				"Frisbee::SwiftPMPackageDescription" /* FrisbeePackageDescription */,
 				"Frisbee::FrisbeePackageTests::ProductTarget" /* FrisbeePackageTests */,
+				"Frisbee::FrisbeeTests" /* FrisbeeTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		344BCCE31FE606B400E0A2B7 /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		344BCCE41FE606D600E0A2B7 /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_20 /* Sources */ = {
+		OBJ_139 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_21 /* Package.swift in Sources */,
-				343ECBAC200CC93D00320259 /* LinuxMain.swift in Sources */,
+				OBJ_140 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_26 /* Sources */ = {
+		OBJ_150 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				578D2CA520019B1400EE3865 /* ResultTests.swift in Sources */,
-				579F534E200151DF00E9996A /* MockURLSession.swift in Sources */,
-				3409C9E32009EFE000353DC4 /* NetworkPostTests.swift in Sources */,
-				578D2CA720019C3D00EE3865 /* SequenceExtensions.swift in Sources */,
-				3434A0BF1FE7E025000659E5 /* IntegrationNetworkGetTests.swift in Sources */,
-				3434A0BA1FE7DC30000659E5 /* URLRequestFactoryTests.swift in Sources */,
-				3409C9E52009F4E900353DC4 /* IntegrationNetworkPostTests.swift in Sources */,
-				3409C9F2200CC72300353DC4 /* URLWithQueryTrhrowErrorFakeBuildable.swift in Sources */,
-				34672DAB2013307600F574F4 /* DecoderDataAdapterTests.swift in Sources */,
-				6564990F209C806100B918B9 /* NetworkPutTests.swift in Sources */,
-				344FC7291FE5D7FC00958CE4 /* ResultGeneratorTests.swift in Sources */,
-				344DD87D1FFEFC910021350B /* URLQueryAdapterTests.swift in Sources */,
-				343ECBA5200CC90500320259 /* Empty.swift in Sources */,
-				343ECBA8200CC90500320259 /* MovieQuery.swift in Sources */,
-				3409C9EE200CC66A00353DC4 /* BodyThrowErrorFakeAdapter.swift in Sources */,
-				343ECBA9200CC90500320259 /* SomeEntity.swift in Sources */,
-				3481FEAE200D8C9700D0AD6D /* SerializerThrowErrorFakeAdapter.swift in Sources */,
-				OBJ_27 /* NetworkGetTests.swift in Sources */,
-				3481FE9A200D575000D0AD6D /* BodyAdapterTests.swift in Sources */,
-				34F9C72A1FE89EF5002C1EB0 /* QueryItemAdapterTests.swift in Sources */,
-				343ECBAA200CC90500320259 /* SomeError.swift in Sources */,
-				343ECBA7200CC90500320259 /* Movie.swift in Sources */,
-				A447764B201FC91C001B4D35 /* URLSessionTaskAdapterTests.swift in Sources */,
-				34F91DA6200821B900FFAE20 /* XCTestCase+AssertContains.swift in Sources */,
-				3434A0BC1FE7DD74000659E5 /* URLSessionFactoryTests.swift in Sources */,
-				343ECBA6200CC90500320259 /* Fake.swift in Sources */,
-				3481FEAC200D8C8200D0AD6D /* EncoderThrowErrorFakeAdapter.swift in Sources */,
-				578D2CA3200199A500EE3865 /* FrisbeeErrorTests.swift in Sources */,
-				34F91DA9200822F500FFAE20 /* FrisbeeError+All.swift in Sources */,
-				2ECE84AF203155AB00FF9767 /* IntegrationNetworkPutTests.swift in Sources */,
-				3409C9F0200CC6AB00353DC4 /* DecoderThrowErrorFakeAdapter.swift in Sources */,
+				OBJ_151 /* BodyAdapterTests.swift in Sources */,
+				OBJ_152 /* DecoderDataAdapterTests.swift in Sources */,
+				OBJ_153 /* QueryItemAdapterTests.swift in Sources */,
+				OBJ_154 /* URLQueryAdapterTests.swift in Sources */,
+				OBJ_155 /* URLSessionTaskAdapterTests.swift in Sources */,
+				OBJ_156 /* FrisbeeErrorTests.swift in Sources */,
+				OBJ_157 /* ResultTests.swift in Sources */,
+				OBJ_158 /* URLRequestFactoryTests.swift in Sources */,
+				OBJ_159 /* URLSessionFactoryTests.swift in Sources */,
+				OBJ_160 /* ResultGeneratorTests.swift in Sources */,
+				OBJ_161 /* IntegrationNetworkGetTests.swift in Sources */,
+				OBJ_162 /* IntegrationNetworkPostTests.swift in Sources */,
+				OBJ_163 /* IntegrationNetworkPutTests.swift in Sources */,
+				OBJ_164 /* NetworkGetTests.swift in Sources */,
+				OBJ_165 /* NetworkPostTests.swift in Sources */,
+				OBJ_166 /* NetworkPutTests.swift in Sources */,
+				OBJ_167 /* BodyThrowErrorFakeAdapter.swift in Sources */,
+				OBJ_168 /* DecoderThrowErrorFakeAdapter.swift in Sources */,
+				OBJ_169 /* EncoderThrowErrorFakeAdapter.swift in Sources */,
+				OBJ_170 /* MockURLSession.swift in Sources */,
+				OBJ_171 /* SerializerThrowErrorFakeAdapter.swift in Sources */,
+				OBJ_172 /* URLWithQueryTrhrowErrorFakeBuildable.swift in Sources */,
+				OBJ_173 /* Empty.swift in Sources */,
+				OBJ_174 /* Fake.swift in Sources */,
+				OBJ_175 /* Movie.swift in Sources */,
+				OBJ_176 /* MovieQuery.swift in Sources */,
+				OBJ_177 /* SomeEntity.swift in Sources */,
+				OBJ_178 /* SomeError.swift in Sources */,
+				OBJ_179 /* FrisbeeError+All.swift in Sources */,
+				OBJ_180 /* SequenceExtensions.swift in Sources */,
+				OBJ_181 /* XCTestCase+AssertContains.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_35 /* Sources */ = {
+		OBJ_99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				3481FEA0200D5A0100D0AD6D /* EncodableAdapter.swift in Sources */,
-				A4477649201FC748001B4D35 /* URLSessionTaskAdapter.swift in Sources */,
-				3409C9E12009EFBA00353DC4 /* NetworkPost.swift in Sources */,
-				3409C9E9200C385900353DC4 /* BodyAdapter.swift in Sources */,
-				3481FEA6200D892F00D0AD6D /* SerializableAdapter.swift in Sources */,
-				34C52E8720098A0F00DCD88C /* ResultGeneratorFactory.swift in Sources */,
-				344FC71A1FE5B93200958CE4 /* Getable.swift in Sources */,
-				344DD87B1FFEFBE40021350B /* URLQueryAdapter.swift in Sources */,
-				34C52E832009844400DCD88C /* URLQueriableAdapterFactory.swift in Sources */,
-				3434A0B41FE7D9FF000659E5 /* URLSessionFactory.swift in Sources */,
-				2ECE84B02031568C00FF9767 /* NetworkPut.swift in Sources */,
-				3473C852200CD3810014C66E /* OnComplete.swift in Sources */,
-				344FC71E1FE5BA0200958CE4 /* Result.swift in Sources */,
-				2ECE84B12031568F00FF9767 /* Putable.swift in Sources */,
-				3409C9E7200C385100353DC4 /* BodiableAdapter.swift in Sources */,
-				344FC7261FE5D76B00958CE4 /* ResultGenerator.swift in Sources */,
-				3409C9EB200C388E00353DC4 /* BodyAdapterFactory.swift in Sources */,
-				3434A0B61FE7DA5A000659E5 /* HTTPMethod.swift in Sources */,
-				344FC7201FE5BBFE00958CE4 /* NetworkGet.swift in Sources */,
-				3434A0B21FE7D9CC000659E5 /* URLRequestFactory.swift in Sources */,
-				A444E82B201AC648002A6927 /* Cancellable.swift in Sources */,
-				3481FEAA200D895300D0AD6D /* SerializableAdapterFactory.swift in Sources */,
-				3481FEA8200D894400D0AD6D /* SerializerJSONAdapter.swift in Sources */,
-				34C52E852009895D00DCD88C /* DecodableAdapter.swift in Sources */,
-				3481FE9E200D59ED00D0AD6D /* EncoderJSONAdapter.swift in Sources */,
-				34C52E8B20098D4100DCD88C /* DecoderJSONAdapter.swift in Sources */,
-				344FC71C1FE5B9D500958CE4 /* FrisbeeError.swift in Sources */,
-				34672DA720132FC600F574F4 /* DecodableAdapterFactory.swift in Sources */,
-				3481FEA4200D5A6D00D0AD6D /* EncodableAdapterFactory.swift in Sources */,
-				34672DA920132FE600F574F4 /* DecoderDataAdapter.swift in Sources */,
-				3409C9E02009EFBA00353DC4 /* Postable.swift in Sources */,
-				3473C854200CD7570014C66E /* DataTaskRunner.swift in Sources */,
-				34F9C72C1FE89F44002C1EB0 /* QueryItemAdapter.swift in Sources */,
-				34C52E8D20098D8D00DCD88C /* URLQueriableAdapter.swift in Sources */,
+				OBJ_100 /* BodiableAdapter.swift in Sources */,
+				OBJ_101 /* BodyAdapter.swift in Sources */,
+				OBJ_102 /* Cancellable.swift in Sources */,
+				OBJ_103 /* DecodableAdapter.swift in Sources */,
+				OBJ_104 /* DecoderDataAdapter.swift in Sources */,
+				OBJ_105 /* DecoderJSONAdapter.swift in Sources */,
+				OBJ_106 /* EncodableAdapter.swift in Sources */,
+				OBJ_107 /* EncoderJSONAdapter.swift in Sources */,
+				OBJ_108 /* QueryItemAdapter.swift in Sources */,
+				OBJ_109 /* SerializableAdapter.swift in Sources */,
+				OBJ_110 /* SerializerJSONAdapter.swift in Sources */,
+				OBJ_111 /* URLQueriableAdapter.swift in Sources */,
+				OBJ_112 /* URLQueryAdapter.swift in Sources */,
+				OBJ_113 /* URLSessionTaskAdapter.swift in Sources */,
+				OBJ_114 /* FrisbeeError.swift in Sources */,
+				OBJ_115 /* HTTPMethod.swift in Sources */,
+				OBJ_116 /* Result.swift in Sources */,
+				OBJ_117 /* BodyAdapterFactory.swift in Sources */,
+				OBJ_118 /* DecodableAdapterFactory.swift in Sources */,
+				OBJ_119 /* EncodableAdapterFactory.swift in Sources */,
+				OBJ_120 /* SerializableAdapterFactory.swift in Sources */,
+				OBJ_121 /* URLQueriableAdapterFactory.swift in Sources */,
+				OBJ_122 /* ResultGeneratorFactory.swift in Sources */,
+				OBJ_123 /* URLRequestFactory.swift in Sources */,
+				OBJ_124 /* URLSessionFactory.swift in Sources */,
+				OBJ_125 /* DataTaskRunner.swift in Sources */,
+				OBJ_126 /* ResultGenerator.swift in Sources */,
+				OBJ_127 /* Getable.swift in Sources */,
+				OBJ_128 /* NetworkGet.swift in Sources */,
+				OBJ_129 /* NetworkPost.swift in Sources */,
+				OBJ_130 /* NetworkPut.swift in Sources */,
+				OBJ_131 /* OnComplete.swift in Sources */,
+				OBJ_132 /* Postable.swift in Sources */,
+				OBJ_133 /* Putable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_30 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Frisbee::Frisbee" /* Frisbee */;
-			targetProxy = 344FC7171FE5B41500958CE4 /* PBXContainerItemProxy */;
-		};
-		OBJ_42 /* PBXTargetDependency */ = {
+		OBJ_145 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Frisbee::FrisbeeTests" /* FrisbeeTests */;
-			targetProxy = 344FC7181FE5B41600958CE4 /* PBXContainerItemProxy */;
+			targetProxy = 347AE581215E978400EF0623 /* PBXContainerItemProxy */;
+		};
+		OBJ_184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Frisbee::Frisbee" /* Frisbee */;
+			targetProxy = 347AE580215E978300EF0623 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_18 /* Debug */ = {
+		OBJ_137 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode_9.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode_9.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		OBJ_19 /* Release */ = {
+		OBJ_138 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode_9.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode_9.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
-		OBJ_24 /* Debug */ = {
+		OBJ_143 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_148 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -684,7 +658,8 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Frisbee.xcodeproj/FrisbeeTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_VERSION = 4.0;
@@ -692,7 +667,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_25 /* Release */ = {
+		OBJ_149 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -702,7 +677,8 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Frisbee.xcodeproj/FrisbeeTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_VERSION = 4.0;
@@ -732,50 +708,6 @@
 			};
 			name = Debug;
 		};
-		OBJ_33 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Frisbee.xcodeproj/Frisbee_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited) -Xfrontend -warn-long-function-bodies=100 -Xfrontend -warn-long-expression-type-checking=100";
-				PRODUCT_BUNDLE_IDENTIFIER = Frisbee;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Frisbee;
-			};
-			name = Debug;
-		};
-		OBJ_34 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Frisbee.xcodeproj/Frisbee_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited) -Xfrontend -warn-long-function-bodies=100 -Xfrontend -warn-long-expression-type-checking=100";
-				PRODUCT_BUNDLE_IDENTIFIER = Frisbee;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Frisbee;
-			};
-			name = Release;
-		};
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -796,29 +728,81 @@
 			};
 			name = Release;
 		};
-		OBJ_40 /* Debug */ = {
+		OBJ_97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Frisbee.xcodeproj/Frisbee_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Frisbee;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Frisbee;
 			};
 			name = Debug;
 		};
-		OBJ_41 /* Release */ = {
+		OBJ_98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Frisbee.xcodeproj/Frisbee_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Frisbee;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Frisbee;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_17 /* Build configuration list for PBXNativeTarget "FrisbeePackageDescription" */ = {
+		OBJ_136 /* Build configuration list for PBXNativeTarget "FrisbeePackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_18 /* Debug */,
-				OBJ_19 /* Release */,
+				OBJ_137 /* Debug */,
+				OBJ_138 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
+		};
+		OBJ_142 /* Build configuration list for PBXAggregateTarget "FrisbeePackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_143 /* Debug */,
+				OBJ_144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_147 /* Build configuration list for PBXNativeTarget "FrisbeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_148 /* Debug */,
+				OBJ_149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		OBJ_2 /* Build configuration list for PBXProject "Frisbee" */ = {
 			isa = XCConfigurationList;
@@ -827,34 +811,16 @@
 				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
-		OBJ_23 /* Build configuration list for PBXNativeTarget "FrisbeeTests" */ = {
+		OBJ_96 /* Build configuration list for PBXNativeTarget "Frisbee" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_24 /* Debug */,
-				OBJ_25 /* Release */,
+				OBJ_97 /* Debug */,
+				OBJ_98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		OBJ_32 /* Build configuration list for PBXNativeTarget "Frisbee" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_33 /* Debug */,
-				OBJ_34 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		OBJ_39 /* Build configuration list for PBXAggregateTarget "FrisbeePackageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_40 /* Debug */,
-				OBJ_41 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

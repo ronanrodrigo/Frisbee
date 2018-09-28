@@ -19,27 +19,8 @@ public final class NetworkPut: Putable {
     }
 
     @discardableResult
-    public func put<T: Decodable>(url: String, onComplete: @escaping OnComplete<T>) -> Cancellable {
-        guard let url = URL(string: url) else {
-            onComplete(.fail(FrisbeeError.invalidUrl))
-            return NilCancellable()
-        }
-        return put(url: url, onComplete: onComplete)
-    }
-
-    @discardableResult
     public func put<T: Decodable>(url: URL, onComplete: @escaping OnComplete<T>) -> Cancellable {
         return makeRequest(url: url, onComplete: onComplete)
-    }
-
-    @discardableResult
-    public func put<T: Decodable, U: Encodable>(url: String, body: U,
-                                                onComplete: @escaping OnComplete<T>) -> Cancellable {
-        guard let url = URL(string: url) else {
-            onComplete(.fail(FrisbeeError.invalidUrl))
-            return NilCancellable()
-        }
-        return put(url: url, body: body, onComplete: onComplete)
     }
 
     @discardableResult
