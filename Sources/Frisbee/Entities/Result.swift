@@ -1,14 +1,21 @@
 public enum Result<T> {
-    case success(T)
+    case success(T?, Int?)
     case fail(FrisbeeError)
 }
 
 extension Result {
     public var data: T? {
-        guard case let .success(data) = self else {
+        guard case .success(let data, _) = self else {
             return nil
         }
         return data
+    }
+
+    public var httpStatusCode: Int? {
+        guard case .success(_, let httpStatusCode) = self else {
+            return nil
+        }
+        return httpStatusCode
     }
 
     public var error: FrisbeeError? {

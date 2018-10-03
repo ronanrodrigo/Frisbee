@@ -30,7 +30,7 @@ class MockURLSession: URLSession {
 
 class MockDataTask: URLSessionDataTask {
     enum Result {
-        case success(Data, URLResponse), error(Error)
+        case success(Data?, URLResponse), error(Error)
     }
 
     let result: Result

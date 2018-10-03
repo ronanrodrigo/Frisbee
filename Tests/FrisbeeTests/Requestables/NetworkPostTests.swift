@@ -33,6 +33,17 @@ final class NetworkPostTests: XCTestCase {
         XCTAssertNil(generatedResult.error)
     }
 
+    func testPostWhenValidURLWithoutBodyThenGenerateSuccessResult() {
+        let session = MockURLSession(results: [.success(nil, URLResponse())])
+        let networkPost = NetworkPost(urlSession: session)
+        var generatedResult: Result<Empty>!
+
+        networkPost.post(url: validUrlString) { generatedResult = $0 }
+
+        XCTAssertNil(generatedResult.data)
+        XCTAssertNil(generatedResult.error)
+    }
+
     func testPostWhenValidURLWithBodyThenGenerateSuccessResult() {
         let session = MockURLSession(results: [.success(Empty.data, URLResponse())])
         let networkPost = NetworkPost(urlSession: session)
