@@ -11,21 +11,15 @@ final class ResultGenerator<T: Decodable> {
     func generate(data: Data?, error: Error?) -> Result<T> {
         guard let data = data else {
             switch error {
-                case .some(let error):
-                    return .fail(FrisbeeError(error))
-                case .none:
-                    return .fail(FrisbeeError.noData)
+            case .some(let error): return .fail(FrisbeeError(error))
+            case .none: return .fail(FrisbeeError.noData)
             }
         }
 
-        let result: Result<T>
         do {
             let entityDecoded = try decoder.decode(T.self, from: data)
-            result = .success(entityDecoded)
-        } catch {
-            result = .fail(.noData)
-        }
-        return result
+            return .success(entityDecoded)
+        } catch { return .fail(.noData) }
     }
 
 }
