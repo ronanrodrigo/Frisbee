@@ -1,6 +1,7 @@
 import XCTest
 @testable import Frisbee
 
+#if !os(Linux)
 final class URLSessionTaskAdapterTests: XCTestCase {
 
     func testAdapterWhenCancelThenCancelTask() {
@@ -17,3 +18,4 @@ final class URLSessionTaskAdapterTests: XCTestCase {
     }
 
 }
+#endif

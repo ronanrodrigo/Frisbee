@@ -54,9 +54,7 @@ class FrisbeeErrorTests: XCTestCase {
         ("testInequatableFromAllPossibleErrorsThenBeNotEqual",
          testInequatableFromAllPossibleErrorsThenBeNotEqual),
         ("testInitFromUnkownErrorThenCreateFrisbeErrorOtherWithLocalizedString",
-         testInitFromUnkownErrorThenCreateFrisbeErrorOtherWithLocalizedString),
-        ("testInitWhenURLErrorCanceledThenCreateRequestCancelled",
-         testInitWhenURLErrorCanceledThenCreateRequestCancelled)
+         testInitFromUnkownErrorThenCreateFrisbeErrorOtherWithLocalizedString)
     ]
 
 }
