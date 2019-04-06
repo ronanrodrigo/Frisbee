@@ -50,6 +50,17 @@ final class NetworkGetTests: XCTestCase {
         XCTAssertNil(generatedResult.error)
     }
 
+    func testGetWhenValidURLWithoutBodyThenGenerateSuccessResult() {
+        let session = MockURLSession(results: [.success(nil, URLResponse())])
+        let getter = NetworkGet(urlSession: session)
+        var generatedResult: Result<Empty>!
+
+        getter.get(url: validUrlString) { generatedResult = $0 }
+
+        XCTAssertNil(generatedResult.data)
+        XCTAssertNil(generatedResult.error)
+    }
+
     func testGetWhenInvalidURLThenGenerateFailResult() {
         let session = MockURLSession(results: [])
         let getter = NetworkGet(urlSession: session)

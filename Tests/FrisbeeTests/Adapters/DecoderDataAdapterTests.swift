@@ -8,7 +8,13 @@ final class DecoderDataAdapterTests: XCTestCase {
 
         let decodedData = try DecoderDataAdapter().decode(Data.self, from: data)
 
-        XCTAssertEqual(decodedData.count, data.count)
+        XCTAssertEqual(decodedData!.count, data.count)
+    }
+
+    func testDecodeWhenEncodableGenericIsNilThenDecodeDataIsNil() throws {
+        let decodedData = try DecoderDataAdapter().decode(Data.self, from: nil)
+
+        XCTAssertNil(decodedData)
     }
 
     func testDecodeWhenNotDataEntityThenThrowsError() throws {

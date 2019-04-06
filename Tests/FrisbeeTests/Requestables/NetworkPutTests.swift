@@ -45,6 +45,18 @@ class NetworkPutTests: XCTestCase {
         XCTAssertNil(generatedResult.error)
     }
 
+    func testPutWhenValidURLWithoutBodyThenGenerateSuccessResult() {
+        let session = MockURLSession(results: [.success(nil, URLResponse())])
+        let networkPut = NetworkPut(urlSession: session)
+        let body = Empty()
+        var generatedResult: Result<Empty>!
+
+        networkPut.put(url: validUrlString, body: body) { generatedResult = $0 }
+
+        XCTAssertNil(generatedResult.data)
+        XCTAssertNil(generatedResult.error)
+    }
+
     func testPutWhenInvalidURLThenGenerateFailResult() {
         let session = MockURLSession(results: [])
         let networkPut = NetworkPut(urlSession: session)

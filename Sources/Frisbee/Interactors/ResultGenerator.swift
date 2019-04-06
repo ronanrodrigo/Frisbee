@@ -8,8 +8,8 @@ final class ResultGenerator<T: Decodable> {
         self.decoder = decoder
     }
 
-    func generate(data: Data?, error: Error?) -> Result<T> {
-        guard let data = data else {
+    func generate(data: Data?, urlResponse: URLResponse?, error: Error?) -> Result<T> {
+        guard let urlResponse = urlResponse else {
             switch error {
             case .some(let error): return .fail(FrisbeeError(error))
             case .none: return .fail(FrisbeeError.noData)
@@ -18,7 +18,11 @@ final class ResultGenerator<T: Decodable> {
 
         do {
             let entityDecoded = try decoder.decode(T.self, from: data)
-            return .success(entityDecoded)
+
+            if urlResponse is HTTPURLResponse {
+                return .success(entityDecoded, (urlResponse as! HTTPURLResponse).statusCode)
+            }
+            return .success(entityDecoded, nil)
         } catch { return .fail(.noData) }
     }
 
